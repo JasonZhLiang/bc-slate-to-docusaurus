@@ -1,0 +1,111 @@
+### SysReadGroupEntitiesPage
+
+```r
+{
+	"service": "group",
+	"operation": "SYS_READ_GROUP_ENTITIES_PAGE",
+	"data": {
+		"context": {
+			"pagination": {
+				"rowsPerPage": 50,
+				"pageNumber": 1
+			},
+			"searchCriteria": {
+				"groupId": "130745f4-df57-4162-8f90-d89214fc8512",
+				"entityType": "BLUE"
+			},
+			"sortCriteria": {
+				"createdAt": 1,
+				"updatedAt": -1
+			}
+		}
+	}
+}
+```
+
+```cpp
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+```csharp
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+```java
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+```javascript
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+```objective_c
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+
+```cfscript
+var context = {
+    "pagination": {
+        "rowsPerPage": 50,
+        "pageNumber": 1
+    },
+    "searchCriteria": {
+        "groupId": "130745f4-df57-4162-8f90-d89214fc8512",
+        "entityType": "BLUE"
+    },
+    "sortCriteria": {
+        "createdAt": 1,
+        "updatedAt": -1
+    }
+};
+var groupProxy = bridge.getGroupServiceProxy();
+
+var postResult = groupProxy.sysReadGroupEntitiesPage(context);
+if (postResult.status == 200) {
+    // Success!
+}
+```
+
+<%= partial "partials/jsonBtn" %>
+
+```json-doc
+{
+    "status": 200,
+    "data": {
+        "_serverTime": 1637946319239,
+        "results": {
+            "moreBefore": false,
+            "count": 3,
+            "items": [
+                {
+                    "gameId": "20595",
+                    "groupId": "fee55a37-5e86-43e8-942e-06bcbe1b701e",
+                    "entityId": "91cfece7-debb-4698-ba6b-cd2cb432458d",
+                    "ownerId": null,
+                    "entityType": "BLUE",
+                    "createdAt": 1462812680359,
+                    "updatedAt": 1462812680359,
+                    "version": 1,
+                    "data": {},
+                    "acl": {
+                        "member": 2,
+                        "other": 1
+                    }
+                }
+            ],
+            "page": 1,
+            "moreAfter": true
+        },
+        "context": "eyJzZWFyY2hDcml0ZXJpYSI6eyJncm91cElkIjoiZmVlNTVhMzct"
+    }
+}
+```
+<%= partial(:"partials/versionTag", :locals => {
+  :version => "4.6.0",
+  :newText => "",
+  :comingText => ""
+}) %>
+
+Retrieve a page of group entity information based on the specified context, bypassing ownership/ACL checks.
+
+<%= partial(:"partials/servop", :locals => { :service_name => "group", :operation_name => "SYS_READ_GROUP_ENTITIES_PAGE" }) %>
+#### Method Parameters
+Parameter | Description
+--------- | -----------
+context | The JSON context for the page request

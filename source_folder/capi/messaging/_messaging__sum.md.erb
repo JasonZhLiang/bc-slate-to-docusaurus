@@ -1,0 +1,43 @@
+#### API Summary
+
+#### Retrieving messages
+
+* [GetMessageBoxes](#capi-messaging-getmessageboxes)
+* [GetMessageCounts](#capi-messaging-getmessagecounts)
+* [GetMessages](#capi-messaging-getmessages)
+* [GetMessagesPage](#capi-messaging-getmessagespage)
+* [GetMessagesPageOffset](#capi-messaging-getmessagespageoffset)
+
+#### Sending messages
+
+* [SendMessage](#capi-messaging-sendmessage)
+* [SendMessageSimple](#capi-messaging-sendmessagesimple)
+
+#### Updating messages
+
+* [DeleteMessages](#capi-messaging-deletemessages)
+* [MarkMessagesRead](#capi-messaging-markmessagesread)
+
+
+#### Sys API Calls
+
+These APIs target the shared content portion of a message, and not the per-user messagebox metadata (which controls whether a message has been read, etc.). Can be used on user or system messages.
+
+Available via cleint session cloud code, as well as S2S.
+
+#### Retrieving messages
+
+* [SysGetMessages](#capi-messaging-sysgetmessages)
+* [SysGetMessagesPage](#capi-messaging-sysgetmessagespage)
+* [SysGetMessagesPageOffset](#capi-messaging-sysgetmessagespageoffset)
+
+#### Sending messages
+
+* [SysSendMessage](#capi-messaging-syssendmessage)
+* [SysSendMessageSimple](#capi-messaging-syssendmessagesimple)
+
+#### Updating messages
+
+* [SysDeleteMessage](#capi-messaging-sysdeletemessage)
+* [SysUpdateMessage](#capi-messaging-sysupdatemessage)
+

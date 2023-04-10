@@ -1,0 +1,96 @@
+### CreateSystemEntity
+
+```r
+{
+	"service": "globalEntity",
+	"operation": "CREATE_SYSTEM_ENTITY",
+	"data": {
+		"entityType": "address",
+		"timeToLive": null,
+		"acl": {
+			"other": 1
+		},
+		"data": {
+			"street": "1309 Carling"
+		}
+	}
+}
+```
+
+```cpp
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+
+```csharp
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+
+```java
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+
+```objective_c
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+
+```javascript
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+
+```cfscript
+var entityType = "address";
+var timeToLive = -1;
+var jsonEntityAcl = {
+    "other": 1
+};
+var jsonEntityData = {
+    "street": "1309 Carling"
+};
+var globalEntityProxy = bridge.getGlobalEntityServiceProxy();
+
+var postResult = globalEntityProxy.createSystemEntity(entityType, timeToLive, jsonEntityAcl, jsonEntityData);
+if (postResult.status == 200) {
+    // Success!
+}
+```
+
+<%= partial "partials/jsonBtn" %>
+
+```json-doc
+{
+ "data": {
+  "response": {
+   "data": {
+    "gameId": "22232",
+    "entityIndexedId": null,
+    "timeToLive": -1,
+    "createdAt": 1499276273151,
+    "entityType": "address",
+    "entityId": "5ae3644f-5306-4b24-8134-29b0c1fdf713",
+    "acl": {
+     "other": 2
+    },
+    "ownerId": null,
+    "version": 1,
+    "expiresAt": 9223372036854776000,
+    "updatedAt": 1499276273151
+   },
+   "status": 200
+  },
+  "success": true
+ },
+ "status": 200
+}
+```
+
+Method creates a new system entity on the server.
+
+<%= partial(:"partials/servop", :locals => { :service_name => "globalEntity", :operation_name => "CREATE_SYSTEM_ENTITY" }) %>
+#### Method Parameters
+Parameter | Description
+--------- | -----------
+entityType | The entity type as defined by the user
+timeToLive | Sets expiry time for entity in milliseconds if > 0
+jsonEntityAcl | The entity's <a href="#" onclick='window.navigateToTarget("#appendix-acl");'>Access Control List</a> as object. A null ACL implies default permissions which make the entity readable/writeable by only the user.
+jsonEntityData | The entity's data object
+

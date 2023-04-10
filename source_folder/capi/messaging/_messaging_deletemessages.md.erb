@@ -1,0 +1,118 @@
+### DeleteMessages
+
+```r
+{
+	"service": "messaging",
+	"operation": "DELETE_MESSAGES",
+	"data": {
+		"msgbox": "inbox",
+		"msgIds": [
+			"msgId1",
+			"msgId2"
+		]
+	}
+}
+```
+
+```objective_c
+NSString *msgbox = @"inbox";
+NSArray *msgIds = @[ @"msgId1", @"msgId2" ];
+BCCompletionBlock successBlock;      // define callback
+BCErrorCompletionBlock failureBlock; // define callback
+
+[[<%= data.branding.codePrefix %> messagingService] deleteMessages:msgbox
+                     msgIds:msgIds
+            completionBlock:successBlock
+       errorCompletionBlock:failureBlock
+                   cbObject:nil];
+```
+
+```cpp
+const char *msgbox = "inbox";
+std::vector<std::string> msgIds;
+msgIds.push_back("msgId1");
+msgIds.push_back("msgId2");
+<%= data.branding.codePrefix %>->getMessagingService()->deleteMessages(msgbox, msgIds, this);
+```
+
+```csharp
+string msgbox = "inbox";
+string[] msgIds = { "msgId1", "msgId2" };
+SuccessCallback successCallback = (response, cbObject) =>
+{
+    Debug.Log(string.Format("Success | {0}", response));
+};
+FailureCallback failureCallback = (status, code, error, cbObject) =>
+{
+    Debug.Log(string.Format("Failed | {0}  {1}  {2}", status, code, error));
+};
+
+<%= data.branding.codePrefix %>.MessagingService.DeleteMessages(msgbox, msgIds, successCallback, failureCallback);
+```
+
+```java
+String msgbox = "inbox";
+String[] msgIds = { "msgId1", "msgId2" };
+this; // implements IServerCallback
+
+<%= data.branding.codePrefix %>.getMessagingService().deleteMessages(msgbox, msgIds, this);
+
+public void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData)
+{
+    System.out.print(String.format("Success | %s", jsonData.toString()));
+}
+public void serverError(ServiceName serviceName, ServiceOperation serviceOperation, int statusCode, int reasonCode, String jsonError)
+{
+    System.out.print(String.format("Failed | %d %d %s", statusCode,  reasonCode, jsonError.toString()));
+}
+```
+
+```javascript
+var msgbox = "inbox";
+var msgIds = [ "msgId1", "msgId2" ];
+
+<%= data.branding.codePrefix %>.messaging.deleteMessages(msgbox, msgIds, result =>
+{
+	var status = result.status;
+	console.log(status + " : " + JSON.stringify(result, null, 2));
+});
+```
+
+```cfscript
+var msgbox = "inbox";
+var msgIds = [ "msgId1", "msgId2" ];
+var messagingProxy = bridge.getMessagingServiceProxy();
+
+var postResult = messagingProxy.deleteMessages(msgbox, msgIds);
+if (postResult.status == 200) {
+    // Success!
+}
+```
+
+<%= partial "partials/jsonBtn" %>
+
+```json-doc
+{
+    "status": 200,
+    "data": {
+        "actual": 0,
+        "requested": 2
+    }
+}
+```
+
+Deletes the local copies of messages from the user's mailbox.
+
+<%= partial(:"partials/servop", :locals => { :service_name => "messaging", :operation_name => "DELETE_MESSAGES" }) %>
+
+#### Method Parameters
+Parameter | Description                          
+--------- | ------------------------------------ 
+msgbox | The msgbox that we are deleting messages from 
+msgIds | An array of ids of the messages to delete 
+
+#### Status Codes
+Code | Name | Description                          
+----- | ----------------------- | ------------------------------------ 
+40601 | RTT_NOT_ENABLED | RTT must be enabled for this feature 
+

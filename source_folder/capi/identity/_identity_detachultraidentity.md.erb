@@ -1,0 +1,67 @@
+### DetachUltraIdentity
+
+```csharp
+string ultraUsername = "ultraUsername";
+
+<%= data.branding.codePrefix %>.IdentityService.DetachOculusIdentity(
+    ultraUsername,
+    true,
+    SuccessCallback, FailureCallback);
+```
+
+```cpp
+const char * ultraUsername = "ultraUsername";
+
+<%= data.branding.codePrefix %>->getIdentityService()->detachOculusIdentity(
+    ultraUsername, false, this);
+```
+
+```objective_c
+- (void)detachUltraIdentity:(NSString *)ultraUsername
+                continueAnon:(bool)continueAnon
+             completionBlock:(BCCompletionBlock)cb
+        errorCompletionBlock:(BCErrorCompletionBlock)ecb
+                    cbObject:(BCCallbackObject)cbObject;
+```
+
+```java
+public void detachUltraIdentity(String ultraUsername, boolean continueAnon, IServerCallback callback)
+```
+
+```javascript
+<%= data.branding.codePrefix %>.identity.detachUltraIdentity = function(ultraUsername, continueAnon, callback)
+```
+
+```cfscript
+// N/A
+```
+
+<%= partial "partials/jsonBtn" %>
+
+```json-doc
+{
+    "status" : 200,
+    "data" : null
+}
+```
+
+<%= partial(:"partials/versionTag", :locals => {
+  :version => "4.10.0",
+  :newText => "",
+  :comingText => ""
+}) %>
+
+Detach the Ultra identity from this profile.
+
+<%= partial(:"partials/servop", :locals => { :service_name => "identity", :operation_name => "DETACH" }) %>
+
+#### Method Parameters
+Parameter | Description
+--------- | -----------
+ultraUsername | It's what the user uses to log into the Ultra endpoint initially
+continueAnon | Proceed even if the profile will revert to anonymous?
+
+#### Status Codes
+Code | Name | Description
+---- | ---- | -----------
+40210 | DOWNGRADING_TO_ANONYMOUS_ERROR | Occurs when detaching the last non-anonymous identity from an account with continueAnon set to false.

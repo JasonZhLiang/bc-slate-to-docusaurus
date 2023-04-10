@@ -1,0 +1,75 @@
+### MergeNintendoIdentity
+
+```csharp
+string nintendoAccountId = "nsaid";  // Network Services Account ID
+string nintendoAuthToken = "nsaToken";
+SuccessCallback successCallback = (response, cbObject) =>
+{
+    Debug.Log(string.Format("Success | {0}", response));
+};
+FailureCallback failureCallback = (status, code, error, cbObject) =>
+{
+    Debug.Log(string.Format("Failed | {0}  {1}  {2}", status, code, error));
+};
+
+<%= data.branding.codePrefix %>.IdentityService.MergeNintendoIdentity(
+    nintendoAccountId, nintendoAuthToken, successCallback, failureCallback);
+```
+
+```cpp
+const char* nintendoAccountId = "nsaid";  // Network Services Account ID
+const char* nintendoAuthToken = "nsaToken";
+
+<%= data.branding.codePrefix %>->getIdentityService()->mergeNintendoIdentity(
+    ultraUsername,
+    ultraIdToken,
+    this);
+```
+
+```objective_c
+// N/A
+```
+
+```java
+// N/A
+```
+
+```javascript
+// N/A
+```
+
+```cfscript
+// N/A
+```
+
+<%= partial "partials/jsonBtn" %>
+
+```json-doc
+{  
+   "data":{  
+      "profileId":"f94f7e2d-3cdd-4fd6-9c28-392f7875e9df"
+   },
+   "status":200
+}
+```
+
+<%= partial(:"partials/versionTag", :locals => {
+  :version => "4.12.0",
+  :newText => "",
+  :comingText => ""
+}) %>
+
+Merge the profile associated with the provided Nintendo credentials with the current profile.
+
+<%= partial(:"partials/servop", :locals => { :service_name => "identity", :operation_name => "MERGE" }) %>
+
+#### Method Parameters
+Parameter | Description
+--------- | -----------
+nintendoAccountId | The Nintendo Network Services Account (NSA) ID for the user
+nintendoAuthToken | An NSA ID token retrieved via the NintendoSDK
+
+#### Status Codes
+Code | Name | Description
+---- | ---- | -----------
+40211 | DUPLICATE_IDENTITY_TYPE | Returned when trying to attach an identity type that already exists for that profile. For instance you can have only one Twitter identity for a profile.

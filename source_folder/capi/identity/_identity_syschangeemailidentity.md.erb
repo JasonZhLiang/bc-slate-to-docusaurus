@@ -1,0 +1,80 @@
+### SysChangeEmailIdentity
+
+```r
+{
+	"service": "identity",
+	"operation": "SYS_CHANGE_EMAIL_IDENTITY",
+	"data": {
+        "profileId": "user-profile-id",
+        "oldEmailAddress": "oldemail@email.com",
+        "newEmailAddress": "newemail@email.com",
+		"updateContactEmail": true
+	}
+}
+```
+
+```csharp
+//cloud code only
+```
+
+```cpp
+//cloud code only
+```
+
+```objective_c
+//cloud code only
+```
+
+```java
+//cloud code only
+```
+
+```javascript
+//cloud code only
+```
+
+```cfscript
+var profileId = "user-profile-id";
+var oldEmailAddress = "oldemail@email.com";
+var newEmailAddress = "newemail@email.com";
+var updateContactEmail = true;
+var identityProxy = bridge.getIdentityServiceProxy();
+
+var postResult = identityProxy.sysChangeEmailIdentity(profileId, oldEmailAddress, newEmailAddress, updateContactEmail);
+if (postResult.status == 200) {
+    // Success!
+}
+```
+
+<%= partial "partials/jsonBtn" %>
+
+```json-doc
+{
+    "status": 200,
+    "data": {}
+}
+```
+
+<%= partial(:"partials/versionTag", :locals => {
+  :version => "4.8.0",
+  :newText => "",
+  :comingText => ""
+}) %>
+
+Changes email address associated with specified user's email identity.
+
+<%= partial(:"partials/servop", :locals => { :service_name => "identity", :operation_name => "SYS_CHANGE_EMAIL_IDENTITY" }) %>
+
+#### Method Parameters
+Parameter | Description
+--------- | -----------
+oldEmailAddress | Old email address
+profileId | The profileId of the applicable user
+oldEmailAddress | The user's old email address
+newEmailAddress | The user's new email address
+updateContactEmail | Whether to also update contact email in user's profile
+
+#### Status Codes
+Code | Name | Description
+---- | ---- | -----------
+40583 | APP_ERROR | New email address is already in use

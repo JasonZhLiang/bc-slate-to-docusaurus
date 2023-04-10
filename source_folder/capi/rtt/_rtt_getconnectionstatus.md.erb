@@ -1,0 +1,35 @@
+### GetConnectionStatus
+
+```cpp
+<%= data.branding.codePrefix %>->getConnectionStatus();
+```
+
+```csharp
+<%= data.branding.codePrefix %>.RTTService.GetConnectionStatus();
+```
+
+```java
+<%= data.branding.codePrefix %>.RTTService.getConnectionStatus();
+```
+
+```objective_c
+Coming soon!
+```
+
+```javascript
+<%= data.branding.codePrefix %>.rttService.getConnectionStatus();
+```
+
+```cfscript
+// N/A
+```
+
+<%= partial(:"partials/versionTag", :locals => {
+  :version => "4.6.0",
+  :newText => "",
+  :comingText => ""
+}) %>
+
+Return the RTT connection status (CONNECTED, DISCONNECTED, CONNECTING, and DISCONNECTING).
+
+<%= partial(:"partials/servop", :locals => { :service_name => "rttRegistration", :operation_name => "GET_CONNECTION_STATUS" }) %>

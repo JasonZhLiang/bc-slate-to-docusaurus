@@ -1,0 +1,56 @@
+# Client API [capi]
+
+This is the standard, user-oriented API for working with <%= data.branding.productName %>.
+
+Note that the client is normally managed via the <a href="#" onclick='window.navigateToTarget("#wrapper");'><code><%= data.branding.codeWrapper %></code></a> class described in the section above. The wrapper makes Authentication and Identity Management in <%= data.branding.productName %> a lot simpler. _It is highly recommmended that all applications use the wrapper_.
+
+The Client API is organized into the following services:
+
+* <a href="#" onclick='window.navigateToTarget("#capi-authentication");'>Authentication</a>
+* <a href="#" onclick='window.navigateToTarget("#capi-appstore");'>AppStore</a>
+* <a href="#" onclick='window.navigateToTarget("#capi-asyncmatch");'>Async Match</a>
+* <a href="#" onclick='window.navigateToTarget("#capi-chat");'>Chat</a>
+* <a href="#" onclick='window.navigateToTarget("#capi-client");'>Client</a>
+* <a href="#" onclick='window.navigateToTarget("#capi-customentity");'>Custom Entity</a>
+* <a href="#" onclick='window.navigateToTarget("#capi-datastream");'>Data Stream</a>
+* <a href="#" onclick='window.navigateToTarget("#capi-entity");'>Entity</a>
+* <a href="#" onclick='window.navigateToTarget("#capi-event");'>Event</a>
+* <a href="#" onclick='window.navigateToTarget("#capi-file");'>File</a>
+* <a href="#" onclick='window.navigateToTarget("#capi-friend");'>Friend</a>
+* <a href="#" onclick='window.navigateToTarget("#capi-gamification");'>Gamification</a>
+* <a href="#" onclick='window.navigateToTarget("#capi-globalapp");'>Global App</a>
+* <a href="#" onclick='window.navigateToTarget("#capi-globalentity");'>Global Entity</a>
+* <a href="#" onclick='window.navigateToTarget("#capi-globalfile");'>Global File</a>
+* <a href="#" onclick='window.navigateToTarget("#capi-globalstats");'>Global Statistics</a>
+* <a href="#" onclick='window.navigateToTarget("#capi-group");'>Group</a>
+* <a href="#" onclick='window.navigateToTarget("#capi-identity");'>Identity</a>
+* <a href="#" onclick='window.navigateToTarget("#capi-itemcatalog");'>Item Catalog</a>
+* <a href="#" onclick='window.navigateToTarget("#capi-leaderboard");'>Leaderboard</a>
+* <a href="#" onclick='window.navigateToTarget("#capi-lobby");'>Lobby</a>
+* <a href="#" onclick='window.navigateToTarget("#capi-mail");'>Mail</a>
+* <a href="#" onclick='window.navigateToTarget("#capi-matchmaking");'>Matchmaking</a>
+* <a href="#" onclick='window.navigateToTarget("#capi-messaging");'>Messaging</a>
+* <a href="#" onclick='window.navigateToTarget("#capi-onewaymatch");'>One-way Match</a>
+* <a href="#" onclick='window.navigateToTarget("#capi-playbackstream");'>Playback Stream</a>
+* <a href="#" onclick='window.navigateToTarget("#capi-playerstate");'>Player State</a>
+* <a href="#" onclick='window.navigateToTarget("#capi-playerstats");'>Player Statistics</a>
+* <a href="#" onclick='window.navigateToTarget("#capi-playerstatsevent");'>Player Statistics Event</a>
+* <a href="#" onclick='window.navigateToTarget("#capi-presence");'>Presence</a>
+* <a href="#" onclick='window.navigateToTarget("#capi-profanity");'>Profanity</a>
+* <a href="#" onclick='window.navigateToTarget("#capi-promotions");'>Promotions</a>
+* <a href="#" onclick='window.navigateToTarget("#capi-pushnotification");'>Push Notification</a>
+* <a href="#" onclick='window.navigateToTarget("#capi-redemptioncode");'>Redemption Code</a>
+* <a href="#" onclick='window.navigateToTarget("#capi-relay");'>Relay</a>
+* <a href="#" onclick='window.navigateToTarget("#capi-rtt");'>RTT</a>
+* <a href="#" onclick='window.navigateToTarget("#capi-s3handling");'>S3 Handling</a>
+* <a href="#" onclick='window.navigateToTarget("#capi-script");'>Script</a>
+* <a href="#" onclick='window.navigateToTarget("#capi-time");'>Time</a>
+* <a href="#" onclick='window.navigateToTarget("#capi-tournament");'>Tournament</a>
+* <a href="#" onclick='window.navigateToTarget("#capi-user");'>User</a>
+* <a href="#" onclick='window.navigateToTarget("#capi-useritems");'>User Items</a>
+* <a href="#" onclick='window.navigateToTarget("#capi-virtualcurrency");'>Virtual Currency</a>
+* <a href="#" onclick='window.navigateToTarget("#capi-segment");'>Segment</a>
+
+The following services still function, but are deprecated and should not be used for new applications:
+
+* <a href="#" onclick='window.navigateToTarget("#capi-product");'>Product</a>

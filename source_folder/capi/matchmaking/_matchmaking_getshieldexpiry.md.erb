@@ -1,0 +1,93 @@
+### GetShieldExpiry
+```r
+{
+  "playerId": "player"
+}
+```
+
+```objective_c
+NSString *playerId = @"player";
+BCCompletionBlock successBlock;      // define callback
+BCErrorCompletionBlock failureBlock; // define callback
+
+[[<%= data.branding.codePrefix %> matchMakingService] getShieldExpiry:playerId
+            completionBlock:successBlock
+       errorCompletionBlock:failureBlock
+                   cbObject:nil];
+```
+
+```cpp
+const char *playerId = "player";
+<%= data.branding.codePrefix %>->getMatchMakingService()->getShieldExpiry(playerId, this);
+```
+
+```csharp
+string playerId = "player";
+SuccessCallback successCallback = (response, cbObject) =>
+{
+    Debug.Log(string.Format("Success | {0}", response));
+};
+FailureCallback failureCallback = (status, code, error, cbObject) =>
+{
+    Debug.Log(string.Format("Failed | {0}  {1}  {2}", status, code, error));
+};
+
+<%= data.branding.codePrefix %>.MatchMakingService.GetShieldExpiry(playerId, successCallback, failureCallback);
+```
+
+```java
+String playerId = "player";
+this; // implements IServerCallback
+
+<%= data.branding.codePrefix %>.getMatchMakingService().getShieldExpiry(playerId, this);
+
+public void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData)
+{
+    System.out.print(String.format("Success | %s", jsonData.toString()));
+}
+public void serverError(ServiceName serviceName, ServiceOperation serviceOperation, int statusCode, int reasonCode, String jsonError)
+{
+    System.out.print(String.format("Failed | %d %d %s", statusCode,  reasonCode, jsonError.toString()));
+}
+```
+
+```javascript
+var playerId = "player";
+
+<%= data.branding.codePrefix %>.matchMaking.getShieldExpiry(playerId, result =>
+{
+	var status = result.status;
+	console.log(status + " : " + JSON.stringify(result, null, 2));
+});
+```
+
+```cfscript
+var playerId = "player";
+var matchMakingProxy = bridge.getMatchMakingServiceProxy();
+
+var postResult = matchMakingProxy.getShieldExpiry(playerId);
+if (postResult.status == 200) {
+    // Success!
+}
+```
+
+<%= partial "partials/jsonBtn" %>
+
+```json-doc
+{
+    "status": 200,
+    "data": {
+        "shieldExpiry": 1433259734956
+    }
+}
+```
+
+Gets the shield expiry for the given player id. Passing in a null player id will return the shield expiry for the current player. The value returned is the time in UTC millis when the shield will expire.
+
+<%= partial(:"partials/servop", :locals => { :service_name => "matchMaking", :operation_name => "GET_SHIELD_EXPIRY" }) %>
+#### Method Parameters
+Parameter | Description
+--------- | -----------
+playerId | The player id or use null to retrieve for the current player
+
+

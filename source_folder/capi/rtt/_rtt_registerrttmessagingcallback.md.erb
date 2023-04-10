@@ -1,0 +1,43 @@
+### RegisterRTTMessagingCallback
+
+```cpp
+<%= data.branding.codePrefix %>.RTTService.registerRTTMessagingCallback(rttCallback);
+```
+
+```csharp
+RTTCallback rttCallback = response =>
+{
+   Debug.Log(response);
+};
+<%= data.branding.codePrefix %>.RTTService.RegisterRTTMessagingCallback(rttCallback);
+```
+
+```java
+<%= data.branding.codePrefix %>.RTTService.registerRTTMessagingCallback(rttCallback);
+```
+
+```objective_c
+Coming soon!
+```
+
+```javascript
+<%= data.branding.codePrefix %>.rttService.registerRTTMessagingCallback(rttCallback);
+```
+
+```cfscript
+// N/A
+```
+
+<%= partial(:"partials/versionTag", :locals => {
+  :version => "4.0.0",
+  :newText => "",
+  :comingText => ""
+}) %>
+
+Registers a callback for RTT Message updates.
+
+#### Method Parameters
+Parameter | Description
+--------- | -----------
+rttCallback | The RTT Chat callback handler.
+

@@ -1,0 +1,48 @@
+### RegisterRewardCallback
+
+```csharp
+<%= data.branding.codePrefix %>.RegisterRewardCallback(callbackFunction);
+```
+
+```cpp
+<%= data.branding.codePrefix %>->registerRewardCallback(this);
+```
+
+```objective_c
+rewardBlock = ^(NSString *rewardsJson) {  };
+
+[<%= data.branding.codePrefix %> registerRewardCallback:rewardBlock];
+```
+
+```java
+<%= data.branding.codePrefix %>.registerRewardCallback(callback);
+```
+
+```javascript
+<%= data.branding.codePrefix %>.registerRewardCallback(rewardCallback);
+```
+
+<%= partial "partials/jsonBtn" %>
+
+```json-doc
+{
+	"status": 200,
+	"apiRewards": [{
+		"service": "authenticationV2",
+		"operation": "AUTHENTICATE",
+		"rewards": {
+			"rewardDetails": {
+				// the reward depending on type (see docs)
+			}
+		}
+	}]
+}
+```
+
+Sets a reward handler for any API call results that return rewards.
+
+#### Method Parameters
+Parameter | Description
+--------- | -----------
+rewardCallback | The reward callback handler.
+

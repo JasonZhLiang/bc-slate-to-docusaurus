@@ -1,0 +1,89 @@
+### SysReadPromotion
+
+```cfscript
+var promotionId = 1
+var promotionsProxy = bridge.getPromotionsServiceProxy();
+
+var postResult = promotionsProxy.sysReadPromotion(promotionId);
+if (postResult.status == 200) {
+    // Success!
+}
+```
+```cpp
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+```csharp
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+```java
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+```javascript
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+```objective_c
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+```r
+{
+	"service": "promotions",
+	"operation": "SYS_READ_PROMOTION",
+	"data": {
+    "promotionId": 1
+  }
+}
+```
+
+<%= partial "partials/jsonBtn" %>
+
+```json-doc
+{
+  "data": {
+    "promotion": {
+      "promotionId": 1,
+      "type": "SCHEDULED",
+      "name": "Independence Day Sale",
+      "message": {
+        "en": "Happy 4th of July!"
+      },
+      "enabled": false,
+      "segments": [],
+      "prices": [
+        {
+          "itemId": "coinbundle10",
+          "priceId": 0
+        }
+      ],
+      "notifications": [
+        {
+          "trigger": "ACTIVATED",
+          "notificationTemplateId": 1
+        }
+      ],
+      "customJson": {
+        "key": "value"
+      },
+      "startAt": 1593781259911,
+      "endAt": 1594126859911,
+      "createdAt": 1592543345470,
+      "updatedAt": 1592543345470,
+      "version": 1
+    }
+  },
+  "status": 200
+}
+```
+<%= partial(:"partials/versionTag", :locals => {
+  :version => "4.5.5",
+  :newText => "",
+  :comingText => ""
+}) %>
+
+Returns the full configuration data of the specified promotion.
+
+<%= partial(:"partials/servop", :locals => { :service_name => "promotions", :operation_name => "SYS_READ_PROMOTION" }) %>
+
+#### Method Parameters
+Parameter | Description
+--------- | -----------
+promotionId | ID uniquely identifying the promotion to read.

@@ -1,0 +1,62 @@
+### DetachTwitterIdentity
+
+```csharp
+string twitterId = "someId";
+
+<%= data.branding.codePrefix %>.IdentityService.DetachTwitterIdentity(
+    twitterId,
+    true,
+    SuccessCallback, FailureCallback);
+```
+
+```cpp
+const char * twitterId = "someId";
+
+<%= data.branding.codePrefix %>->getIdentityService()->detachTwitterIdentity(
+    twitterId, false, this);
+```
+
+```objective_c
+- (void)detachTwitterIdentity:(NSString *)twitterId
+                 continueAnon:(bool)continueAnon
+              completionBlock:(BCCompletionBlock)cb
+         errorCompletionBlock:(BCErrorCompletionBlock)ecb
+                     cbObject:(BCCallbackObject)cbObject;
+```
+
+```java
+public void detachTwitterIdentity(String twitterId, boolean continueAnon, IServerCallback callback)
+```
+
+```javascript
+<%= data.branding.codePrefix %>.identity.detachTwitterIdentity = function(twitterId, continueAnon, callback)
+```
+
+```cfscript
+// N/A
+```
+
+<%= partial "partials/jsonBtn" %>
+
+```json-doc
+{
+    "status" : 200,
+    "data" : null
+}
+```
+
+Detach the Twitter identity from this profile.
+
+<%= partial(:"partials/servop", :locals => { :service_name => "identity", :operation_name => "DETACH" }) %>
+
+#### Method Parameters
+Parameter | Description
+--------- | -----------
+twitterId | String representation of a Twitter user ID
+continueAnon | Proceed even if the profile will revert to anonymous?
+
+#### Status Codes
+Code | Name | Description
+---- | ---- | -----------
+40210 | DOWNGRADING_TO_ANONYMOUS_ERROR | Occurs when detaching the last non-anonymous identity from an account with continueAnon set to false.
+

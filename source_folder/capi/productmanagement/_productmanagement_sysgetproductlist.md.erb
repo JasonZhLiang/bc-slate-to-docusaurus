@@ -1,0 +1,74 @@
+### SysGetProductList
+
+```cfscript
+var category = "bars";
+var productManagementProxy = bridge.getProductManagementServiceProxy();
+
+var postResult = productManagementProxy.sysGetProductList(category);
+if (postResult.status == 200) {
+    // Success!
+}
+```
+```cpp
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+```csharp
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+```java
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+```javascript
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+```objective_c
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+```r
+{
+	"service": "productManagement",
+	"operation": "SYS_GET_PRODUCT_LIST",
+	"data": {
+    "category": "bars"
+  }
+}
+```
+
+<%= partial "partials/jsonBtn" %>
+
+```json-doc
+{
+  "data": {
+    "products": [
+      {
+        "itemId": "barBundle1Imp12peer",
+        "defaultReferencePrice": -1,
+        "iTunesSubscriptionType": "Free",
+        "data": {
+          "customAttr": "value"
+        },
+        "imageUrl": "",
+        "description": "Bundle of 10 Bars.",
+        "title": "Bars (10)",
+        "category": "bars",
+        "type": "Subscription"
+      }
+    ]
+  },
+  "status": 200
+}
+```
+<%= partial(:"partials/versionTag", :locals => {
+  :version => "4.5.5",
+  :newText => "",
+  :comingText => ""
+}) %>
+
+Returns the list of products (summary details only) for the specified category (optional).
+
+<%= partial(:"partials/servop", :locals => { :service_name => "productManagement", :operation_name => "SYS_GET_PRODUCT_LIST" }) %>
+
+#### Method Parameters
+Parameter | Description
+--------- | -----------
+category | Optional. The product item category to filter on. Leave blank or null to retrieve all products.

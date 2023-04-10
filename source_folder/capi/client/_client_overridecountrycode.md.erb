@@ -1,0 +1,40 @@
+### OverrideCountryCode
+
+```cpp
+const char* countryCode = "CA";
+<%= data.branding.codePrefix %>->overrideCountryCode(countryCode);
+```
+
+```csharp
+string countryCode = "CA";
+<%= data.branding.codePrefix %>.OverrideCountryCode(countryCode);
+```
+
+```java
+String countryCode = "CA";
+<%= data.branding.codePrefix %>.overrideCountryCode(countryCode);
+```
+
+```objective_c
+NSString* countryCode = @"CA";
+[<%= data.branding.codePrefix %> overrideCountryCode:countryCode];
+```
+
+```javascript
+var countryCode = "CA";
+<%= data.branding.codePrefix %>.overrideCountryCode(countryCode);
+```
+
+Sets the country code sent to <%= data.branding.productName %> when a user authenticates. Will override any auto detected country.
+
+These methods should be called before authenticating so that they are sent to the server.
+
+#### Method Parameters
+Parameter | Description
+--------- | -----------
+countryCode | ISO 3166-1 two-letter country code
+
+<aside class="warning">
+Because of a Unity limitation country code cannot be detected automatically on any platforms other than iOS and Android.
+</aside>
+

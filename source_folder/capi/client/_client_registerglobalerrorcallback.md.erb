@@ -1,0 +1,44 @@
+### RegisterGlobalErrorCallback
+
+```csharp
+<%= data.branding.codePrefix %>.RegisterGlobalErrorCallback(failureCallback);
+```
+
+```cpp
+<%= data.branding.codePrefix %>->registerGlobalErrorCallback(this);
+```
+
+```objective_c
+errorCompletionBlock  = ^(NSString *serviceName, NSString *serviceOperation, NSInteger statusCode, NSInteger reasonCode, NSString *jsonError, BCCallbackObject cbObject) { };
+
+[<%= data.branding.codePrefix %> registerGlobalErrorCallback:errorCompletionBlock];
+```
+
+```java
+<%= data.branding.codePrefix %>.registerGlobalErrorCallback(callback);
+```
+
+```javascript
+<%= data.branding.codePrefix %>.setErrorCallback(errorCallback);
+```
+
+<%= partial "partials/jsonBtn" %>
+
+```json-doc
+// FAILURE JSON
+{
+	"status": 403,
+	"reason_code": 40300,
+	"status_message": "Message describing failure",
+	"severity": "ERROR"
+}
+```
+
+Registers the Global Error callbacks.
+
+Useful for tracking and logging all errors.
+
+#### Method Parameters
+Parameter | Description
+--------- | -----------
+failureCallback | The error callback handler.

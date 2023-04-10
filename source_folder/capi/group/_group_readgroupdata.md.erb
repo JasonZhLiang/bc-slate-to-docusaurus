@@ -1,0 +1,99 @@
+### ReadGroupData [readgroupdata]
+
+```r
+{
+	"service": "group",
+	"operation": "READ_GROUP_DATA",
+	"data": {
+		"groupId": "a-group-id"
+	}
+}
+```
+
+```objective_c
+NSString *groupId = @"a-group-id";
+BCCompletionBlock successBlock;      // define callback
+BCErrorCompletionBlock failureBlock; // define callback
+
+[[<%= data.branding.codePrefix %> groupService] readGroupData:groupId
+            completionBlock:successBlock
+       errorCompletionBlock:failureBlock
+                   cbObject:nil];
+```
+
+```cpp
+const char *groupId = "a-group-id";
+
+<%= data.branding.codePrefix %>->getGroup()->readGroupData(groupId, this);
+```
+
+```csharp
+string groupId = "a-group-id";
+SuccessCallback successCallback = (response, cbObject) =>
+{
+    Debug.Log(string.Format("Success | {0}", response));
+};
+FailureCallback failureCallback = (status, code, error, cbObject) =>
+{
+    Debug.Log(string.Format("Failed | {0}  {1}  {2}", status, code, error));
+};
+
+<%= data.branding.codePrefix %>.Group.ReadGroupData(groupId, successCallback, failureCallback);
+```
+
+```java
+String groupId = "a-group-id";
+this; // implements IServerCallback
+
+<%= data.branding.codePrefix %>.getGroup().readGroupData(groupId, this);
+
+public void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData)
+{
+    System.out.print(String.format("Success | %s", jsonData.toString()));
+}
+public void serverError(ServiceName serviceName, ServiceOperation serviceOperation, int statusCode, int reasonCode, String jsonError)
+{
+    System.out.print(String.format("Failed | %d %d %s", statusCode,  reasonCode, jsonError.toString()));
+}
+```
+
+```javascript
+var groupId = "a-group-id";
+
+<%= data.branding.codePrefix %>.group.readGroupData(groupId, result =>
+{
+	var status = result.status;
+	console.log(status + " : " + JSON.stringify(result, null, 2));
+});
+```
+
+```cfscript
+var groupId = "a-group-id";
+var groupProxy = bridge.getGroupServiceProxy();
+
+var postResult = groupProxy.readGroupData(groupId);
+if (postResult.status == 200) {
+    // Success!
+}
+```
+
+<%= partial "partials/jsonBtn" %>
+
+```json-doc
+{
+    "status": 200,
+    "data": {
+        "data": {
+            "testInc": 123
+        }
+    }
+}
+```
+
+Retrieve a group's data object
+
+<%= partial(:"partials/servop", :locals => { :service_name => "group", :operation_name => "READ_GROUP_DATA" }) %>
+#### Method Parameters
+Parameter | Description
+--------- | -----------
+groupId | ID of the group

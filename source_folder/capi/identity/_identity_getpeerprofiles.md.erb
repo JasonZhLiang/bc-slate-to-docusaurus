@@ -1,0 +1,91 @@
+### GetPeerProfiles
+```r
+{
+	"service": "identity",
+	"operation": "GET_PEER_PROFILES",
+	"data": {}
+}
+```
+
+<%= partial(:"partials/versionTag", :locals => {
+  :version => "3.2.0",
+  :newText => "",
+  :comingText => ""
+}) %>
+
+```csharp
+SuccessCallback successCallback = (response, cbObject) =>
+{
+    Debug.Log(string.Format("Success | {0}", response));
+};
+FailureCallback failureCallback = (status, code, error, cbObject) =>
+{
+    Debug.Log(string.Format("Failed | {0}  {1}  {2}", status, code, error));
+};
+
+<%= data.branding.codePrefix %>.IdentityService.GetPeerProfiles(successCallback, failureCallback);
+```
+
+```cpp
+<%= data.branding.codePrefix %>->getIdentityService()->getPeerProfiles(this);
+```
+
+```objective_c
+BCCompletionBlock successBlock;      // define callback
+BCErrorCompletionBlock failureBlock; // define callback
+
+[[<%= data.branding.codePrefix %> identityService] getPeerProfiles:successBlock
+       errorCompletionBlock:failureBlock
+                   cbObject:nil];
+```
+
+```java
+this; // implements IServerCallback
+
+<%= data.branding.codePrefix %>.getIdentityService().getPeerProfiles(this);
+
+public void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData)
+{
+    System.out.print(String.format("Success | %s", jsonData.toString()));
+}
+public void serverError(ServiceName serviceName, ServiceOperation serviceOperation, int statusCode, int reasonCode, String jsonError)
+{
+    System.out.print(String.format("Failed | %d %d %s", statusCode,  reasonCode, jsonError.toString()));
+}
+```
+
+```javascript
+
+<%= data.branding.codePrefix %>.identity.getPeerProfiles(result =>
+{
+	var status = result.status;
+	console.log(status + " : " + JSON.stringify(result, null, 2));
+});
+```
+
+```cfscript
+var identityProxy = bridge.getIdentityServiceProxy();
+
+var postResult = identityProxy.getPeerProfiles();
+if (postResult.status == 200) {
+    // Success!
+}
+```
+
+<%= partial "partials/jsonBtn" %>
+
+```json-doc
+{
+	"status": 200,
+	"data": {
+		"mypeer": {
+			"profileId": "b7h32751-befd-4a89-b6da-cd55hs3b2a86"
+		}
+	}
+}
+```
+
+Returns a list of all peer profiles for this user.
+
+<%= partial(:"partials/servop", :locals => { :service_name => "identity", :operation_name => "GET_PEER_PROFILES" }) %>
+

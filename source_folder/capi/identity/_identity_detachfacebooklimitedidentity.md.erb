@@ -1,0 +1,89 @@
+### DetachFacebookLimitedIdentity
+
+```csharp
+string facebookId = "someFacebookId";
+
+<%= data.branding.codePrefix %>.IdentityService.DetachFacebookLimitedIdentity(
+    facebookId,
+    true,
+    SuccessCallback, FailureCallback);
+```
+
+```cpp
+const char * facebookId = "someFacebookId";
+
+<%= data.branding.codePrefix %>->getIdentityService()->detachFacebookLimitedIdentity(
+    facebookId, false, this);
+```
+
+```objective_c
+- (void)detachFacebookLimitedIdentity:(NSString *)facebookId
+                  continueAnon:(bool)continueAnon
+               completionBlock:(BCCompletionBlock)cb
+          errorCompletionBlock:(BCErrorCompletionBlock)ecb
+                      cbObject:(BCCallbackObject)cbObject;
+```
+
+```java
+String facebookId = "someFacebookId";
+Boolean continueAnon = true;
+this; // implements IServerCallback
+
+<%= data.branding.codePrefix %>.getIdentityService().detachFacebookLimitedIdentity(facebookId, ontinueAnon, this);
+
+public void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData)
+{
+    System.out.print(String.format("Success | %s", jsonData.toString()));
+}
+public void serverError(ServiceName serviceName, ServiceOperation serviceOperation, int statusCode, int reasonCode, String jsonError)
+{
+    System.out.print(String.format("Failed | %d %d %s", statusCode,  reasonCode, jsonError.toString()));
+}
+public void detachFacebookLimitedIdentity(String facebookId, boolean continueAnon, IServerCallback callback)
+```
+
+```javascript
+var facebookId = "someFacebookId";
+var continueAnon = true;
+
+<%= data.branding.codePrefix %>.identity.detachFacebookLimitedIdentity(facebookId, continueAnon, result =>
+{
+	var status = result.status;
+	console.log(status + " : " + JSON.stringify(result, null, 2));
+});
+```
+
+```cfscript
+// N/A
+```
+
+<%= partial "partials/jsonBtn" %>
+
+```json-doc
+{
+    "status" : 200,
+    "data" : null
+}
+```
+
+<%= partial(:"partials/versionTag", :locals => {
+  :version => "4.7.0",
+  :newText => "",
+  :comingText => ""
+}) %>
+
+Detach the Facebook Limited login identity from this profile.
+
+<%= partial(:"partials/servop", :locals => { :service_name => "identity", :operation_name => "DETACH" }) %>
+
+#### Method Parameters
+Parameter | Description
+--------- | -----------
+facebookId | The facebook id of the user
+continueAnon | Proceed even if the profile will revert to anonymous?
+
+#### Status Codes
+Code | Name | Description
+---- | ---- | -----------
+40210 | DOWNGRADING_TO_ANONYMOUS_ERROR | Occurs when detaching the last non-anonymous identity from an account with continueAnon set to false.
+

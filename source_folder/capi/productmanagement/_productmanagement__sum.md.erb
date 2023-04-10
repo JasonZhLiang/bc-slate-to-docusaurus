@@ -1,0 +1,12 @@
+#### API Summary
+
+#### ProductManagement
+* [SysGetProductList](#capi-productmanagement-sysgetproductlist) - Returns the list of products (summary details only) for the specified category (optional).
+* [SysReadProduct](#capi-productmanagement-sysreadproduct) - Retrieve the full product meta-data for the specified product.
+* [SysCreateProduct](#capi-productmanagement-syscreateproduct) - Creates a new product with the specifed values.
+* [SysUpdateProduct](#capi-productmanagement-sysupdateproduct) - Updates an existing product with the specifed values. Pass -1 as the version to bypass version checking.
+* [SysDeleteProduct](#capi-productmanagement-sysdeleteproduct) - Delete the product item.
+* [SysAddProductPrice](#capi-productmanagement-sysaddproductprice) - Adds a new price to the given product item.
+* [SysUpdateProductPrice](#capi-productmanagement-sysupdateproductprice) - Updates (replaces) a price for the given product item.
+* [SysDeleteProductPrice](#capi-productmanagement-sysdeleteproductprice) - Deletes a price for the given product item. If the priceId being deleted is the currently active price, the defaultPriceId will be set to -1 (not-for-sale).
+* [SysSetDefaultProductPrice](#capi-productmanagement-syssetdefaultproductprice) - Sets the default (i.e. active) price for the given product item.

@@ -1,0 +1,63 @@
+### DetachPlaystation5Identity
+
+```csharp
+string accountId = "somePlaystationNetworkId";
+
+<%= data.branding.codePrefix %>.IdentityService.DetachPlaystation5Identity(
+    accountId,
+    true,
+    SuccessCallback, FailureCallback);
+```
+
+```cpp
+const char * accountId = "somePlaystationNetworkId";
+
+<%= data.branding.codePrefix %>->getIdentityService()->detachPlaystation5Identity(
+    accountId, false, this);
+```
+
+```objective_c
+// N/A
+```
+
+```java
+// N/A
+```
+
+```javascript
+// N/A
+```
+
+```cfscript
+// N/A
+```
+
+<%= partial "partials/jsonBtn" %>
+
+```json-doc
+{
+    "status" : 200,
+    "data" : null
+}
+```
+<%= partial(:"partials/versionTag", :locals => {
+  :version => "4.13.0",
+  :newText => "",
+  :comingText => ""
+}) %>
+
+Detach the Playstation5 identity from this profile.
+
+<%= partial(:"partials/servop", :locals => { :service_name => "identity", :operation_name => "DETACH" }) %>
+
+#### Method Parameters
+Parameter | Description
+--------- | -----------
+accountId | The playstation5 id of the user
+continueAnon | Proceed even if the profile will revert to anonymous?
+
+#### Status Codes
+Code | Name | Description
+---- | ---- | -----------
+40210 | DOWNGRADING_TO_ANONYMOUS_ERROR | Occurs when detaching the last non-anonymous identity from an account with continueAnon set to false.
+

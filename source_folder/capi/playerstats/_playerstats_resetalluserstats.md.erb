@@ -1,0 +1,99 @@
+### ResetAllUserStats
+
+```objective_c
+BCCompletionBlock successBlock;      // define callback
+BCErrorCompletionBlock failureBlock; // define callback
+
+[[<%= data.branding.codePrefix %> playerStatisticsService] resetAllUserStats:successBlock
+       errorCompletionBlock:failureBlock
+                   cbObject:nil];
+```
+
+```cpp
+<%= data.branding.codePrefix %>->getPlayerStatisticsService()->resetAllUserStats(this);
+```
+
+```csharp
+SuccessCallback successCallback = (response, cbObject) =>
+{
+    Debug.Log(string.Format("Success | {0}", response));
+};
+FailureCallback failureCallback = (status, code, error, cbObject) =>
+{
+    Debug.Log(string.Format("Failed | {0}  {1}  {2}", status, code, error));
+};
+
+<%= data.branding.codePrefix %>.PlayerStatisticsService.ResetAllUserStats(successCallback, failureCallback);
+```
+
+```java
+this; // implements IServerCallback
+
+<%= data.branding.codePrefix %>.getPlayerStatisticsService().resetAllUserStats(this);
+
+public void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData)
+{
+    System.out.print(String.format("Success | %s", jsonData.toString()));
+}
+public void serverError(ServiceName serviceName, ServiceOperation serviceOperation, int statusCode, int reasonCode, String jsonError)
+{
+    System.out.print(String.format("Failed | %d %d %s", statusCode,  reasonCode, jsonError.toString()));
+}
+```
+
+```javascript
+<%= data.branding.codePrefix %>.playerStatistics.resetAllUserStats(result =>
+{
+	var status = result.status;
+	console.log(status + " : " + JSON.stringify(result, null, 2));
+});
+```
+
+```cfscript
+var playerStatisticsProxy = bridge.getPlayerStatisticsServiceProxy();
+
+var postResult = playerStatisticsProxy.resetAllUserStats();
+if (postResult.status == 200) {
+    // Success!
+}
+```
+```r
+{
+	"service": "playerStatistics",
+	"operation": "RESET",
+	"data": {}
+}
+```
+
+<%= partial "partials/jsonBtn" %>
+
+```json-doc
+{
+	"status": 200,
+	"data": {
+		"milestones": {
+			"1": "UNLOCKED",
+			"2": "UNLOCKED"
+		},
+		"xpCapped": false,
+		"experiencePoints": 0,
+		"quests": {
+			"Test Quest 2": "UNLOCKED",
+			"Test Quest 1": "UNLOCKED"
+		},
+		"playerAchievements": [],
+		"experienceLevel": 0,
+		"statistics": {
+			"RoundsWon": 0,
+			"RoundsLost": 0,
+			"DifficultyChanges": 0,
+			"RoundsFinished": 0
+		}
+	}
+}
+```
+
+Reset all of the statistics for this user back to their initial value.
+
+<%= partial(:"partials/servop", :locals => { :service_name => "playerStatistics", :operation_name => "RESET" }) %>
+

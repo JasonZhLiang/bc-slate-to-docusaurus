@@ -1,0 +1,77 @@
+### ConfirmFacebookPurchase
+
+```r
+{
+	"service": "product",
+	"operation": "FB_CONFIRM_PURCHASE",
+	"data": {
+		"signed_request": "Sample Facebook Receipt"
+	}
+}
+```
+
+```csharp
+string signedRequest = "Sample Facebook Receipt";
+SuccessCallback successCallback = (response, cbObject) =>
+{
+    Debug.Log(string.Format("Success | {0}", response));
+};
+FailureCallback failureCallback = (status, code, error, cbObject) =>
+{
+    Debug.Log(string.Format("Failed | {0}  {1}  {2}", status, code, error));
+};
+
+<%= data.branding.codePrefix %>.Product.ConfirmFacebookPurchase(signedRequest, successCallback, failureCallback);
+```
+
+```cpp
+// N/A
+```
+
+```objective_c
+// N/A
+```
+
+```java
+// N/A
+```
+
+```javascript
+var signedRequest = "Sample Facebook Receipt";
+
+<%= data.branding.codePrefix %>.product.confirmFacebookPurchase(signedRequest, result =>
+{
+	var status = result.status;
+	console.log(status + " : " + JSON.stringify(result, null, 2));
+});
+```
+
+```cfscript
+var signedRequest = "Sample Facebook Receipt";
+var productProxy = bridge.getProductServiceProxy();
+
+var postResult = productProxy.confirmFacebookPurchase(signedRequest);
+if (postResult.status == 200) {
+    // Success!
+}
+```
+
+<%= partial "partials/jsonBtn" %>
+
+```json-doc
+{
+    "status": 200,
+    "data": {
+        "result": "OK"
+    }
+}
+```
+
+Confirm Facebook Purchase. On success, the player will be awarded the associated currencies.
+
+<%= partial(:"partials/servop", :locals => { :service_name => "product", :operation_name => "FB_CONFIRM_PURCHASE" }) %>
+#### Method Parameters
+Parameter | Description
+--------- | -----------
+signedRequest | signed_request object received from Facebook
+

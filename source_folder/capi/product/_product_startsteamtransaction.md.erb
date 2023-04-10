@@ -1,0 +1,75 @@
+### StartSteamTransaction
+
+```r
+{
+	"service": "product",
+	"operation": "START_STEAM_TRANSACTION",
+	"data": {
+		"itemId": "item01",
+		"language": "en"
+	}
+}
+```
+
+```cpp
+const char *itemId = "item01";
+const char *language = "en";
+<%= data.branding.codePrefix %>->getProductService()->startSteamTransaction(itemId, language, this);
+```
+
+```csharp
+string itemId = "item01";
+string language = "en";
+SuccessCallback successCallback = (response, cbObject) =>
+{
+    Debug.Log(string.Format("Success | {0}", response));
+};
+FailureCallback failureCallback = (status, code, error, cbObject) =>
+{
+    Debug.Log(string.Format("Failed | {0}  {1}  {2}", status, code, error));
+};
+
+<%= data.branding.codePrefix %>.ProductService.StartSteamTransaction(itemId, language, successCallback, failureCallback);
+```
+
+```objective_c
+// N/A
+```
+
+```java
+// N/A
+```
+
+```javascript
+// N/A
+```
+
+```cfscript
+var itemId = "item01";
+var language = "en";
+var productProxy = bridge.getProductServiceProxy();
+
+var postResult = productProxy.startSteamTransaction(itemId, language);
+if (postResult.status == 200) {
+    // Success!
+}
+```
+
+<%= partial "partials/jsonBtn" %>
+
+```json-doc
+{
+    "status": 200,
+    "data": {}
+}
+```
+
+Initialize a Steam transaction.
+
+<%= partial(:"partials/servop", :locals => { :service_name => "product", :operation_name => "START_STEAM_TRANSACTION" }) %>
+
+#### Method Parameters
+Parameter | Description
+--------- | -----------
+itemId | Items to purchase
+language | ISO 639-1 language code

@@ -1,0 +1,85 @@
+### SysGetPromotionList
+
+```cfscript
+var type = "SCHEDULED"
+var promotionsProxy = bridge.getPromotionsServiceProxy();
+
+var postResult = promotionsProxy.sysGetPromotionList(type);
+if (postResult.status == 200) {
+    // Success!
+}
+```
+```cpp
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+```csharp
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+```java
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+```javascript
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+```objective_c
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+```r
+{
+	"service": "promotions",
+	"operation": "SYS_GET_PROMOTION_LIST",
+	"data": {
+    "type": "SCHEDULED"
+  }
+}
+```
+
+<%= partial "partials/jsonBtn" %>
+
+```json-doc
+{
+  "data": {
+    "promotions": [
+      {
+        "promotionId": 1,
+        "type": "SCHEDULED",
+        "name": "Independence Day Sale",
+        "enabled": false,
+        "segments": [],
+        "startAt": 1593781259911,
+        "endAt": 1594126859911,
+        "createdAt": 1592543345470,
+        "updatedAt": 1592543345470,
+        "version": 1
+      },
+      {
+        "promotionId": 2,
+        "type": "SCHEDULED",
+        "name": "Good Friday Day Sale",
+        "enabled": false,
+        "segments": [],
+        "startAt": 1593781259911,
+        "endAt": 1594126859911,
+        "createdAt": 1592572610332,
+        "updatedAt": 1592572610332,
+        "version": 1
+      }
+    ]
+  },
+  "status": 200
+}
+```
+<%= partial(:"partials/versionTag", :locals => {
+  :version => "4.5.5",
+  :newText => "",
+  :comingText => ""
+}) %>
+
+Returns the list of configured promotions (without full details).
+
+<%= partial(:"partials/servop", :locals => { :service_name => "promotions", :operation_name => "SYS_GET_PROMOTION_LIST" }) %>
+
+#### Method Parameters
+Parameter | Description
+--------- | -----------
+type | SCHEDULED or AUTOMATED to filter specific type, or empty string to return all promotions.

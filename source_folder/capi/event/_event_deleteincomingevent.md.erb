@@ -1,0 +1,95 @@
+### DeleteIncomingEvent
+
+```r
+{
+	"service": "event",
+	"operation": "DELETE_INCOMING",
+	"data": {
+		"evId": "hexString"
+	}
+}
+```
+
+```cpp
+const char *evId = "hexString";
+<%= data.branding.codePrefix %>->getEventService()->deleteIncomingEvent(evId, this);
+```
+
+```csharp
+string evId = "hexString";
+SuccessCallback successCallback = (response, cbObject) =>
+{
+    Debug.Log(string.Format("Success | {0}", response));
+};
+FailureCallback failureCallback = (status, code, error, cbObject) =>
+{
+    Debug.Log(string.Format("Failed | {0}  {1}  {2}", status, code, error));
+};
+
+<%= data.branding.codePrefix %>.EventService.DeleteIncomingEvent(evId, successCallback, failureCallback);
+```
+
+```java
+String evId = "hexString";
+this; // implements IServerCallback
+
+<%= data.branding.codePrefix %>.getEventService().deleteIncomingEvent(evId, this);
+
+public void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData)
+{
+    System.out.print(String.format("Success | %s", jsonData.toString()));
+}
+public void serverError(ServiceName serviceName, ServiceOperation serviceOperation, int statusCode, int reasonCode, String jsonError)
+{
+    System.out.print(String.format("Failed | %d %d %s", statusCode,  reasonCode, jsonError.toString()));
+}
+```
+
+```javascript
+var evId = "hexString";
+
+<%= data.branding.codePrefix %>.event.deleteIncomingEvent(evId, result =>
+{
+	var status = result.status;
+	console.log(status + " : " + JSON.stringify(result, null, 2));
+});
+```
+
+```cfscript
+var evId = "hexString";
+var eventProxy = bridge.getEventServiceProxy();
+
+var postResult = eventProxy.deleteIncomingEvent(evId);
+if (postResult.status == 200) {
+    // Success!
+}
+```
+
+```objective_c
+NSString *evId = @"hexString";
+BCCompletionBlock successBlock;      // define callback
+BCErrorCompletionBlock failureBlock; // define callback
+
+[[<%= data.branding.codePrefix %> eventService] deleteIncomingEvent:evId
+            completionBlock:successBlock
+       errorCompletionBlock:failureBlock
+                   cbObject:nil];
+```
+
+<%= partial "partials/jsonBtn" %>
+
+```json-doc
+{
+    "status" : 200,
+    "data" : null
+}
+```
+
+Delete an event out of the player's incoming event queue.
+
+<%= partial(:"partials/servop", :locals => { :service_name => "event", :operation_name => "DELETE_INCOMING" }) %>
+#### Method Parameters
+Parameter | Description
+--------- | -----------
+evId | The event ID
+

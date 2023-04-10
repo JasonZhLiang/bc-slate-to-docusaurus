@@ -1,0 +1,77 @@
+### SysDeleteEntities
+
+```cfscript
+var entityType = "athletes";
+var deleteCriteria = {
+    "entityId": { "$in":
+        ["aaaa-bbbb-cccc-dddd", "ffff-gggg-hhhh-iiii", "jjjj-kkkk-llll-mmmm"]
+    }
+};
+var acrossAllUsers = true;
+var customEntityProxy = bridge.getCustomEntityServiceProxy();
+
+var postResult = customEntityProxy.sysDeleteEntities(entityType, deleteCriteria, acrossAllUsers);
+if (postResult.status == 200) {
+    // Success!
+}
+```
+```cpp
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+```csharp
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+```java
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+```javascript
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+```objective_c
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+```r
+//ownerId(s) is needed to specify for the owned custom entities only. Or, setting acrossAllUsers to true
+{
+	"service": "customEntity",
+	"operation": "SYS_DELETE_ENTITIES",
+	"data": {
+		"entityType": "athletes",
+		"deleteCriteria": {
+			"entityId": { "$in":
+				["aaaa-bbbb-cccc-dddd", "ffff-gggg-hhhh-iiii", "jjjj-kkkk-llll-mmmm"]
+			},
+			"ownerId":"e7688d66-bf31-4d5c-a0f4-da97628531a3"//the ownerId is only needed for the owned custom entities. Or, set acrossAllUsers to true
+		},
+		"acrossAllUsers": false
+	}
+}
+```
+
+<%= partial "partials/jsonBtn" %>
+
+```json-doc
+{
+  "data": {
+    "deletedCount": 3
+  },
+  "status": 200
+}
+```
+<%= partial(:"partials/versionTag", :locals => {
+  :version => "4.5.5",
+  :newText => "",
+  :comingText => ""
+}) %>
+
+Deletes all applicable custom entities from the server based on the custom entity type, specified delete criteria and acrossAllUsers flag, bypassing ownership/ACL checks.
+
+<%= partial(:"partials/servop", :locals => { :service_name => "customEntity", :operation_name => "SYS_DELETE_ENTITIES" }) %>
+
+#### Method Parameters
+Parameter | Description
+--------- | -----------
+entityType | The type of custom entity being deleted. 
+deleteCriteria | The delete criteria to be applied. 
+acrossAllUsers | Boolean indicating whether delete is to be applied to all users (true) or not (false), when custom entities are owned.
+

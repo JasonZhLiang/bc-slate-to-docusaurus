@@ -1,0 +1,102 @@
+### ReadGlobalStatsForCategory
+
+```objective_c
+NSString *category = @"generated";
+BCCompletionBlock successBlock;      // define callback
+BCErrorCompletionBlock failureBlock; // define callback
+
+[[<%= data.branding.codePrefix %> globalStatisticsService] readGlobalStatsForCategory:category
+            completionBlock:successBlock
+       errorCompletionBlock:failureBlock
+                   cbObject:nil];
+```
+
+```cpp
+const char *category = "generated";
+
+<%= data.branding.codePrefix %>->getGlobalStatisticsService()->readGlobalStatsForCategory(category, this);
+```
+
+```csharp
+string category = "generated";
+SuccessCallback successCallback = (response, cbObject) =>
+{
+    Debug.Log(string.Format("Success | {0}", response));
+};
+FailureCallback failureCallback = (status, code, error, cbObject) =>
+{
+    Debug.Log(string.Format("Failed | {0}  {1}  {2}", status, code, error));
+};
+
+<%= data.branding.codePrefix %>.GlobalStatisticsService.ReadGlobalStatsForCategory(category, successCallback, failureCallback);
+```
+
+```java
+String category = "generated";
+this; // implements IServerCallback
+
+<%= data.branding.codePrefix %>.getGlobalStatisticsService().readGlobalStatsForCategory(category, this);
+
+public void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData)
+{
+    System.out.print(String.format("Success | %s", jsonData.toString()));
+}
+public void serverError(ServiceName serviceName, ServiceOperation serviceOperation, int statusCode, int reasonCode, String jsonError)
+{
+    System.out.print(String.format("Failed | %d %d %s", statusCode,  reasonCode, jsonError.toString()));
+}
+```
+
+```javascript
+var category = "generated";
+
+<%= data.branding.codePrefix %>.globalStatistics.readGlobalStatsForCategory(category, result =>
+{
+	var status = result.status;
+	console.log(status + " : " + JSON.stringify(result, null, 2));
+});
+```
+
+```cfscript
+var category = "generated";
+var globalStatisticsProxy = bridge.getGlobalStatisticsServiceProxy();
+
+var postResult = globalStatisticsProxy.readGlobalStatsForCategory(category);
+if (postResult.status == 200) {
+    // Success!
+}
+```
+
+<%= partial "partials/jsonBtn" %>
+
+```json-doc
+{
+  "data": {
+    "statistics": {
+      "ESTIMATE": 5,
+      "HIGHESTHR": 4,
+      "INNING": 2,
+      "INNINGSREM": 0,
+      "INNINGnew": 1,
+      "OUTS": 0,
+      "PLAYERS": 8,
+      "PLAYER_COUNT": 4,
+      "PLAYER_COUNTa": 1,
+      "POINT": 1,
+      "POINTS": 11,
+      "otherstat": 0
+    }
+  },
+  "status": 200
+}
+```
+
+Method retrieves the global statistics for the given category.
+
+<%= partial(:"partials/servop", :locals => { :service_name => "globalGameStatistics", :operation_name => "READ_FOR_CATEGORY" }) %>
+
+#### Method Parameters
+Parameter | Description
+--------- | -----------
+category | The global statistics category
+

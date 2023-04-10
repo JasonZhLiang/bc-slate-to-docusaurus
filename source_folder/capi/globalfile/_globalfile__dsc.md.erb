@@ -1,0 +1,27 @@
+
+<%= partial(:"partials/versionTag", :locals => {
+  :version => "4.5.0",
+  :newText => "",
+  :comingText => ""
+}) %>
+
+The new Global File API is used to access V3 of our Global Files Service. The V3 API brings new features to global files:
+
+* Ability to organize files into sub-directories
+* Ability to upload global files from the Client Libraries (by migrating an uploaded User File)
+
+*Note that because these files are global to the app, this API has been designed with additional checks (in terms of treeIds, versions, etc.) for concurrency safety.*
+
+Important notes:
+
+* V3 files are stored separately from the legacy global files
+* This API is not supported by the current Design Portal. 
+
+To access the files uploaded into the [Custom Config | Files](https://portal.braincloudservers.com/admin/dashboard#/development/files) section of the portal, you need to use the legacy [S3 Handling](#capi-s3handling) service. 
+
+<aside class="notice">
+There is a new <strong>globalFileTree</strong> structure added to app-record to hold the tree structure that we will store files in. 
+Note that this structure is separate from the files list itself (which will still be stored in the fileMetadata collection) and of 
+course the cloud storage itself (accomplished via S3, Google Cloud Store, etc).
+The <em>treeId</em> (aka globalTreeId, folder or file Id) represents the guid for folders or files in the file tree structure.
+</aside>

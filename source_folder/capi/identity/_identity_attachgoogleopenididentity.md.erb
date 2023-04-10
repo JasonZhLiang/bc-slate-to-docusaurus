@@ -1,0 +1,70 @@
+### AttachGoogleOpenIdIdentity
+
+```csharp
+string googleId = "someId";
+string token = "someToken";
+
+<%= data.branding.codePrefix %>.IdentityService.AttachGoogleOpenIdIdentity(
+    googleId,
+    token,
+    SuccessCallback, FailureCallback);
+```
+
+```cpp
+const char * googleId = "someId";
+const char * token = "someToken";
+
+<%= data.branding.codePrefix %>->getIdentityService()->attachGoogleOpenIdIdentity(
+    googleId, token, this);
+```
+
+```objective_c
+- (void)attachGoogleOpenIdIdentity:(NSString *)googleId
+               authenticationToken:(NSString *)token
+                   completionBlock:(BCCompletionBlock)cb
+              errorCompletionBlock:(BCErrorCompletionBlock)ecb
+                          cbObject:(BCCallbackObject)cbObject;
+```
+
+```java
+public void attachGoogleOpenIdIdentity(String googleId, String authenticationToken, IServerCallback callback)
+```
+
+```javascript
+<%= data.branding.codePrefix %>.identity.attachGoogleOpenIdIdentity = function(googleId, authenticationToken, callback)
+```
+
+```cfscript
+// N/A
+```
+
+<%= partial "partials/jsonBtn" %>
+
+```json-doc
+{
+    "status" : 200,
+    "data" : null
+}
+```
+<%= partial(:"partials/versionTag", :locals => {
+  :version => "4.4.0",
+  :newText => "",
+  :comingText => ""
+}) %>
+
+Attach the user's Google OpenId credentials to the current profile.
+
+<%= partial(:"partials/servop", :locals => { :service_name => "identity", :operation_name => "ATTACH" }) %>
+
+#### Method Parameters
+Parameter | Description
+--------- | -----------
+googleId | The google ID of the user
+authenticationToken | The validated token from the Google OpenId SDK (that will be further validated when sent to the <%= data.branding.productName %> service)
+
+#### Status Codes
+Code | Name | Description
+---- | ---- | -----------
+40211 | DUPLICATE_IDENTITY_TYPE | Returned when trying to attach an identity type that already exists for that profile. For instance you can have only one Google OpenId identity for a profile.
+40212 | MERGE_PROFILES | Returned when trying to attach an identity type that would result in two profiles being merged into one (for instance an anonymous account and a Google account).
+

@@ -1,0 +1,56 @@
+### AwardPeerCurrency
+
+```r
+{
+	"service": "product",
+	"operation": "AWARD_PEER_VC",
+	"data": {
+		"vc_id": "tokens",
+		"vc_amount": 1,
+		"peer": "gameloot"
+	}
+}
+```
+
+```csharp
+// Cloud Code Only
+```
+
+```cpp
+// Cloud Code Only
+```
+
+```objective_c
+// Cloud Code Only
+```
+
+```java
+// Cloud Code Only
+```
+
+```javascript
+// Cloud Code Only
+```
+
+```cfscript
+var currencyType = "tokens";
+var amount = 1;
+var peer = "gameloot";
+var productProxy = bridge.getProductServiceProxy();
+
+var postResult = productProxy.awardPeerCurrency(currencyType, amount, peer);
+if (postResult.status == 200) {
+    // Success!
+}
+```
+
+Used to award Peer currency.
+
+<%= partial(:"partials/servop", :locals => { :service_name => "product", :operation_name => "AWARD_PEER_VC" }) %>
+#### Method Parameters
+Parameter | Description
+--------- | -----------
+currencyType | Type of currency (Ex. ticket, tokens)
+amount | Currency amount to be awarded
+peer | Name of the peer
+

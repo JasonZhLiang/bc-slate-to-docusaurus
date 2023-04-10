@@ -1,0 +1,70 @@
+### RefreshBlockchainUserItems
+
+```cfscript
+var userItemsProxy = bridge.getUserItemsServiceProxy();
+
+var postResult = userItemsProxy.refreshBlockchainUserItems();
+if (postResult.status == 200) {
+    // Success!
+}
+```
+```cpp
+<%= data.branding.codePrefix %>->getUserItemsService()->refreshBlockchainUserItems(this);
+```
+```csharp
+SuccessCallback successCallback = (response, cbObject) =>
+{
+    Debug.Log(string.Format("Success | {0}", response));
+};
+FailureCallback failureCallback = (status, code, error, cbObject) =>
+{
+    Debug.Log(string.Format("Failed | {0}  {1}  {2}", status, code, error));
+};
+
+<%= data.branding.codePrefix %>.UserItemsService.RefreshBlockchainUserItems(successCallback, failureCallback);
+```
+```java
+this; // implements IServerCallback
+
+<%= data.branding.codePrefix %>.getUserItemsService().refreshBlockchainUserItems(this);
+
+public void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData)
+{
+    System.out.print(String.format("Success | %s", jsonData.toString()));
+}
+public void serverError(ServiceName serviceName, ServiceOperation serviceOperation, int statusCode, int reasonCode, String jsonError)
+{
+    System.out.print(String.format("Failed | %d %d %s", statusCode,  reasonCode, jsonError.toString()));
+}
+```
+```javascript
+
+<%= data.branding.codePrefix %>.userItems.refreshBlockchainUserItems(result =>
+{
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
+});
+```
+```objective_c
+BCCompletionBlock successBlock;      // define callback
+BCErrorCompletionBlock failureBlock; // define callback
+
+[[<%= data.branding.codePrefix %> userItemsService] refreshBlockchainUserItems:successBlock
+       errorCompletionBlock:failureBlock
+                   cbObject:nil];
+```
+
+```r
+{
+	"service": "userItems",
+	"operation": "REFRESH_BLOCKCHAIN_USER_ITEMS",
+	"data": {}
+}
+```
+
+
+Syncs the caller's user items with the item management attached blockchain. Results are reported asynchronously via an RTT event.
+
+<%= partial(:"partials/servop", :locals => { :service_name => "userItems", :operation_name => "REFRESH_BLOCKCHAIN_USER_ITEMS" }) %>
+
+

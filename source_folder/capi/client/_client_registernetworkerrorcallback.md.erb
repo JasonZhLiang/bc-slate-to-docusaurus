@@ -1,0 +1,32 @@
+### RegisterNetworkErrorCallback
+
+```csharp
+<%= data.branding.codePrefix %>.RegisterNetworkErrorCallback(callback);
+```
+
+```cpp
+<%= data.branding.codePrefix %>->registerNetworkErrorCallback(this);
+```
+
+```objective_c
+networkErrorBlock = ^() {  };
+
+[<%= data.branding.codePrefix %> registerNetworkErrorCallback:networkErrorBlock];
+```
+
+```java
+<%= data.branding.codePrefix %>.registerNetworkErrorCallback(callback);
+```
+
+```javascript
+// N/A
+```
+
+Registers a callback that is invoked for network errors. Note this is only called if EnableNetworkErrorMessageCaching has been set to true.
+
+
+#### Method Parameters
+Parameter | Description
+--------- | -----------
+callback | The callback handler.
+

@@ -1,0 +1,149 @@
+### SendAdvancedEmailByAddress
+
+<%= partial(:"partials/versionTag", :locals => {
+  :version => "3.5.0",
+  :newText => "",
+  :comingText => ""
+}) %>
+
+```objective_c
+NSString *emailAddress = @"test@email.com";
+NSString *jsonServiceParams = @"{\"fromAddress\":\"email@company.com\",\"fromName\":\"Jane Doe\",\"replyToAddress\":\"optional@company.com\",\"replyToName\":\"Optional ReplyTo\",\"templateId\":\"d-www-xxx-yyy-zzz\",\"dynamicData\":{\"user\":{\"firstName\":\"John\",\"lastName\":\"Doe\"},\"resetLink\":\"www.dummuyLink.io\"},\"categories\":[\"category1\",\"category2\"],\"attachments\":[{\"content\":\"VGhpcyBhdHRhY2htZW50IHRleHQ=\",\"filename\":\"attachment.txt\"}]}";
+BCCompletionBlock successBlock;      // define callback
+BCErrorCompletionBlock failureBlock; // define callback
+
+[[<%= data.branding.codePrefix %> mailService] sendAdvancedEmailByAddress:emailAddress
+          jsonServiceParams:jsonServiceParams
+            completionBlock:successBlock
+       errorCompletionBlock:failureBlock
+                   cbObject:nil];
+```
+
+```cpp
+const char *emailAddress = "test@email.com";
+const char *jsonServiceParams = "{\"fromAddress\":\"email@company.com\",\"fromName\":\"Jane Doe\",\"replyToAddress\":\"optional@company.com\",\"replyToName\":\"Optional ReplyTo\",\"templateId\":\"d-www-xxx-yyy-zzz\",\"dynamicData\":{\"user\":{\"firstName\":\"John\",\"lastName\":\"Doe\"},\"resetLink\":\"www.dummuyLink.io\"},\"categories\":[\"category1\",\"category2\"],\"attachments\":[{\"content\":\"VGhpcyBhdHRhY2htZW50IHRleHQ=\",\"filename\":\"attachment.txt\"}]}";
+<%= data.branding.codePrefix %>->getMailService()->sendAdvancedEmailByAddress(emailAddress, jsonServiceParams, this);
+```
+
+```csharp
+string emailAddress = "test@email.com";
+string jsonServiceParams = "{\"fromAddress\":\"email@company.com\",\"fromName\":\"Jane Doe\",\"replyToAddress\":\"optional@company.com\",\"replyToName\":\"Optional ReplyTo\",\"templateId\":\"d-www-xxx-yyy-zzz\",\"dynamicData\":{\"user\":{\"firstName\":\"John\",\"lastName\":\"Doe\"},\"resetLink\":\"www.dummuyLink.io\"},\"categories\":[\"category1\",\"category2\"],\"attachments\":[{\"content\":\"VGhpcyBhdHRhY2htZW50IHRleHQ=\",\"filename\":\"attachment.txt\"}]}";
+SuccessCallback successCallback = (response, cbObject) =>
+{
+    Debug.Log(string.Format("Success | {0}", response));
+};
+FailureCallback failureCallback = (status, code, error, cbObject) =>
+{
+    Debug.Log(string.Format("Failed | {0}  {1}  {2}", status, code, error));
+};
+
+<%= data.branding.codePrefix %>.MailService.SendAdvancedEmailByAddress(emailAddress, jsonServiceParams, successCallback, failureCallback);
+```
+
+```java
+String emailAddress = "test@email.com";
+String jsonServiceParams = "{\"fromAddress\":\"email@company.com\",\"fromName\":\"Jane Doe\",\"replyToAddress\":\"optional@company.com\",\"replyToName\":\"Optional ReplyTo\",\"templateId\":\"d-www-xxx-yyy-zzz\",\"dynamicData\":{\"user\":{\"firstName\":\"John\",\"lastName\":\"Doe\"},\"resetLink\":\"www.dummuyLink.io\"},\"categories\":[\"category1\",\"category2\"],\"attachments\":[{\"content\":\"VGhpcyBhdHRhY2htZW50IHRleHQ=\",\"filename\":\"attachment.txt\"}]}";
+this; // implements IServerCallback
+
+<%= data.branding.codePrefix %>.getMailService().sendAdvancedEmailByAddress(emailAddress, jsonServiceParams, this);
+
+public void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData)
+{
+    System.out.print(String.format("Success | %s", jsonData.toString()));
+}
+public void serverError(ServiceName serviceName, ServiceOperation serviceOperation, int statusCode, int reasonCode, String jsonError)
+{
+    System.out.print(String.format("Failed | %d %d %s", statusCode,  reasonCode, jsonError.toString()));
+}
+```
+
+```javascript
+var emailAddress = "test@email.com";
+var jsonServiceParams = {
+    "fromAddress": "email@company.com",
+    "fromName": "Jane Doe",
+    "replyToAddress": "optional@company.com",
+    "replyToName": "Optional ReplyTo",
+    "templateId": "d-www-xxx-yyy-zzz",
+    "dynamicData": {
+        "user": {
+            "firstName": "John",
+            "lastName": "Doe"
+        },
+        "resetLink": "www.dummuyLink.io"
+    },
+    "categories": [
+        "category1",
+        "category2"
+    ],
+    "attachments": [
+        {
+            "content": "VGhpcyBhdHRhY2htZW50IHRleHQ=",
+            "filename": "attachment.txt"
+        }
+    ]
+};
+
+<%= data.branding.codePrefix %>.mail.sendAdvancedEmailByAddress(emailAddress, jsonServiceParams, result =>
+{
+	var status = result.status;
+	console.log(status + " : " + JSON.stringify(result, null, 2));
+});
+```
+
+```cfscript
+var emailAddress = "test@email.com";
+var jsonServiceParams = {
+    "fromAddress": "email@company.com",
+    "fromName": "Jane Doe",
+    "replyToAddress": "optional@company.com",
+    "replyToName": "Optional ReplyTo",
+    "templateId": "d-www-xxx-yyy-zzz",
+    "dynamicData": {
+        "user": {
+            "firstName": "John",
+            "lastName": "Doe"
+        },
+        "resetLink": "www.dummuyLink.io"
+    },
+    "categories": [
+        "category1",
+        "category2"
+    ],
+    "attachments": [
+        {
+            "content": "VGhpcyBhdHRhY2htZW50IHRleHQ=",
+            "filename": "attachment.txt"
+        }
+    ]
+};
+var mailProxy = bridge.getMailServiceProxy();
+
+var postResult = mailProxy.sendAdvancedEmailByAddress(emailAddress, jsonServiceParams);
+if (postResult.status == 200) {
+    // Success!
+}
+```
+
+<%= partial "partials/jsonBtn" %>
+
+```json-doc
+{
+    "status": 200,
+    "data": {
+        "message": "Email sent successfully"
+    }
+}
+```
+
+Sends an advanced email to the specified email address.  The advanced API takes a set of parameters that are
+dependant on the mail service configured in the <%= data.branding.productName %> Portal.
+For a list of all available parameters see the top of the Mail service documentation.
+
+<%= partial(:"partials/servop", :locals => { :service_name => "mail", :operation_name => "SEND_ADVANCED_EMAIL_BY_ADDRESS" }) %>
+
+#### Method Parameters
+Parameter | Description
+--------- | -----------
+emailAddress | The address to send the email to
+serviceParams | Set of parameters dependant on the mail service configured

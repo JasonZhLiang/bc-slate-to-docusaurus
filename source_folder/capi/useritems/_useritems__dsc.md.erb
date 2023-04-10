@@ -1,0 +1,19 @@
+
+
+
+<%= partial(:"partials/versionTag", :locals => {
+  :version => "4.2.0",
+  :newText => "",
+  :comingText => ""
+}) %>
+
+The **User Items** service, introduced in 4.2, is used to manage a collection of in-app items that users can be awarded, buy, sell, or trade (using virtual currency). Optionally, these items can be backed up to the blockchain.
+
+Key concepts:
+
+- Items are first defined in the **Item Catalog** 
+- Defined items can be purchased or awarded to users, where they will be recorded as userItem instances.
+- Using an item may consume it (or a portion of it - or none of it). Consumed items will automatically disappear from the user's user item inventory.
+- Using an item may trigger a status effect (i.e. invulnerability for 60 seconds)
+- Using an item may trigger a cool-down period (before the item can be used again) or a regeneration period (a period after which the item regenerates a "use.")
+

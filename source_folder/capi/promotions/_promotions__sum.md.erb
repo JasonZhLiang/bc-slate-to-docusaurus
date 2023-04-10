@@ -1,0 +1,9 @@
+#### API Summary
+
+#### Promotions
+* [SysGetPromotionList](#capi-promotions-sysgetpromotionlist) - Returns the list of configured promotions (without full details).
+* [SysReadPromotion](#capi-promotions-sysreadpromotion) - Returns the full configuration data of the specified promotion.
+* [SysCreatePromotion](#capi-promotions-syscreatePromotion) - Creates a new promotion. The full promotion JSON (minus the promotionId) should be provided. The full promotion JSON, including the created promotionId, will be returned as a result (similar to SysReadPromotion()).
+* [SysUpdatePromotion](#capi-promotions-sysupdatePromotion) - Updates the specified promotion with the provided promotionJson. Any promotionId included in the promotionJson will be ignored.
+* [SysDeletePromotion](#capi-promotions-sysdeletePromotion) - Deletes the specified promotion from the server.
+* [SysEnablePromotion](#capi-promotions-sysenablePromotion) - Enable/Disable a promotion. A convenience API for easily toggling a promotion on/off.

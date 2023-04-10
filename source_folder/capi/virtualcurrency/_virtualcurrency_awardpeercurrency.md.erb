@@ -1,0 +1,64 @@
+### AwardPeerCurrency
+
+```cfscript
+var vcId = "tokens";
+var vcAmount = 1;
+var peerCode = "gameloot";
+var virtualCurrencyProxy = bridge.getVirtualCurrencyServiceProxy();
+
+var postResult = virtualCurrencyProxy.awardPeerCurrency(vcId, vcAmount, peerCode);
+if (postResult.status == 200) {
+    // Success!
+}
+```
+```cpp
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+```csharp
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+```java
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+```javascript
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+```objective_c
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+
+<%= partial "partials/jsonBtn" %>
+
+```json-doc
+{
+    "status" : 200,
+    "data" :
+    {
+        "currencyMap": {
+            "gems": {
+                "purchased": 0,
+                "balance": 0,
+                "consumed": 0,
+                "awarded": 0
+            },
+            "gold": {
+                "purchased": 0,
+                "balance": 100,
+                "consumed": 0,
+                "awarded": 100
+            }
+        }
+    }
+}
+```
+
+Used to award Peer currency.
+
+<%= partial(:"partials/servop", :locals => { :service_name => "virtualCurrency", :operation_name => "AWARD_PEER_VC" }) %>
+
+#### Method Parameters
+Parameter | Description
+--------- | -----------
+vcId | Type of currency (Ex. ticket, tokens)
+vcAmount | Currency amount to be awarded
+peer | Name of the peer

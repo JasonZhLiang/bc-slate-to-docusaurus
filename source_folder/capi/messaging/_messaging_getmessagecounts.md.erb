@@ -1,0 +1,100 @@
+### GetMessageCounts
+
+```r
+{
+	"service": "messaging",
+	"operation": "GET_MESSAGE_COUNTS",
+	"data": {}
+}
+```
+
+```objective_c
+BCCompletionBlock successBlock;      // define callback
+BCErrorCompletionBlock failureBlock; // define callback
+
+[[<%= data.branding.codePrefix %> messagingService] getMessageCounts:successBlock
+       errorCompletionBlock:failureBlock
+                   cbObject:nil];
+```
+
+```cpp
+<%= data.branding.codePrefix %>->getMessagingService()->getMessageCounts(this);
+```
+
+```csharp
+SuccessCallback successCallback = (response, cbObject) =>
+{
+    Debug.Log(string.Format("Success | {0}", response));
+};
+FailureCallback failureCallback = (status, code, error, cbObject) =>
+{
+    Debug.Log(string.Format("Failed | {0}  {1}  {2}", status, code, error));
+};
+
+<%= data.branding.codePrefix %>.MessagingService.GetMessageCounts(successCallback, failureCallback);
+```
+
+```java
+this; // implements IServerCallback
+
+<%= data.branding.codePrefix %>.getMessagingService().getMessageCounts(this);
+
+public void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData)
+{
+    System.out.print(String.format("Success | %s", jsonData.toString()));
+}
+public void serverError(ServiceName serviceName, ServiceOperation serviceOperation, int statusCode, int reasonCode, String jsonError)
+{
+    System.out.print(String.format("Failed | %d %d %s", statusCode,  reasonCode, jsonError.toString()));
+}
+```
+
+```javascript
+
+<%= data.branding.codePrefix %>.messaging.getMessageCounts(result =>
+{
+	var status = result.status;
+	console.log(status + " : " + JSON.stringify(result, null, 2));
+});
+```
+
+```cfscript
+var messagingProxy = bridge.getMessagingServiceProxy();
+
+var postResult = messagingProxy.getMessageCounts();
+if (postResult.status == 200) {
+    // Success!
+}
+```
+
+<%= partial "partials/jsonBtn" %>
+
+```json-doc
+{
+    "status": 200,
+    "data": {
+        "inbox": {
+            "total": 1,
+            "unread": 1
+        },
+        "sent": {
+            "total": 1,
+            "unread": 0
+        }
+    }
+}
+```
+
+Returns the total # of messages, and # of unread messages, per messagbox, for this user. Note that `unread` for `sent` messagebox will always be 0.
+
+<%= partial(:"partials/servop", :locals => { :service_name => "messaging", :operation_name => "GET_MESSAGE_COUNTS" }) %>
+
+#### Method Parameters
+
+None.
+
+#### Status Codes
+| Code | Name | Description |
+| ----- | ----------------------- | ----------------------------------- |
+| 40601 | FEATURE_NOT_ENABLED | Messaging feature is not enabled for app. |
+

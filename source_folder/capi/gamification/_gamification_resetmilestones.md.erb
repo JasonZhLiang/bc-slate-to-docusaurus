@@ -1,0 +1,54 @@
+### ResetMilestones
+
+```r
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+
+```objective_c
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+
+```cpp
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+
+```csharp
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+
+```java
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+
+```javascript
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+
+```cfscript
+var milestones = [ "EGG_MIL01" ];
+var gamificationProxy = bridge.getGamificationServiceProxy();
+
+var postResult = gamificationProxy.resetMilestones(milestones);
+if (postResult.status == 200) {
+    // Success!
+}
+```
+
+<%= partial "partials/jsonBtn" %>
+
+```json-doc
+{
+    "status":200,
+    "data":null
+}
+```
+
+Resets the specified milestones' statuses.
+
+<%= partial(:"partials/servop", :locals => { :service_name => "gamification", :operation_name => "RESET_MILESTONES" }) %>
+#### Method Parameters
+Parameter | Description
+--------- | -----------
+milestones | A list of milestones to reset
+
+

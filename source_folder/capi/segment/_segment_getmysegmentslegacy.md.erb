@@ -1,0 +1,61 @@
+### GetMySegmentsLegacy
+
+```cfscript
+var segmentProxy = bridge.getSegmentServiceProxy();
+
+var postResult = segmentProxy.getMySegmentsLegacy();
+if (postResult.status == 200) {
+    // Success!
+}
+```
+```cpp
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+```csharp
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+```java
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+```javascript
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+```objective_c
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+```r
+{
+	"service": "segment",
+	"operation": "GET_MY_SEGMENTS_LEGACY",
+	"data": {}
+}
+```
+
+<%= partial "partials/jsonBtn" %>
+
+```json-doc
+{
+	"data": {
+		"segments": [
+		  {
+			"segmentId": 1,
+			"name": "segmentname"
+		  },
+		  {
+			"segmentId": 2,
+			"name": "another segment"
+		  }
+		]
+	  },
+	  "status": 200
+}
+```
+<%= partial(:"partials/versionTag", :locals => {
+  :version => "4.5.5",
+  :newText => "",
+  :comingText => ""
+}) %>
+
+Returns the segments for the current user - in legacy format (i.e. using the existing, numeric segment ids). Available via cloud-code only.
+
+<%= partial(:"partials/servop", :locals => { :service_name => "segment", :operation_name => "GET_MY_SEGMENTS_LEGACY" }) %>

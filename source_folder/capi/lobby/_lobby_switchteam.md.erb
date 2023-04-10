@@ -1,0 +1,112 @@
+### SwitchTeam
+
+```r
+{
+	"service": "lobby",
+	"operation": "SWITCH_TEAM",
+	"data": {
+		"lobbyId": "55555:4v4:19",
+		"toTeamCode": "blue"
+	}
+}
+```
+
+```cpp
+const char *lobbyId = "55555:4v4:19";
+const char *toTeamCode = "blue";
+<%= data.branding.codePrefix %>->getLobbyService()->switchTeam(lobbyId, toTeamCode, this);
+```
+
+```csharp
+string lobbyId = "55555:4v4:19";
+string toTeamCode = "blue";
+SuccessCallback successCallback = (response, cbObject) =>
+{
+    Debug.Log(string.Format("Success | {0}", response));
+};
+FailureCallback failureCallback = (status, code, error, cbObject) =>
+{
+    Debug.Log(string.Format("Failed | {0}  {1}  {2}", status, code, error));
+};
+
+<%= data.branding.codePrefix %>.LobbyService.SwitchTeam(lobbyId, toTeamCode, successCallback, failureCallback);
+```
+
+```java
+String lobbyId = "55555:4v4:19";
+String toTeamCode = "blue";
+this; // implements IServerCallback
+
+<%= data.branding.codePrefix %>.getLobbyService().switchTeam(lobbyId, toTeamCode, this);
+
+public void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData)
+{
+    System.out.print(String.format("Success | %s", jsonData.toString()));
+}
+public void serverError(ServiceName serviceName, ServiceOperation serviceOperation, int statusCode, int reasonCode, String jsonError)
+{
+    System.out.print(String.format("Failed | %d %d %s", statusCode,  reasonCode, jsonError.toString()));
+}
+```
+
+```objective_c
+NSString *lobbyId = @"55555:4v4:19";
+NSString *toTeamCode = @"blue";
+BCCompletionBlock successBlock;      // define callback
+BCErrorCompletionBlock failureBlock; // define callback
+
+[[<%= data.branding.codePrefix %> lobbyService] switchTeam:lobbyId
+                 toTeamCode:toTeamCode
+            completionBlock:successBlock
+       errorCompletionBlock:failureBlock
+                   cbObject:nil];
+```
+
+```javascript
+var lobbyId = "55555:4v4:19";
+var toTeamCode = "blue";
+
+<%= data.branding.codePrefix %>.lobby.switchTeam(lobbyId, toTeamCode, result =>
+{
+	var status = result.status;
+	console.log(status + " : " + JSON.stringify(result, null, 2));
+});
+```
+
+```cfscript
+var lobbyId = "55555:4v4:19";
+var toTeamCode = "blue";
+var lobbyProxy = bridge.getLobbyServiceProxy();
+
+var postResult = lobbyProxy.switchTeam(lobbyId, toTeamCode);
+if (postResult.status == 200) {
+    // Success!
+}
+```
+
+<%= partial "partials/jsonBtn" %>
+
+```json-doc
+{
+    "status": 200,
+    "data": {}
+}
+```
+
+Switches to the specified team (if allowed.)
+
+Sends LOBBY_MEMBER_UPDATED to all lobby members, with copy of member data
+
+<%= partial(:"partials/servop", :locals => { :service_name => "lobby", :operation_name => "SWITCH_TEAM" }) %>
+
+#### Method Parameters
+Parameter | Description
+--------- | -----------
+lobbyId | Id of chosen lobby.
+toTeamCode | Specified team code.
+
+#### Status Codes
+Code | Name | Description
+---- | ---- | -----------
+40601 | RTT_NOT_ENABLED | RTT must be enabled for this feature
+

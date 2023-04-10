@@ -1,0 +1,63 @@
+### RegisterRTTEventCallback
+
+```cpp
+<%= data.branding.codePrefix %>.RTTService.registerRTTEventCallback(rttCallback);
+```
+
+```csharp
+RTTCallback rttCallback = response =>
+{
+   Debug.Log(response);
+};
+<%= data.branding.codePrefix %>.RTTService.RegisterRTTEventCallback(rttCallback);
+```
+
+```java
+<%= data.branding.codePrefix %>.RTTService.registerRTTEventCallback(rttCallback);
+```
+
+```objective_c
+Coming soon!
+```
+
+```javascript
+<%= data.branding.codePrefix %>.rttService.registerRTTEventCallback(rttCallback);
+```
+
+```cfscript
+// N/A
+```
+
+<%= partial(:"partials/versionTag", :locals => {
+  :version => "4.0.0",
+  :newText => "",
+  :comingText => ""
+}) %>
+
+Registers a real-time (RTT) callback for Events. Allows the standard <a href="#" onclick='window.navigateToTarget("#capi-event-sendevent");'><code>SendEvent</code></a> call to push updates in real-time if the recipient is online.
+
+> **RTT Event Format**
+```
+{
+    "service": "event",
+    "operation": "GET_EVENTS",
+    "data": {
+        "evId": "5b44f50fe3adc1594bb09c94",
+        "eventType": "testEvent",        
+        "fromPlayerId": "c3a455de-27f5-4126-a051-0effb1c75fd3",
+        "toPlayerId": "44afc271-4e7a-430d-91cc-bca38c76acd0",
+        "createdAt": 1531245839578,
+        "eventData": {
+            "customKey": "customValue"
+        },
+    }
+}
+```
+
+
+#### Method Parameters
+Parameter | Description
+--------- | -----------
+rttCallback | The RTT Event callback handler.
+
+

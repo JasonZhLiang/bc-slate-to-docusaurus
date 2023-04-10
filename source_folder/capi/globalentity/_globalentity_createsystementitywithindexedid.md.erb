@@ -1,0 +1,93 @@
+### CreateSystemEntityWithIndexedId
+
+```r
+{
+	"service": "globalEntity",
+	"operation": "CREATE_SYSTEM_ENTITY_WITH_INDEXED_ID",
+	"data": {
+		"entityType": "address",
+		"entityIndexedId": "entityId1",
+		"timeToLive": -1,
+		"acl": {
+			"other": 1
+		},
+		"data": {
+			"street": "1309 Carling"
+		}
+	}
+}
+```
+
+```objective_c
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+
+```cpp
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+
+```csharp
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+
+```java
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+
+```javascript
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+```cfscript
+var entityType = "address";
+var entityIndexedId = "entityId1";
+var timeToLive = null;
+var data = {
+  "street": "1309 Carling"
+};
+var acl = {
+  "other": 1
+};
+var globalEntityProxy = bridge.getGlobalEntityServiceProxy();
+
+var postResult = globalEntityProxy.createSystemEntityWithIndexedId(entityType, entityIndexedId, timeToLive, acl, data);
+if (postResult.status == 200) {
+    // Success!
+}
+```
+
+<%= partial "partials/jsonBtn" %>
+```json-doc
+{  
+   "data":{  
+      "gameId":"12270",
+      "entityId":"b2a2bbdf-084b-41c8-802a-05de9c37b20c",
+      "ownerId":null,
+      "entityType":"address",
+      "entityIndexedId":"entityId1",
+      "version":1,
+      "acl":{  
+         "other":1
+      },
+      "expiresAt":9223372036854776000,
+      "timeToLive":-1,
+      "createdAt":1550852309251,
+      "updatedAt":1550852309251
+   },
+   "status":200
+}
+```
+
+
+Create a new system entity on the server with an indexed id.
+
+<%= partial(:"partials/servop", :locals => { :service_name => "globalEntity", :operation_name => "CREATE_SYSTEM_ENTITY_WITH_INDEXED_ID" }) %>
+
+
+#### Method Parameters
+Parameter | Description
+--------- | -----------
+entityType | The entity type as defined by the user 
+entityIndexedId | Id used to index the entity
+timeToLive | Sets expiry time for entity in milliseconds if > 0 
+acl | The entity's <a href="#" onclick='window.navigateToTarget("#appendix-acl");'>Access Control List</a> as object. A null ACL implies default permissions which make the entity readable/writeable by only the user. 
+data | The entity's data object 

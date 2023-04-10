@@ -1,0 +1,111 @@
+### ReadSelectedProperties
+```r
+{
+	"service": "globalApp",
+	"operation": "READ_SELECTED_PROPERTIES",
+	"data": {
+        "propertyNames": ["comma separated property names"]
+    }
+}
+```
+
+```cpp
+std::vector<std::string> propertyNames;
+propertyNames.push_back("pName1");
+propertyNames.push_back("pName2");
+<%= data.branding.codePrefix %>->getGlobalAppService()->readSelectedProperties(propertyNames, this);
+```
+
+```csharp
+string[] propertyNames = { "pName1", "pName2" };
+
+SuccessCallback successCallback = (response, cbObject) =>
+{
+    Debug.Log(string.Format("Success | {0}", response));
+};
+FailureCallback failureCallback = (status, code, error, cbObject) =>
+{
+    Debug.Log(string.Format("Failed | {0}  {1}  {2}", status, code, error));
+};
+
+<%= data.branding.codePrefix %>.GlobalAppService.ReadSelectedProperties(propertyNames, successCallback, failureCallback);
+```
+
+```java
+String[] propertyNames = { "pName1", "pName2" };
+this; // implements IServerCallback
+
+<%= data.branding.codePrefix %>.getGlobalAppService().readSelectedProperties(propertyNames, this);
+
+public void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData)
+{
+    System.out.print(String.format("Success | %s", jsonData.toString()));
+}
+public void serverError(ServiceName serviceName, ServiceOperation serviceOperation, int statusCode, int reasonCode, String jsonError)
+{
+    System.out.print(String.format("Failed | %d %d %s", statusCode,  reasonCode, jsonError.toString()));
+}
+```
+
+```objective_c
+NSArray *propertyNames = @[ @"pName1", @"pName2" ];
+BCCompletionBlock successBlock;      // define callback
+BCErrorCompletionBlock failureBlock; // define callback
+
+[[<%= data.branding.codePrefix %> globalAppService] readSelectedProperties:propertyNames
+            completionBlock:successBlock
+       errorCompletionBlock:failureBlock
+                   cbObject:nil];
+```
+
+```javascript
+var propertyNames = [ "pName1", "pName2" ];
+<%= data.branding.codePrefix %>.globalApp.readSelectedProperties(propertyNames, result =>
+{
+	var status = result.status;
+	console.log(status + " : " + JSON.stringify(result, null, 2));
+});
+```
+
+```cfscript
+var propertyNames = [ "pName1", "pName2" ];
+var globalAppProxy = bridge.getGlobalAppServiceProxy();
+
+var postResult = globalAppProxy.readSelectedProperties(propertyNames);
+if (postResult.status == 200) {
+    // Success!
+}
+```
+
+<%= partial "partials/jsonBtn" %>
+
+```json-doc
+{
+    "status":200,
+    "data":{
+        "pName1": {
+            "name": "pName1",
+            "value": "value1"
+        },
+        "pName2": {
+            "name": "pName2",
+            "value": "value2"
+        }
+    }
+}
+```
+
+<%= partial(:"partials/versionTag", :locals => {
+  :version => "4.9.0",
+  :newText => "",
+  :comingText => ""
+}) %>
+
+Read all the global properties of the app identified by the property names provided in parameter.
+
+<%= partial(:"partials/servop", :locals => { :service_name => "globalApp", :operation_name => "READ_SELECTED_PROPERTIES" }) %>
+
+#### Method Parameters
+Parameter | Description
+--------- | -----------
+propertyNames | List of property names identifying the global properties to return.

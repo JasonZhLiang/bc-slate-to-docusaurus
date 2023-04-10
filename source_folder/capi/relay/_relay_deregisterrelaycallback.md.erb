@@ -1,0 +1,21 @@
+### DeregisterRelayCallback
+
+```csharp
+<%= data.branding.codePrefix %>.RelayService.DeregisterRelayCallback();
+```
+```cpp
+<%= data.branding.codePrefix %>->getRelayService()->deregisterRelayCallback();
+```
+
+```cfscript
+// N/A
+```
+
+<%= partial(:"partials/versionTag", :locals => {
+  :version => "4.0",
+  :newText => "",
+  :comingText => ""
+}) %>
+
+
+Deregisters callback for relay messages coming from peers.

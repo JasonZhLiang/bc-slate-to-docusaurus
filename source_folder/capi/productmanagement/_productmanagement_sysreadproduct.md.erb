@@ -1,0 +1,113 @@
+### SysReadProduct
+
+```cfscript
+var itemId = "gold_bars_10";
+var productManagementProxy = bridge.getProductManagementServiceProxy();
+
+var postResult = productManagementProxy.sysReadProduct(itemId);
+if (postResult.status == 200) {
+    // Success!
+}
+```
+```cpp
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+```csharp
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+```java
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+```javascript
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+```objective_c
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+```r
+{
+	"service": "productManagement",
+	"operation": "SYS_READ_PRODUCT",
+	"data": {
+    "itemId": "gold_bars_10"
+  }
+}
+```
+
+<%= partial "partials/jsonBtn" %>
+
+```json-doc
+{
+  "data": {
+    "productDetails": {
+      "gameId": "23783",
+      "itemId": "gold_bars_10",
+      "type": "Consumable",
+      "iTunesSubscriptionType": null,
+      "category": "gold",
+      "title": "product",
+      "description": "gold_bars_10",
+      "imageUrl": null,
+      "currency": {},
+      "parentCurrency": {},
+      "peerCurrency": {
+        "deploypeer": {
+          "gems": 1
+        }
+      },
+      "defaultPriceId": 0,
+      "prices": [
+        {
+          "priceId": 0,
+          "referencePrice": 400,
+          "storeData": {
+            "amazon": {
+              "id": "com.amazon.cunsumable.gold.v1"
+            },
+            "facebook": {
+              "currencyList": [
+                {
+                  "currency": "USD",
+                  "price": 6
+                }
+              ]
+            },
+            "googlePlay": {
+              "id": "3"
+            }
+          }
+        },
+        {
+          "priceId": 1,
+          "referencePrice": 500,
+          "storeData": {
+            "amazon": {
+              "id": "a"
+            }
+          }
+        }
+      ],
+      "data": null,
+      "createdAt": 1592542611282,
+      "updatedAt": 1592543124830,
+      "version": 7,
+      "absoluteImageUrl": null
+    }
+  },
+  "status": 200
+}
+```
+<%= partial(:"partials/versionTag", :locals => {
+  :version => "4.5.5",
+  :newText => "",
+  :comingText => ""
+}) %>
+
+Retrieve the full product meta-data for the specified product.
+
+<%= partial(:"partials/servop", :locals => { :service_name => "productManagement", :operation_name => "SYS_READ_PRODUCT" }) %>
+
+#### Method Parameters
+Parameter | Description
+--------- | -----------
+itemId | The item id being requested.

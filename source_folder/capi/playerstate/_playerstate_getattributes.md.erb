@@ -1,0 +1,88 @@
+### GetAttributes
+
+```r
+{
+	"service": "playerState",
+	"operation": "GET_ATTRIBUTES"
+}
+```
+
+```objective_c
+BCCompletionBlock successBlock;      // define callback
+BCErrorCompletionBlock failureBlock; // define callback
+
+[[<%= data.branding.codePrefix %> playerStateService] getAttributes:successBlock
+       errorCompletionBlock:failureBlock
+                   cbObject:nil];
+```
+
+```cpp
+<%= data.branding.codePrefix %>->getPlayerStateService()->getAttributes(this);
+```
+
+```csharp
+SuccessCallback successCallback = (response, cbObject) =>
+{
+    Debug.Log(string.Format("Success | {0}", response));
+};
+FailureCallback failureCallback = (status, code, error, cbObject) =>
+{
+    Debug.Log(string.Format("Failed | {0}  {1}  {2}", status, code, error));
+};
+
+<%= data.branding.codePrefix %>.PlayerStateService.GetAttributes(successCallback, failureCallback);
+```
+
+```java
+this; // implements IServerCallback
+
+<%= data.branding.codePrefix %>.getPlayerStateService().getAttributes(this);
+
+public void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData)
+{
+    System.out.print(String.format("Success | %s", jsonData.toString()));
+}
+public void serverError(ServiceName serviceName, ServiceOperation serviceOperation, int statusCode, int reasonCode, String jsonError)
+{
+    System.out.print(String.format("Failed | %d %d %s", statusCode,  reasonCode, jsonError.toString()));
+}
+```
+
+```javascript
+
+<%= data.branding.codePrefix %>.playerState.getAttributes(result =>
+{
+	var status = result.status;
+	console.log(status + " : " + JSON.stringify(result, null, 2));
+});
+```
+
+```cfscript
+var playerStateProxy = bridge.getPlayerStateServiceProxy();
+
+var postResult = playerStateProxy.getAttributes();
+if (postResult.status == 200) {
+    // Success!
+}
+```
+
+<%= partial "partials/jsonBtn" %>
+
+```json-doc
+{
+  "data": {
+    "attributes": {
+      "avatarId": "123",
+      "validatedContactEmail": "bitheads@gmail.com",
+      "address": "1309 Carling Ave.",
+      "numberOfGamePlayed": "2"
+    }
+  },
+  "status": 200
+}
+```
+
+Retrieve the user attributes.
+
+<%= partial(:"partials/servop", :locals => { :service_name => "playerState", :operation_name => "GET_ATTRIBUTES" }) %>
+

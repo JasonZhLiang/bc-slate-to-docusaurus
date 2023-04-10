@@ -1,0 +1,82 @@
+#### API Summary
+
+#### Group Management
+
+* [CreateGroup](#capi-group-creategroup) - create a group
+* [CreateGroupWithSummaryData](#capi-group-creategroupwithsummarydata) - Create a group. 
+* [DeleteGroup](#capi-group-deletegroup) - delete the specified group
+* [IncrementGroupData](#capi-group-incrementgroupdata) - increment numeric values in the group's data
+* [ReadGroup](#capi-group-readgroup) - read the specified group
+* [ReadGroupData](#capi-group-readgroupdata) - read the data object of specified group
+* [SetGroupOpen](#capi-group-setgroupopen) - set if user's can join the group
+* [UpdateGroupAcl](#capi-group-updategroupacl) - update the acl permissions of the specified group
+* [UpdateGroupName](#capi-group-updategroupname) - update the name of the specified group
+* [UpdateGroupData](#capi-group-updategroupdata) - update the JSON data of the specified group
+* [UpdateGroupSummaryData](#capi-group-updategroupsummarydata) - update a group's summary data
+
+
+#### Group members
+
+* [AddGroupMember](#capi-group-addgroupmember) - add a member to the group
+* [AutoJoinGroup](#capi-group-autojoingroup) - auto-joins an open group that matches the criteria
+* [AutoJoinGroupMulti](#capi-group-autojoingroupmulti) - use when there are multiple group types to consider when auto-joining
+* [CancelGroupInvitation](#capi-group-cancelgroupinvitation) - cancel a previously sent invitation
+* [InviteGroupMember](#capi-group-invitegroupmember) - invite a member to the group
+* [JoinGroup](#capi-group-joingroup) - join the specified group
+* [LeaveGroup](#capi-group-leavegroup) - leave the specified group
+* [ReadGroupMembers](#capi-group-readgroupmembers) - returns a list of the group's members
+* [RejectGroupInvitation](#capi-group-rejectgroupinvitation) - reject a group invitation
+* [RemoveGroupMember](#capi-group-removegroupmember) - remove the specified member from the group
+* [UpdateGroupMember](#capi-group-updategroupmember) - update the group member's attributes
+
+
+#### Locating Groups
+
+* [ListGroupsPage](#capi-group-listgroupspage) - list first page of groups that match the specified query
+* [ListGroupsPageByOffset](#capi-group-listgroupspagebyoffset) - get next/prev page
+* [ListGroupsWithMember](#capi-group-listgroupswithmember) - list groups that include the specified member
+* [GetMyGroups](#capi-group-getmygroups) - return groups that the current user is a member of
+* [GetRandomGroupsMatching](#capi-group-getrandomgroupsmatching) - gets a list of randomly selected groups from the server
+
+
+#### Group entities
+
+* [CreateGroupEntity](#capi-group-creategroupentity) - create an entity
+* [DeleteGroupEntity](#capi-group-deletegroupentity) - delete an entity
+* [IncrementGroupEntityData](#capi-group-incrementgroupentitydata) - increment numeric values in the entity's data
+* [ReadGroupEntitiesPage](#capi-group-readgroupentitiespage) - returns a list of entities that match the query
+* [ReadGroupEntitiesPageByOffset](#capi-group-readgroupentitiespagebyoffset) - get next/prev page
+* [ReadGroupEntity](#capi-group-readgroupentity) - reads the specified entity
+* [UpdateGroupEntityData](#capi-group-updategroupentitydata) - updates the specified entity
+* [UpdateGroupEntityAcl](#capi-group-updategroupentityccl) - Update the acl settings for a group entity, enforcing ownership.
+
+
+#### System calls
+
+* [SysAddGroupMember](#capi-group-sysaddgroupmember) - add a user as a member to the group, bypassing ownership/ACL checks. Optional parameters: role OR attributes.
+* [SysChangeGroupType](#capi-group-syschangegrouptype) - changes the group type
+* [SysCreateGroup](#capi-group-syscreategroup) - create a group
+* [SysCreateGroupEntity](#capi-group-syscreategroupentity) - create an entity in the group with no owner
+* [SysDeleteGroup](#capi-group-sysdeletegroup) - delete a group
+* [SysDeleteGroupEntity](#capi-group-sysdeletegroupentity) - delete an entity in the group
+* [SysGetRandomGroupsMatching](#capi-group-sysgetrandomgroupsmatching) - Gets a list of up to maxReturn randomly selected groups from the server based on the where condition, bypassing ownership/ACL checks
+* [SysIncrementGroupData](#capi-group-sysincrementgroupdata) - partial increment of group data field items. Partial set of items incremented as specified
+* [SysIncrementGroupEntityData](#capi-group-sysincrementgroupentitydata) - partial increment of group entity data field items. Partial set of items incremented as specified
+* [SysIsGroupMember](#capi-group-sysisgroupmember) - Verifies if user is a group member and returns information about group member, bypassing ownership/ACL checks
+* [SysListGroupsPage](#capi-group-syslistgroupspage) - retrieve a page of group summary information based on the specified context
+* [SysListGroupsPageByOffset](#capi-group-syslistgroupspagebyoffset) - retrieve a page of group summary information based on the encoded context and specified page offset
+* [SysReadGroup](#capi-group-sysreadgroup) - retrieve information about the group
+* [SysReadGroupData](#capi-group-sysreadgroupdata) - retrieve a group's data object
+* [SysReadGroupEntitiesPage](#capi-group-sysreadgroupentitiespage) - retrieve a page of group entity information based on the specified context
+* [SysReadGroupEntitiesPageByOffset](#capi-group-sysreadgroupentitiespagebyoffset) - retrieve a page of group entity information based on the encoded context and specified page offset
+* [SysReadGroupEntity](#capi-group-sysreadgroupentity) - read an entity in the group
+* [SysReadGroupMembers](#capi-group-sysreadgroupmembers) - read all members in the group
+* [SysRemoveGroupMember](#capi-group-sysremovegroupmember) - Remove a member from the group, bypassing group ownership/ACL checks.
+* [SysSetGroupOpen](#capi-group-syssetgroupopen) - Set whether a group is open (true) or closed (false)
+* [SysUpdataGroupAcl](#capi-group-sysupdatagroupacl) - update a group's access conditions
+* [SysUpdateGroupData](#capi-group-sysupdategroupdata) - update a group's data
+* [SysUpdateGroupEntityData](#capi-group-sysupdategroupentitydata) - update the data for a group entity
+* [SysUpdateGroupMember](#capi-group-sysupdategroupmember) - update a member of the group
+* [SysUpdateGroupName](#capi-group-sysupdategroupname) - update a group's name
+* [SysUpdateGroupSummaryData](#capi-group-sysupdategroupsummarydata) - update a group's summary data
+* [SysUpdateGroupEntityAcl](#capi-group-sysupdategroupentityacl) - Update the acl settings for a group entity, bypassing ownership/ACL checks.

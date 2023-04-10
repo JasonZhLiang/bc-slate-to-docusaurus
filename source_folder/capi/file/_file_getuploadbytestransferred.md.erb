@@ -1,0 +1,44 @@
+### GetUploadBytesTransferred
+
+```csharp
+string myUploadId = "1234-1234-1234-1234"; //From UploadFile return data
+
+int bytes = <%= data.branding.codePrefix %>.FileService.GetUploadBytesTransferred(myUploadId);
+```
+
+```cpp
+const char* myUploadId = "1234-1234-1234-1234"; //From UploadFile return data
+
+int64_t bytes = <%= data.branding.codePrefix %>->getFileService()->
+    getUploadBytesTransferred(myUploadId);
+```
+
+```objective_c
+NSString * uploadId = @"1234-1234-1234-1234"; //From UploadFile return data
+
+[[<%= data.branding.codePrefix %> fileService] getUploadBytesTransferred:uploadId];
+```
+
+```java
+public void deleteUserFiles(String cloudPath, Boolean recurse, IServerCallback callback)
+```
+
+```javascript
+// N/A
+```
+
+```cfscript
+// N/A
+```
+
+Returns the number of bytes uploaded or -1 if upload not found.
+
+#### Method Parameters
+Parameter | Description
+--------- | -----------
+uploadId | The id of the upload
+
+<aside class="warning">
+This will always return the total bytes to transfer on Unity mobile platforms.
+</aside>
+

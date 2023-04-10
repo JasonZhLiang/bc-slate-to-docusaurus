@@ -1,0 +1,79 @@
+### DeleteSystemEntity
+
+```r
+{
+	"service": "entity",
+	"operation": "DELETE",
+	"data": {
+		"entityId": "someEntityId",
+		"version": -1
+	}
+}
+```
+
+<%= partial(:"partials/versionTag", :locals => {
+  :version => "3.5.0",
+  :newText => "",
+  :comingText => ""
+}) %>
+
+```cpp
+//cloud code only
+```
+
+```csharp
+//cloud code only
+```
+
+```java
+//cloud code only
+```
+
+```objective_c
+//cloud code only
+```
+
+```javascript
+//cloud code only
+```
+
+```cfscript
+var entityId = "a-entity-id";
+var version = 2;
+var globalEntityProxy = bridge.getGlobalEntityServiceProxy();
+
+var postResult = globalEntityProxy.deleteSystemEntity(entityId, version);
+if (postResult.status == 200) {
+    // Success!
+}
+```
+
+<%= partial "partials/jsonBtn" %>
+
+```json-doc
+{
+    "status":200,
+    "data":null
+}
+```
+
+Method deletes the given system entity on the server.
+
+System entities are entities that can only be deleted via cloudCode, or the <%= data.branding.productName %> dashboard.
+Use them for storing data that the users should not be able to delete.
+
+This method is affected by versioning. See the <a href="#" onclick='window.navigateToTarget("#appendix-version");'>versioning documentation</a> for more information.
+
+<%= partial(:"partials/servop", :locals => { :service_name => "entity", :operation_name => "DELETE" }) %>
+
+#### Method Parameters
+Parameter | Description
+--------- | -----------
+entityId | The id of the entity to update
+version | The entity's data object. -1 indicates current entity version
+#### Status Codes
+Code | Name | Description
+---- | ---- | -----------
+40344 | ENTITY_VERSION_MISMATCH | The version parameter does not match the current version on the server
+
+

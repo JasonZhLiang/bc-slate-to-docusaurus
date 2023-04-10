@@ -1,0 +1,107 @@
+### MergeAdvancedIdentity
+
+```csharp
+AuthenticationType authenticationType = AuthenticationType.Universal;
+AuthenticationIds ids;
+ids.externalId = "authAdvancedUser";
+ids.authenticationToken = "authAdvancedPass";
+ids.authenticationSubType = "";
+string extraJson = "{\"key\":\"value\"}";
+
+<%= data.branding.codePrefix %>.IdentityService.MergeAdvancedIdentity(
+    authenticationType,
+    ids,
+    extraJson,
+    SuccessCallback, FailureCallback);
+```
+
+```cpp
+AuthenticationType authenticationType = AuthenticationType::Universal;
+AuthenticationIds ids = { "authAdvancedUser", "authAdvancedPass", "" };
+const char* extraJson = "{\"key\":\"value\"}";
+
+<%= data.branding.codePrefix %>->getIdentityService()->mergeAdvancedIdentity(
+    authenticationType, ids, extraJson, this);
+```
+
+```objective_c
+AuthenticationType authenticationType = [AuthenticationTypeObjc Universal];
+AuthenticationIds *ids = [[AuthenticationIdsObjc alloc]init];
+ids.externalId = @"authAdvancedUser";
+ids.authenticationToken = @"authAdvancedPass";
+ids.authenticationSubType = @"";
+NSString * extraJson = "{\"key\":\"value\"}";
+BCCompletionBlock successBlock;      // define callback
+BCErrorCompletionBlock failureBlock; // define callback
+
+[[<%= data.branding.codePrefix %> identityService]
+       mergeAdvancedIdentity:authenticationType
+                        ids:ids
+                  extraJson:extraJson
+            completionBlock:successBlock
+       errorCompletionBlock:failureBlock
+                   cbObject:nil];
+```
+
+```java
+AuthenticationType authenticationType = AuthenticationType.Universal;
+AuthenticationIds ids = new AuthenticationIds ("authAdvancedUser", "authAdvancedPass", "");
+string extraJson = "{\"key\":\"value\"}";
+this; // implements IServerCallback
+
+<%= data.branding.codePrefix %>.getIdentityService().mergeAdvancedIdentity(authenticationType, ids, extraJson, this);
+
+public void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData)
+{
+    System.out.print(String.format("Success | %s", jsonData.toString()));
+}
+public void serverError(ServiceName serviceName, ServiceOperation serviceOperation, int statusCode, int reasonCode, String jsonError)
+{
+    System.out.print(String.format("Failed | %d %d %s", statusCode,  reasonCode, jsonError.toString()));
+}
+```
+
+```javascript
+var authenticationType = <%= data.branding.codePrefix %>.brainCloudClient.authentication.AUTHENTICATION_TYPE_UNIVERSAL;
+var ids = {externalId: "authAdvancedUser", authenticationToken: "authAdvancedPass", authenticationSubType: ""};
+var forceCreate = true;
+var extraJson = {"key":"value"};
+
+<%= data.branding.codePrefix %>.identity.mergeAdvancedIdentity(authenticationType, ids, forceCreate, extraJson, result =>
+{
+	var status = result.status;
+	console.log(status + " : " + JSON.stringify(result, null, 2));
+});
+```
+
+```cfscript
+// N/A
+```
+
+<%= partial "partials/jsonBtn" %>
+
+```json-doc
+{  
+   "data":{  
+      "profileId":"f94f7e2d-3cdd-4fd6-9c28-392f7875e9df"
+   },
+   "status":200
+}
+```
+
+<%= partial(:"partials/versionTag", :locals => {
+  :version => "4.10.0",
+  :newText => "",
+  :comingText => ""
+}) %>
+
+Merge the profile associated with the provided credentials with the current profile.
+
+<%= partial(:"partials/servop", :locals => { :service_name => "identity", :operation_name => "MERGE" }) %>
+
+#### Method Parameters
+Parameter | Description
+--------- | -----------
+authenticationType | Universal, Universal, Facebook, etc
+ids | Auth IDs structure
+extraJson | Additional to piggyback along with the call, to be picked up by pre- or post- hooks. Leave empty string for no extraJson

@@ -1,0 +1,67 @@
+### Detach
+
+```cfscript
+var externalId = "email@email.com";
+var authenticationType = "Email";
+var confirmAnonymous = false;
+var identityProxy = bridge.getIdentityServiceProxy();
+
+var postResult = identityProxy.detach(externalId, authenticationType, confirmAnonymous);
+if (postResult.status == 200) {
+    // Success!
+}
+```
+```cpp
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+```csharp
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+```java
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+```javascript
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+```objective_c
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+
+```r
+{
+	"service": "identity",
+	"operation": "DETACH",
+	"data": {
+		"externalId": "email@email.com",
+		"authenticationType": "Email",
+		"confirmAnonymous": false
+	}
+}
+```
+
+
+<%= partial "partials/jsonBtn" %>
+
+```json-doc
+{
+    "status" : 200,
+    "data" : null
+}
+```
+
+Detaches an identity from the current profile.
+
+<%= partial(:"partials/servop", :locals => { :service_name => "identity", :operation_name => "DETACH" }) %>
+
+#### Method Parameters
+Parameter | Description
+--------- | -----------
+externalId | User ID
+authenticationType | Type of authentication. Full list of types can be found <a href="#" onclick='window.navigateToTarget("#appendix-authtypes");'>here</a>.
+confirmAnonymous | If false will generate an error when downgrading to anonymous (null is false)
+
+#### Status Codes
+Code | Name | Description
+---- | ---- | -----------
+40210 | DOWNGRADING_TO_ANONYMOUS_ERROR | Occurs when detaching the last non-anonymous identity from an account with continueAnon set to false.
+

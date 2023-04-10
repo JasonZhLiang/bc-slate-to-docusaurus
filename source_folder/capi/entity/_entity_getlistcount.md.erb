@@ -1,0 +1,111 @@
+### GetListCount
+
+```r
+{
+	"service": "entity",
+	"operation": "GET_LIST_COUNT",
+	"data": {
+		"where": {
+			"entityType": "address"
+		}
+	}
+}
+```
+
+```objective_c
+NSString *whereJson = @"{\"entityType\":\"address\"}";
+BCCompletionBlock successBlock;      // define callback
+BCErrorCompletionBlock failureBlock; // define callback
+
+[[<%= data.branding.codePrefix %> entityService] getListCount:whereJson
+            completionBlock:successBlock
+       errorCompletionBlock:failureBlock
+                   cbObject:nil];
+```
+
+```cpp
+const char *whereJson = "{\"entityType\":\"address\"}";
+<%= data.branding.codePrefix %>->getEntityService()->getListCount(whereJson, this);
+```
+
+```csharp
+string whereJson = "{\"entityType\":\"address\"}";
+SuccessCallback successCallback = (response, cbObject) =>
+{
+    Debug.Log(string.Format("Success | {0}", response));
+};
+FailureCallback failureCallback = (status, code, error, cbObject) =>
+{
+    Debug.Log(string.Format("Failed | {0}  {1}  {2}", status, code, error));
+};
+
+<%= data.branding.codePrefix %>.EntityService.GetListCount(whereJson, successCallback, failureCallback);
+```
+
+```java
+String whereJson = "{\"entityType\":\"address\"}";
+this; // implements IServerCallback
+
+<%= data.branding.codePrefix %>.getEntityService().getListCount(whereJson, this);
+
+public void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData)
+{
+    System.out.print(String.format("Success | %s", jsonData.toString()));
+}
+public void serverError(ServiceName serviceName, ServiceOperation serviceOperation, int statusCode, int reasonCode, String jsonError)
+{
+    System.out.print(String.format("Failed | %d %d %s", statusCode,  reasonCode, jsonError.toString()));
+}
+```
+
+```javascript
+var whereJson = {
+    "entityType": "address"
+};
+
+<%= data.branding.codePrefix %>.entity.getListCount(whereJson, result =>
+{
+	var status = result.status;
+	console.log(status + " : " + JSON.stringify(result, null, 2));
+});
+```
+
+```cfscript
+var whereJson = {
+    "entityType": "address"
+};
+var entityProxy = bridge.getEntityServiceProxy();
+
+var postResult = entityProxy.getListCount(whereJson);
+if (postResult.status == 200) {
+    // Success!
+}
+```
+
+<%= partial "partials/jsonBtn" %>
+
+```json-doc
+{
+    "status": 200,
+    "data": {
+        "entityListCount": 5
+    }
+}
+```
+
+Method gets a count of entities based on the where clause.
+
+Fields available for use in the 'where' clause are:
+
+ - entityType
+ - createdAt
+ - updatedAt
+
+ Along with all custom data (using `data.`).  For more information on the query syntax see <a href="#" onclick='window.navigateToTarget("#appendix-mongodbwherequeries");'>here</a>.
+
+<%= partial(:"partials/servop", :locals => { :service_name => "entity", :operation_name => "GET_LIST_COUNT" }) %>
+#### Method Parameters
+Parameter | Description
+--------- | -----------
+whereJson | Mongo style query string
+

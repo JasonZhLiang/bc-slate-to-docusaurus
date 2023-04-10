@@ -1,0 +1,62 @@
+### DeleteLeaderboards
+
+```r
+{
+	"service": "leaderboard",
+	"operation": "DELETE_LEADERBOARDS",
+	"data": {
+		"leaderboardIds": [
+			"1st-leaderboard-id",
+			"2nd-leaderboard-id"
+		]
+	}
+}
+```
+
+```csharp
+//cloud code only
+```
+
+```cpp
+//cloud code only
+```
+
+```objective_c
+//cloud code only
+```
+
+```java
+//cloud code only
+```
+
+```javascript
+//cloud code only
+```
+
+```cfscript
+var leaderboardIds = [ "1234-1234-1234-1234", "1234-1234-1234-1234" ];
+
+var leaderboardProxy = bridge.getLeaderboardServiceProxy();
+var retVal = leaderboardProxy.deleteLeaderboards(leaderboardsIds);
+```
+
+<%= partial "partials/jsonBtn" %>
+
+```json-doc
+{
+    "status": 200,
+    "data": {
+        "deletedLeaderboardCount": 2,
+        "message": "2 record(s) deleted successfully."
+    }
+}
+```
+
+Deletes the specified leaderboards from <%= data.branding.productName %> server.
+
+<%= partial(:"partials/servop", :locals => { :service_name => "leaderboard", :operation_name => "DELETE_LEADERBOARDS" }) %>
+#### Method Parameters
+Parameter | Description
+--------- | -----------
+leaderboardIds | Collection of leaderboard IDs.
+

@@ -1,0 +1,36 @@
+### DisableRTT
+
+```cpp
+<%= data.branding.codePrefix %>->disableRTT();
+```
+
+```csharp
+<%= data.branding.codePrefix %>.RTTService.DisableRTT();
+```
+
+```java
+<%= data.branding.codePrefix %>.RTTService.disableRTT();
+```
+
+```objective_c
+Coming soon!
+```
+
+```javascript
+<%= data.branding.codePrefix %>.rttService.disableRTT();
+```
+
+```cfscript
+// N/A
+```
+
+<%= partial(:"partials/versionTag", :locals => {
+  :version => "4.0.0",
+  :newText => "",
+  :comingText => ""
+}) %>
+
+Disables the RTT connection.
+
+<%= partial(:"partials/servop", :locals => { :service_name => "rttRegistration", :operation_name => "disconnect" }) %>
+

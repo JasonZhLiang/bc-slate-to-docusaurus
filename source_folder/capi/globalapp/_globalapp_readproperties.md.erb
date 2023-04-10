@@ -1,0 +1,86 @@
+### ReadProperties
+```r
+{
+	"service": "globalApp",
+	"operation": "READ_PROPERTIES",
+	"data": {}
+}
+```
+
+```cpp
+<%= data.branding.codePrefix %>->getGlobalAppService()->readProperties(this);
+```
+
+```csharp
+SuccessCallback successCallback = (response, cbObject) =>
+{
+    Debug.Log(string.Format("Success | {0}", response));
+};
+FailureCallback failureCallback = (status, code, error, cbObject) =>
+{
+    Debug.Log(string.Format("Failed | {0}  {1}  {2}", status, code, error));
+};
+
+<%= data.branding.codePrefix %>.GlobalAppService.ReadProperties(successCallback, failureCallback);
+```
+
+```java
+this; // implements IServerCallback
+
+<%= data.branding.codePrefix %>.getGlobalAppService().readProperties(this);
+
+public void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData)
+{
+    System.out.print(String.format("Success | %s", jsonData.toString()));
+}
+public void serverError(ServiceName serviceName, ServiceOperation serviceOperation, int statusCode, int reasonCode, String jsonError)
+{
+    System.out.print(String.format("Failed | %d %d %s", statusCode,  reasonCode, jsonError.toString()));
+}
+```
+
+```objective_c
+BCCompletionBlock successBlock;      // define callback
+BCErrorCompletionBlock failureBlock; // define callback
+
+[[<%= data.branding.codePrefix %> globalAppService] readProperties:successBlock
+       errorCompletionBlock:failureBlock
+                   cbObject:nil];
+```
+
+```javascript
+
+<%= data.branding.codePrefix %>.globalApp.readProperties(result =>
+{
+	var status = result.status;
+	console.log(status + " : " + JSON.stringify(result, null, 2));
+});
+```
+
+```cfscript
+var globalAppProxy = bridge.getGlobalAppServiceProxy();
+
+var postResult = globalAppProxy.readProperties();
+if (postResult.status == 200) {
+    // Success!
+}
+```
+
+<%= partial "partials/jsonBtn" %>
+
+```json-doc
+{
+    "status":200,
+    "data":{
+        "pName": {
+            "name": "pName",
+            "description": "pValue",
+            "value": "pDescription"
+        }
+    }
+}
+```
+
+Read the game's properties.
+
+<%= partial(:"partials/servop", :locals => { :service_name => "globalApp", :operation_name => "READ_PROPERTIES" }) %>

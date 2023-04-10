@@ -1,0 +1,57 @@
+#### API Summary
+
+#### Global Leaderboard Views
+
+* [GetGlobalLeaderboardView](#capi-leaderboard-getgloballeaderboardview) - view the global leaderboard centered around this user's score
+* [GetGlobalLeaderboardPage](#capi-leaderboard-getgloballeaderboardpage) - view a page of the global leaderboard
+* [GetGlobalLeaderboardEntryCount](#capi-leaderboard-getgloballeaderboardentrycount) - returns the # of entries in the leaderboard
+* [GetGlobalLeaderboardVersions()](#capi-leaderboard-getgloballeaderboardversions) - Retrieve information about the retained versions for the leaderboard (sorted newest to oldest).
+
+
+#### Social Leaderboard Views
+
+* [GetSocialLeaderboard](#capi-leaderboard-getsocialleaderboard) - retrieve a leaderboard filtered to this user's friends
+* [GetMultiSocialLeaderboard](#capi-leaderboard-getmultisocialleaderboard) - retrieve the results of several leaderboards, filtered to this user's friends. Handy for Candy Crush-style maps.
+* [GetGroupSocialLeaderboard](#capi-leaderboard-getgroupsocialleaderboard) - retrieve a leaderboard filtered to the specified group
+* [GetPlayersSocialLeaderboard](#capi-leaderboard-getplayerssocialleaderboard) - retrieve a leaderboard filtered to a specific set of players
+* [GetPlayersSocialLeaderboardByVersion()](#capi-leaderboard-getplayerssocialleaderboardbyversion) - Retrieve a sorted, social leaderboard of the specified list of players by version.
+
+
+#### Posting Scores
+
+* [GetPlayerScore](#capi-leaderboard-getplayerscore) - retrieves the player's score in the leaderboard
+* [GetPlayerScoresFromLeaderboards](#capi-leaderboard-getplayerscoresfromleaderboards) - retrieves the players score from multiple leaderboards
+* [PostScoreToLeaderboard](#capi-leaderboard-postscoretoleaderboard) - post a score to the specified leaderboard
+* [PostScoreToDynamicLeaderboardUTC](#capi-leaderboard-postscoretodynamicleaderboardutc) - post a score to a leaderboard (creating the leaderboard if it doesn't already exist)
+* [PostScoreToDynamicLeaderboardDaysUTC](#capi-leaderboard-postscoretodynamicleaderboarddaysutc) - post a score to a leaderboard (creating the leaderboard if it doesn't already exist) based on an arbitrary number of days rotation
+* [PostScoreToLeaderboardOnBehalfOf](#capi-leaderboard-postscoretoleaderboardonbehalfof) - post score to another player's score
+* [RemovePlayerScore](#capi-leaderboard-removeplayerscore) - Remove the players
+
+
+#### Group Leaderboards
+
+* [GetGroupLeaderboardView](#capi-leaderboard-getgroupleaderboardview) - leaderboard results (of version) that centers on the current group
+* [GetGroupLeaderboardViewByVersion](#capi-leaderboard-getgroupleaderboardviewbyversion) - leaderboard results that centers on the current group
+* [PostScoreToGroupLeaderboard](#capi-leaderboard-postscoretogroupleaderboard) - post the group score to the given group leaderboard
+* [PostScoreToDynamicGroupLeaderboardUTC](#capi-leaderboard-postscoretodynamicgroupleaderboardutc) - post the group score to the given group leaderboard (creating the leaderboard if it doesn't already exist)
+* [RemoveGroupScore](#capi-leaderboard-removegroupscore) - removes the group's score data from the specified group leaderboard
+
+#### Leaderboard Managerment
+
+* [ListAllLeaderboards](#capi-leaderboard-listallleaderboards) - retrieves a list of all leaderboards
+* [CreateLeaderboard](#capi-leaderboard-createleaderboard) - creates a leaderboard
+* [EditLeaderboard](#capi-leaderboard-editleaderboard) - updates a leaderboard
+* [DeleteLeaderboards](#capi-leaderboard-deleteleaderboards) - deletes a leaderboard
+* [SysResetNeverLeaderboard](#capi-leaderboard-sysresetneverleaderboard) - manually reset a never-rotating leaderboard
+* [SysCreateLeaderboard](#capi-leaderboard-syscreateleaderboard) - Create a new player or group entry leaderboard configuration.
+* [SysEditLeaderboard](#capi-leaderboard-syseditleaderboard) - Edit a player or group entry leaderboard configuration.
+* [SysCreateLeaderboardConfig](#capi-leaderboard-syscreateleaderboardconfig) - Creates a leaderboard configuration, with support for tournament leaderboards.
+* [SysEditLeaderboardConfig](#capi-leaderboard-syseditleaderboardconfig) - Edits a leaderboard configuration, with support for tournament leaderboards.
+* [SysGetLeaderboardConfig](#capi-leaderboard-sysgetleaderboardconfig) - Returns leaderboard configuration information, including tournament settings, for future and current (active) version of the specified leaderboard.
+* [SysListLeaderboardConfigs](#capi-leaderboard-syslistleaderboardconfigs) - Returns list of applicable leaderboards, with summary leaderboard configuration information, including tournament flags, if applicable. Any supported optionsJson flag not specified will default to false.
+* [SysEditTournamentSettingsForFuturePeriodsOnly](#capi-leaderboard-sysddittournamentsettingsforfutureperiodsonly) - Updates the tournament settings for the leaderboard configuration, for future recurring periods only (does not affect current rotation). Supported tSettingsJson settings include: 'tTournament' (with 'tConfigs' to configure tournament templates, 'tAutoJoin' flag, 'tAutoClaim' flag), and 'tPhases' (to schedule 'enrolMins', 'announcementMins', 'disallowMins' and 'bufferMins' minutes).
+* [SysEditTournamentSettingsIncludingCurrentPeriod](#capi-leaderboard-sysedittournamentsettingsincludingcurrentperiod) - Updates the tournament settings for the leaderboard configuration, for the current period in progress, as well as the future periods if recurring periods (not ADHOC). Supported tSettingsJson settings include: 'tTournament' (with 'tConfigs' to configure tournament templates, 'tAutoJoin' flag, 'tAutoClaim' flag), and 'tPhases' (to schedule 'enrolMins', 'announcementMins', 'disallowMins' and 'bufferMins' minutes), and, if ADHOC tournament in progress, API also supports 'tPeriod' duration settings ('durationDays', 'durationDays', 'durationDays').
+* [SysCreateAdhocTournamentPeriod](#capi-leaderboard-syscreateadhoctournamentperiod) - Schedules a new tournament period for the ADHOC leaderboard configuration. Tournament must be scheduled in the future. Tournament settings ('tSettingsJson') must include tournament period ('tPeriod'), tournament configs and associated flags ('tTournament') and tournament phases ('tPhases').
+* [SysEditAdhocTournamentPeriod](#capi-leaderboard-syseditadhoctournamentperiod) - Updates a future ADHOC tournament period scheduled for the leaderboard configuration, identified by the existing period's UTC startingAt time, in milliseconds. Period being edited must be scheduled in the future, not in-progress. Tournament settings may include tournament period ('tPeriod'), tournament configs and associated flags ('tTournament') and tournament phases ('tPhases').
+* [SysDeleteAdhocTournamentPeriod](#capi-leaderboard-sysdeleteadhoctournamentperiod) - Deletes a future ADHOC tournament period scheduled for the leaderboard configuration, identified by the existing period's UTC startingAt time, in milliseconds. Period being edited must be scheduled in the future, not in-progress. Tournament settings may include tournament period ('tPeriod'), tournament configs and associated flags ('tTournament') and tournament phases ('tPhases').
+  

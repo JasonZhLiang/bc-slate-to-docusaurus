@@ -1,0 +1,31 @@
+
+<%= partial(:"partials/versionTag", :locals => {
+  :version => "3.8.0",
+  :newText => "",
+  :comingText => ""
+}) %>
+
+<%= data.branding.productName %> is built upon a high performance request/response architecture.
+This means that its APIs are REST-like -- essentially you only received data from
+<%= data.branding.productName %> servers by directly requesting it (i.e. request/reponse).
+
+
+<%= data.branding.productName %>'s new Real-Time Tech (RTT) featureset expands upon these capabilities -
+adding the ability for <%= data.branding.productName %> to push information and updates to clients
+that need it.
+
+![RTT](<%= I18n.t(:root) %> <%= data.images.rtt_architecture %>)
+
+Services that require RTT include:
+
+* Chat
+* Lobbies
+* Online Matchmaking
+* Presence
+
+In addition, the following services have been enhanced to take advantage of RTT (if enabled):
+
+* Async Multiplayer
+* Events
+* Messaging
+

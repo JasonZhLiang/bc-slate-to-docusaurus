@@ -1,0 +1,30 @@
+The **TournamentService** API allows apps to interact with <%= data.branding.productName %>'s *Global Tournaments* feature.
+
+Tournaments allow developers to automatically reward players based on their performance in leaderboards. Rewards can be virtual currencies, XP, stats and more.
+
+To create an instance of a Tournament, you first create a *Tournament Template* - and attach it to a Leaderboard via the Design Portal.
+
+Once a Leaderboard has a Tournament attached its behavior changes (i.e., you need to [join](#capi-tournament-jointournament) the tournament before you can post scores, etc.)
+
+At the end of a Tournament cycle (i.e. period), players are sent a `SYSTEM_TOURNAMENT_COMPLETE` event indicating that the tournament has completed. If there is a reward, the app should [claim it](#capi-tournament-claimtournamentreward).
+
+For more information on how *Global Tournaments* work, see [Introducing Global Tournaments](http://getbraincloud.com/apidocs/introducing-global-tournaments/).
+
+For more information on *Events*, see the <a href="#" onclick='window.navigateToTarget("#capi-event");'>Events API</a>.
+
+
+<aside class="notice">
+Pro-tip: There are two fields, <strong>tRank</strong> and <strong>rank</strong>, in our tournament system. The former repesents the tournament ranking for the score (with tied tournament scores will be having the same tRank), the latter
+repesents the leaderboard ranking, it will be unique, so even tied scores will be given a different leaderboard <em>rank</em> (with the most recently posted "tied' score having a better rank).
+</aside>
+
+#### Tournament Divisions
+
+Tournaments with too many players can be less enticing to players because they have a smaller chance to win. *Divisions* solve this problem by arbitrarily breaking smaller groups - eg. 100 players each. We call each mini-competition a *Division Instance*.
+
+*Divisions Instances* only exist for a single tournament period. Once the challenge period is complete, players are disbursed and will join new division instances as the next tournament cycle begins.
+
+FYI - Division instances are essentially managed leaderboards, and are given special leaderboard ids to distinguish them. The ids, for example  `^D^weekly^55`, include an incrementing sequence number that identity the instance.
+
+*Note - Divisions are not to be confused with Tiers. Tiers normally imply a ranking difference between players - eg. bronze, silver and gold. You can implement this notion in <%= data.branding.productName %> using a separate division set (or simply leaderboards+tournaments) for each tier - the management of ranking players up/down is up to the developer. Ask us for implementation suggestions if you are interested.*
+

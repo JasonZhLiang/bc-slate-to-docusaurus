@@ -1,0 +1,88 @@
+### SysIncrementData
+
+```cfscript
+var entityType = "athletes";
+var entityId = "aaaa-bbbb-cccc-dddd";
+var fieldsJson = { 
+    "goals": 3, 
+    "assists": 5 
+};
+var customEntityProxy = bridge.getCustomEntityServiceProxy();
+
+var postResult = customEntityProxy.sysIncrementData(entityType, entityId, fieldsJson);
+if (postResult.status == 200) {
+    // Success!
+}
+```
+```cpp
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+```csharp
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+```java
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+```javascript
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+```objective_c
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+
+```r
+{
+	"service": "customEntity",
+	"operation": "SYS_INCREMENT_DATA",
+	"data": {
+		"entityType": "athletes",
+		"entityId": "aaaa-bbbb-cccc-dddd",
+		"fieldsJson": { 
+            "goals": 3, 
+            "assists": 5 
+        }
+	}
+}
+```
+
+<%= partial "partials/jsonBtn" %>
+
+```json-doc
+{
+  "data": {
+    "entityId": "aaaa-bbbb-cccc-dddd",
+    "version": 2,
+    "acl": {
+      "other": 2
+    },
+    "ownerId": null,
+    "expiresAt": null,
+    "timeToLive": null,
+    "createdAt": 1586047449214,
+    "updatedAt": 1591290232477,
+    "data": {
+        "goals": 3, 
+        "assists": 5 
+    },
+    "entityType": "athletes"
+  },
+  "status": 200
+}
+```
+
+<aside class="notice">
+This method is not sharding safe - and thus is not recommended for custom entities that you may want to shard for greater performance and scalability in the future. 
+Consider using <strong>SysIncrementDataSharded()</strong> version of this method instead.
+</aside>
+
+Increments the specified fields by the specified amount within custom entity data on the server, bypassing ownership/ACL permissions checks.
+
+<%= partial(:"partials/servop", :locals => { :service_name => "customEntity", :operation_name => "SYS_INCREMENT_DATA" }) %>
+
+#### Method Parameters
+Parameter | Description
+--------- | -----------
+entityType | The type of custom entity being updated. 
+entityId | The id of custom entity being updated. 
+fieldsJson | Specific fields, as JSON, within entity's custom data, with respective increment amount.
+

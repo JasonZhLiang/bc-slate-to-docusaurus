@@ -1,0 +1,34 @@
+### EnableCompressedRequests
+
+```csharp
+<%= data.branding.codePrefix %>.EnableCompressedRequests(true);
+```
+
+```cpp
+<%= data.branding.codePrefix %>->enableCompressedRequests(true);
+```
+
+```objective_c
+[<%= data.branding.codePrefix %> enableCompressedRequests:true];
+```
+
+```java
+<%= data.branding.codePrefix %>.enableCompressedRequests(true);
+```
+
+```javascript
+<%= data.branding.codePrefix %>.enableCompressedRequests(true);
+```
+
+<%= partial(:"partials/versionTag", :locals => {
+  :version => "4.9.0",
+  :newText => "",
+  :comingText => ""
+}) %>
+
+Enables sending Gzip compressed packets of requests from client side. Which can significantely decrease response time for requests with large body content.
+
+#### Method Parameters
+Parameter | Description
+--------- | -----------
+enabled | True if request packets should be compressed

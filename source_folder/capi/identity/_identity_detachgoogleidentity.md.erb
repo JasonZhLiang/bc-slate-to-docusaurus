@@ -1,0 +1,62 @@
+### DetachGoogleIdentity
+
+```csharp
+string googleId = "someId";
+
+<%= data.branding.codePrefix %>.IdentityService.DetachGoogleIdentity(
+    googleId,
+    true,
+    SuccessCallback, FailureCallback);
+```
+
+```cpp
+const char * googleId = "someId";
+
+<%= data.branding.codePrefix %>->getIdentityService()->detachGoogleIdentity(
+    googleId, false, this);
+```
+
+```objective_c
+- (void)detachGoogleIdentity:(NSString *)googleId
+                continueAnon:(bool)continueAnon
+             completionBlock:(BCCompletionBlock)cb
+        errorCompletionBlock:(BCErrorCompletionBlock)ecb
+                    cbObject:(BCCallbackObject)cbObject;
+```
+
+```java
+public void detachGoogleIdentity(String googleId, boolean continueAnon, IServerCallback callback)
+```
+
+```javascript
+<%= data.branding.codePrefix %>.identity.detachGoogleIdentity = function(googleId, continueAnon, callback)
+```
+
+```cfscript
+// N/A
+```
+
+<%= partial "partials/jsonBtn" %>
+
+```json-doc
+{
+    "status" : 200,
+    "data" : null
+}
+```
+
+Detach the Google identity from this profile.
+
+<%= partial(:"partials/servop", :locals => { :service_name => "identity", :operation_name => "DETACH" }) %>
+
+#### Method Parameters
+Parameter | Description
+--------- | -----------
+googleId | The google ID of the user
+continueAnon | Proceed even if the profile will revert to anonymous?
+
+#### Status Codes
+Code | Name | Description
+---- | ---- | -----------
+40210 | DOWNGRADING_TO_ANONYMOUS_ERROR | Occurs when detaching the last non-anonymous identity from an account with continueAnon set to false.
+

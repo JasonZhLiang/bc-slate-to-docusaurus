@@ -1,0 +1,24 @@
+### GetSessionId
+
+```csharp
+string sessionId = <%= data.branding.codePrefix %>.GetSessionId();
+```
+
+```cpp
+const char * sessionId = <%= data.branding.codePrefix %>->getSessionId();
+```
+
+```objective_c
+const char * sessionId = [<%= data.branding.codePrefix %> sessionId];
+```
+
+```java
+String sessionId = <%= data.branding.codePrefix %>.getSessionId();
+```
+
+```javascript
+var sessionId = <%= data.branding.codePrefix %>.getSessionId();
+```
+
+Returns the session id if a connection with <%= data.branding.productName %> has been established.
+

@@ -1,0 +1,72 @@
+### FinalizeSteamTransaction
+
+```r
+{
+	"service": "product",
+	"operation": "FINALIZE_STEAM_TRANSACTION",
+	"data": {
+		"transId": "trans01"
+	}
+}
+```
+
+```cpp
+const char *transId = "trans01";
+<%= data.branding.codePrefix %>->getProductService()->finalizeSteamTransaction(transId, this);
+```
+
+```csharp
+string transId = "trans01";
+SuccessCallback successCallback = (response, cbObject) =>
+{
+    Debug.Log(string.Format("Success | {0}", response));
+};
+FailureCallback failureCallback = (status, code, error, cbObject) =>
+{
+    Debug.Log(string.Format("Failed | {0}  {1}  {2}", status, code, error));
+};
+
+<%= data.branding.codePrefix %>.ProductService.FinalizeSteamTransaction(transId, successCallback, failureCallback);
+```
+
+```objective_c
+// N/A
+```
+
+```java
+// N/A
+```
+
+```javascript
+// N/A
+```
+
+```cfscript
+var transId = "trans01";
+var productProxy = bridge.getProductServiceProxy();
+
+var postResult = productProxy.finalizeSteamTransaction(transId);
+if (postResult.status == 200) {
+    // Success!
+}
+```
+
+<%= partial "partials/jsonBtn" %>
+
+```json-doc
+{
+    "status": 200,
+    "data": {
+        "result": "OK"
+    }
+}
+```
+
+Finalize Steam Transaction. On success, the player will be awarded the associated currencies.
+
+<%= partial(:"partials/servop", :locals => { :service_name => "product", :operation_name => "FINALIZE_STEAM_TRANSACTION" }) %>
+#### Method Parameters
+Parameter | Description
+--------- | -----------
+transId | Steam transaction id
+

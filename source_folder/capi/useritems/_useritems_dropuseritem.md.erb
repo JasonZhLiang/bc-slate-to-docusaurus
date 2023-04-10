@@ -1,0 +1,111 @@
+### DropUserItem
+
+```cfscript
+var itemId = "aaa-bbb-ccc-ddd";
+var quantity = 1;
+var includeDef = true;
+var userItemsProxy = bridge.getUserItemsServiceProxy();
+
+var postResult = userItemsProxy.dropUserItem(itemId, quantity, includeDef);
+if (postResult.status == 200) {
+    // Success!
+}
+```
+```cpp
+const char *itemId = "aaa-bbb-ccc-ddd";
+int quantity = 1;
+bool includeDef = true;
+<%= data.branding.codePrefix %>->getUserItemsService()->dropUserItem(itemId, quantity, includeDef, this);
+```
+```csharp
+string itemId = "aaa-bbb-ccc-ddd";
+int quantity = 1;
+bool includeDef = true;
+SuccessCallback successCallback = (response, cbObject) =>
+{
+    Debug.Log(string.Format("Success | {0}", response));
+};
+FailureCallback failureCallback = (status, code, error, cbObject) =>
+{
+    Debug.Log(string.Format("Failed | {0}  {1}  {2}", status, code, error));
+};
+
+<%= data.branding.codePrefix %>.UserItemsService.DropUserItem(itemId, quantity, includeDef, successCallback, failureCallback);
+```
+```java
+String itemId = "aaa-bbb-ccc-ddd";
+int quantity = 1;
+boolean includeDef = true;
+this; // implements IServerCallback
+
+<%= data.branding.codePrefix %>.getUserItemsService().dropUserItem(itemId, quantity, includeDef, this);
+
+public void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData)
+{
+    System.out.print(String.format("Success | %s", jsonData.toString()));
+}
+public void serverError(ServiceName serviceName, ServiceOperation serviceOperation, int statusCode, int reasonCode, String jsonError)
+{
+    System.out.print(String.format("Failed | %d %d %s", statusCode,  reasonCode, jsonError.toString()));
+}
+```
+```javascript
+var itemId = "aaa-bbb-ccc-ddd";
+var quantity = 1;
+var includeDef = true;
+
+<%= data.branding.codePrefix %>.userItems.dropUserItem(itemId, quantity, includeDef, result =>
+{
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
+});
+```
+```objective_c
+NSString *itemId = @"aaa-bbb-ccc-ddd";
+int quantity = 1;
+bool includeDef = true;
+BCCompletionBlock successBlock;      // define callback
+BCErrorCompletionBlock failureBlock; // define callback
+
+[[<%= data.branding.codePrefix %> userItemsService] dropUserItem:itemId
+                   quantity:quantity
+                 includeDef:includeDef
+            completionBlock:successBlock
+       errorCompletionBlock:failureBlock
+                   cbObject:nil];
+```
+
+```r
+{
+	"service": "userItems",
+	"operation": "DROP_USER_ITEM",
+	"data": {
+		"itemId": "aaa-bbb-ccc-ddd",
+		"quantity": 1,
+		"includeDef": true
+	}
+}
+```
+
+<%= partial "partials/jsonBtn" %>
+
+```json-doc
+{
+  "data": {
+    "item": {}
+  },
+  "status": 200
+}
+```
+
+Allows a quantity of a specified user item to be dropped, without any recovery of the money paid for the item. If any quantity of the user item remains, it will be returned, potentially with the associated itemDef (with language fields limited to the current or default language).
+
+<%= partial(:"partials/servop", :locals => { :service_name => "userItems", :operation_name => "DROP_USER_ITEM" }) %>
+
+#### Method Parameters
+Parameter | Description
+--------- | -----------
+itemId | The unique id of the user item. 
+quantity | The quantity of the user item to drop. 
+includeDef | If true and any quantity of the user item remains, the associated item definition will be included in the response. 
+

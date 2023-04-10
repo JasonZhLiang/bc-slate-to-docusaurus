@@ -1,0 +1,69 @@
+### GetIdentityData
+
+```cfscript
+var authenticationType = "Ultra";
+var externalAuthName = "";
+var identityProxy = bridge.getIdentityServiceProxy();
+
+var postResult = identityProxy.getIdentityData(authenticationType, externalAuthName);
+if (postResult.status == 200) {
+  // Success!
+}
+```
+```csharp
+//cloud code only
+```
+```cpp
+//cloud code only
+```
+```objective_c
+//cloud code only
+```
+```java
+//cloud code only
+```
+```javascript
+//cloud code only
+```
+```r
+{
+  "service": "identity",
+  "operation": "GET_IDENTITY_DATA",
+  "data":
+  {
+    "authenticationType": "Ultra",
+    "externalAuthName": ""
+  }
+}
+```
+
+<%= partial "partials/jsonBtn" %>
+```json-doc
+{
+  "data": {
+    "identityData": {
+      "blockchain_id": "-a-blockchain-id-"
+    }
+  },
+  "status": 200
+}
+```
+
+<%= partial(:"partials/versionTag", :locals => {
+  :version => "4.10.0",
+  :newText => "",
+  :comingText => ""
+}) %>
+
+<aside class="notice">
+Currently, this method is available in Cloud Code scripts and for Ultra authentication type only.
+</aside>
+
+Retrieves identity data for given identity type for this profile. 
+
+<%= partial(:"partials/servop", :locals => {  :service_name => "identity", :operation_name => "GET_IDENTITY_DATA" }) %>
+#### Method Parameters
+Parameter | Description
+--------- | -----------
+authenticationType | Type of authentication.
+externalAuthName | The name of the external authentication mechanism (optional, used for custom authentication types)

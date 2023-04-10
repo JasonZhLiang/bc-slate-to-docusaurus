@@ -1,0 +1,116 @@
+### GetMessagesPageOffset
+
+```r
+{
+	"service": "messaging",
+	"operation": "GET_MESSAGES_PAGE_OFFSET",
+	"data": {
+		"context": "eyJzZWFyY2hDcml0ZXJpYSI6eyJlbnRpdHlUeXBlIjp7IiRyZWdleCI6Ii4qaWxkLioiLCIkb3B0",
+		"pageOffset": 1
+	}
+}
+```
+
+```objective_c
+NSString *context = @"eyJzZWFyY2hDcml0ZXJpYSI6eyJlbnRpdHlUeXBlIjp7IiRyZWdleCI6Ii4qaWxkLioiLCIkb3B0";
+int pageOffset = 1;
+BCCompletionBlock successBlock;      // define callback
+BCErrorCompletionBlock failureBlock; // define callback
+
+[[<%= data.branding.codePrefix %> messagingService] getMessagesPageOffset:context
+                 pageOffset:pageOffset
+            completionBlock:successBlock
+       errorCompletionBlock:failureBlock
+                   cbObject:nil];
+```
+
+```cpp
+const char *context = "eyJzZWFyY2hDcml0ZXJpYSI6eyJlbnRpdHlUeXBlIjp7IiRyZWdleCI6Ii4qaWxkLioiLCIkb3B0";
+int pageOffset = 1;
+<%= data.branding.codePrefix %>->getMessagingService()->getMessagesPageOffset(context, pageOffset, this);
+```
+
+```csharp
+string context = "eyJzZWFyY2hDcml0ZXJpYSI6eyJlbnRpdHlUeXBlIjp7IiRyZWdleCI6Ii4qaWxkLioiLCIkb3B0";
+int pageOffset = 1;
+SuccessCallback successCallback = (response, cbObject) =>
+{
+    Debug.Log(string.Format("Success | {0}", response));
+};
+FailureCallback failureCallback = (status, code, error, cbObject) =>
+{
+    Debug.Log(string.Format("Failed | {0}  {1}  {2}", status, code, error));
+};
+
+<%= data.branding.codePrefix %>.MessagingService.GetMessagesPageOffset(context, pageOffset, successCallback, failureCallback);
+```
+
+```java
+String context = "eyJzZWFyY2hDcml0ZXJpYSI6eyJlbnRpdHlUeXBlIjp7IiRyZWdleCI6Ii4qaWxkLioiLCIkb3B0";
+int pageOffset = 1;
+this; // implements IServerCallback
+
+<%= data.branding.codePrefix %>.getMessagingService().getMessagesPageOffset(context, pageOffset, this);
+
+public void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData)
+{
+    System.out.print(String.format("Success | %s", jsonData.toString()));
+}
+public void serverError(ServiceName serviceName, ServiceOperation serviceOperation, int statusCode, int reasonCode, String jsonError)
+{
+    System.out.print(String.format("Failed | %d %d %s", statusCode,  reasonCode, jsonError.toString()));
+}
+```
+
+```javascript
+var context = "eyJzZWFyY2hDcml0ZXJpYSI6eyJlbnRpdHlUeXBlIjp7IiRyZWdleCI6Ii4qaWxkLioiLCIkb3B0";
+var pageOffset = 1;
+
+<%= data.branding.codePrefix %>.messaging.getMessagesPageOffset(context, pageOffset, result =>
+{
+	var status = result.status;
+	console.log(status + " : " + JSON.stringify(result, null, 2));
+});
+```
+
+```cfscript
+var context = "eyJzZWFyY2hDcml0ZXJpYSI6eyJlbnRpdHlUeXBlIjp7IiRyZWdleCI6Ii4qaWxkLioiLCIkb3B0";
+var pageOffset = 1;
+var messagingProxy = bridge.getMessagingServiceProxy();
+
+var postResult = messagingProxy.getMessagesPageOffset(context, pageOffset);
+if (postResult.status == 200) {
+    // Success!
+}
+```
+
+<%= partial "partials/jsonBtn" %>
+
+```json-doc
+{
+ "status": 200,    
+ "data": {
+ }
+}
+```
+
+<aside class="warning">
+This method is not yet available.
+</aside>
+
+
+Returns the next/prev set of messages. Takes the encoded-context from <code>[GetMessagesPage](#capi-messaging-getmessagespage)</code> as a parameter.
+
+<%= partial(:"partials/servop", :locals => { :service_name => "messaging", :operation_name => "GET_MESSAGES_PAGE_OFFSET" }) %>
+
+#### Method Parameters
+Parameter | Description                         
+--------- | ------------------------------------
+channelId | The id of the channel to connect to.
+
+#### Status Codes
+Code | Name | Description                        
+----- | ----------------------- | -----------------------------------
+40601 | FEATURE_NOT_ENABLED | Messaging feature is not enabled for app.
+
+

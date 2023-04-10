@@ -1,0 +1,79 @@
+### MergePeerProfile
+
+```r
+{
+	"service": "identity",
+	"operation": "MERGE_PEER_PROFILE",
+	"data": {
+		"peer": "gameloot",
+		"externalId": "email@email.com",
+		"authenticationToken": "email@email.com",
+		"authenticationType": "Email",
+		"externalAuthName": ""
+	}
+}
+```
+
+```csharp
+// cloud code only
+```
+
+```cpp
+// cloud code only
+```
+
+```objective_c
+// cloud code only
+```
+
+```java
+// cloud code only
+```
+
+```javascript
+// cloud code only
+```
+
+```cfscript
+var peer = "gameloot";
+var externalId = "UserID";
+var authenticationToken = "token";
+var authenticationType = "email";
+var externalAuthName = "";
+
+var identityProxy = bridge.getIdentityServiceProxy();
+identityProxy.mergePeerProfile(peer, externalId, authenticationToken, authenticationType, externalAuthName);
+```
+
+<%= partial "partials/jsonBtn" %>
+
+```json-doc
+{  
+   "data":{  
+      "profileId":"f94f7e2d-3cdd-4fd6-9c28-392f7875e9df"
+   },
+   "status":200
+}
+```
+
+Merge the peer profile associated with the provided externalId with the current profile.
+
+NOTE: If using the <%= data.branding.codeWrapper %>, once the merge is complete you should call <a href="#" onclick='window.navigateToTarget("#wrapper-setstoredprofileid");'><code>SetStoredProfileId</code></a> in the <%= data.branding.codeWrapper %> with the profileId returned in the Merge call.
+
+<%= partial(:"partials/servop", :locals => { :service_name => "identity", :operation_name => "MERGE_PEER_PROFILE" }) %>
+
+#### Method Parameters
+Parameter | Description
+--------- | -----------
+peer | Name of the peer service
+externalId | User ID
+authenticationToken | Password or client side token
+authenticationType | Type of authentication. Full list of types can be found <a href="#" onclick='window.navigateToTarget("#appendix-authtypes");'>here</a>.
+externalAuthName | The name of the external authentication mechanism (optional, used for custom authentication types)
+
+#### Status Codes
+Code | Name | Description
+---- | ---- | -----------
+40211 | DUPLICATE_IDENTITY_TYPE | Returned when trying to attach an identity type that already exists for that profile. For instance you can have only one Steam identity for a profile.
+
+

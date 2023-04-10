@@ -1,0 +1,71 @@
+### SysRoomCancelled
+
+```r
+{
+	"service": "lobby",
+	"operation": "SYS_ROOM_CANCELLED",
+	"data": {
+		"lobbyId": "55555:4v4:19",
+		"msg": "Server going down for maintenance",
+		"details": {}
+	}
+}
+```
+
+```cpp
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+
+```csharp
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+
+```java
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+
+```objective_c
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+
+```javascript
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+
+```cfscript
+var lobbyId = "55555:4v4:19";
+var msg = "Server going down for maintenance";
+var details = {};
+var lobbyProxy = bridge.getLobbyServiceProxy();
+
+var postResult = lobbyProxy.sysRoomCancelled(lobbyId, msg, details);
+if (postResult.status == 200) {
+    // Success!
+}
+```
+
+<%= partial "partials/jsonBtn" %>
+
+```json-doc
+{
+    "status": 200,
+    "data": {}
+}
+```
+
+Tells the lobby system that creation of the room experience failed.
+
+<%= partial(:"partials/servop", :locals => { :service_name => "lobby", :operation_name => "SYS_ROOM_CANCELLED" }) %>
+
+#### Method Parameters
+Parameter | Description
+--------- | -----------
+lobbyId | The id of lobby that this room server is associated with
+connectInfo | Info the clients will use to connect to the room server
+details | Optional data to send to room members.
+
+#### Status Codes
+Code | Name | Description
+---- | ---- | -----------
+40601 | RTT_NOT_ENABLED | RTT must be enabled for this feature
+

@@ -1,0 +1,24 @@
+### GetAppVersion
+
+```csharp
+string appVersion = <%= data.branding.codePrefix %>.GetAppVersion();
+```
+
+```cpp
+const char * appVersion = <%= data.branding.codePrefix %>->getAppVersion();
+```
+
+```objective_c
+const char * appVersion = [<%= data.branding.codePrefix %> appVersion];
+```
+
+```java
+String appVersion = <%= data.branding.codePrefix %>.getAppVersion();
+```
+
+```javascript
+var appVersion = <%= data.branding.codePrefix %>.getAppVersion();
+```
+
+Returns the app version of the client app.
+

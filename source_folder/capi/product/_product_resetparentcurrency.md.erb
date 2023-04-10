@@ -1,0 +1,60 @@
+### ResetParentCurrency
+
+```r
+{
+	"service": "product",
+	"operation": "RESET_PARENT_VC",
+	"data": {
+		"levelName": "master"
+	}
+}
+```
+
+```csharp
+// Cloud Code Only
+```
+
+```cpp
+// Cloud Code Only
+```
+
+```objective_c
+// Cloud Code Only
+```
+
+```java
+// Cloud Code Only
+```
+
+```javascript
+// Cloud Code Only
+```
+
+```cfscript
+var levelName = "master";
+var productProxy = bridge.getProductServiceProxy();
+
+var postResult = productProxy.resetParentCurrency(levelName);
+if (postResult.status == 200) {
+    // Success!
+}
+```
+
+<%= partial "partials/jsonBtn" %>
+
+```json-doc
+{
+    "status" : 200,
+    "data" : null
+}
+```
+
+Resets the player's parent currency back to zero.
+
+<%= partial(:"partials/servop", :locals => { :service_name => "product", :operation_name => "RESET_PARENT_VC" }) %>
+#### Method Parameters
+#### Method Parameters
+Parameter | Description
+--------- | -----------
+leveName | Name of the parent level.
+

@@ -1,0 +1,80 @@
+###  ForcePush [forcepush]
+```r
+{
+	"service": "presence",
+	"operation": "FORCE_PUSH",
+	"data": {}
+}
+```
+
+```cpp
+this; // implements IServerCallback
+
+<%= data.branding.codePrefix %>->getPresenceService()->forcePush(this);
+```
+
+```csharp
+SuccessCallback successCallback = (response, cbObject) =>
+{
+    Debug.Log(string.Format("Success | {0}", response));
+};
+FailureCallback failureCallback = (status, code, error, cbObject) =>
+{
+    Debug.Log(string.Format("Failed | {0}  {1}  {2}", status, code, error));
+};
+    
+<%= data.branding.codePrefix %>.PresenceService.ForcePush(successCallback, failureCallback);
+```
+
+```java
+this; // implements IServerCallback
+
+<%= data.branding.codePrefix %>.getPresenceService().forcePush(this);
+
+public void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData)
+{
+    System.out.print(String.format("Success | %s", jsonData.toString()));
+}
+public void serverError(ServiceName serviceName, ServiceOperation serviceOperation, int statusCode, int reasonCode, String jsonError)
+{
+    System.out.print(String.format("Failed | %d %d %s", statusCode,  reasonCode, jsonError.toString()));
+}
+```
+
+```objective_c
+BCCompletionBlock successBlock;      // define callback
+BCErrorCompletionBlock failureBlock; // define callback
+
+[[<%= data.branding.codePrefix %> presenceService] forcePush:successBlock
+       errorCompletionBlock:failureBlock
+                   cbObject:nil];
+```
+
+```javascript
+<%= data.branding.codePrefix %>.presence.forcePush(result =>
+{
+	var status = result.status;
+	console.log(status + " : " + JSON.stringify(result, null, 2));
+});
+```
+
+```cfscript
+var presenceProxy = bridge.getPresenceServiceProxy();
+
+var postResult = presenceProxy.forcePush();
+if (postResult.status == 200) {
+    // Success!
+}
+```
+
+Force an RTT presence update to all listeners of the caller. Note that *Real-time Tech(RTT) updates* must be enabled in order for this API call to work (see Messaging > Presence in the portal).
+
+<%= partial "partials/jsonBtn" %>
+```json-doc
+{
+ "data": null,
+ "status": 200
+}
+```
+
+<%= partial(:"partials/servop", :locals => { :service_name => "presence", :operation_name => "FORCE_PUSH" }) %>

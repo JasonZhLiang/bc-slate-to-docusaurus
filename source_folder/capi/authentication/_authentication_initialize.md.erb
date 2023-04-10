@@ -1,0 +1,45 @@
+### Initialize
+
+```csharp
+<%= data.branding.codePrefix %>.AuthenticationService.Initialize("profileId", "anonId");
+```
+
+```cpp
+<%= data.branding.codePrefix %>->getAuthenticationService()->initialize("profileId", "anonId");
+```
+
+```objective_c
+NSString * profileID = @"profileId";
+NSString * anonymousID = @"anonId";
+
+[[<%= data.branding.codePrefix %> authenticationService]
+	        	initialize:profileID
+	 	       anonymousID:anonymousID];
+```
+
+```java
+String profileID = "profileId";
+String anonymousID = "anonId";
+
+<%= data.branding.codePrefix %>.getAuthenticationService().initialize(profileId, anonymousId);
+```
+
+```javascript
+<%= data.branding.codePrefix %>.authentication.initialize(profileId, anonymousId);
+```
+
+```cfscript
+// N/A
+```
+
+Initializes the authentication service with an anonymous installation ID and most recently used profile ID.
+You will need to call this method before authenticating anonymously.
+
+Note that calling this is the same as calling <a href="#" onclick='window.navigateToTarget("#capi-client-initializeidentity");'><code>InitializeIdentity</code></a> in the <%= data.branding.codeClient %>.
+
+#### Method Parameters
+Parameter | Description
+--------- | -----------
+profileId | The ID of the profile ID that was most recently used by the app (on this device)
+anonymousId | The anonymous installation ID that was generated for this device
+

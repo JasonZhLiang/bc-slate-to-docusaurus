@@ -1,0 +1,9 @@
+
+User state contains methods for accessing user-specific information like name and contact email.
+
+It also provides access to the User Attributes APIs allowing you to assign key+value pairs to a user.
+These are primarily used in defining and filtering segments for Promotions.
+
+New in 4.2, we've added our *Timed Status Effects* API. These API calls allow developers to associated a "status" with a user for a specified amount of time. The status will automatically be removed when it expires.
+
+Active status effects are returned automatically during Authentication and via ReadUserState. They can also be retrieved directly via GetUserStatus.

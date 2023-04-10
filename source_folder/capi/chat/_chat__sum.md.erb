@@ -1,0 +1,39 @@
+#### API Summary
+
+#### Channel lookup and management
+
+* [GetChannelId](#capi-chat-getchannelid)
+* [GetChannelInfo](#capi-chat-getchannelinfo)
+* [GetSubscribedChannels](#capi-chat-getsubscribedchannels)
+* [ChannelConnect](#capi-chat-channelconnect)
+* [ChannelDisconnect](#capi-chat-channeldisconnect)
+
+#### Retrieving chat messages
+
+* [GetRecentChatMessages](#capi-chat-getrecentchatmessages)
+* [GetChatMessage](#capi-chat-getchatmessage)
+
+#### Posting chat messages
+
+* [PostChatMessageSimple](#capi-chat-postchatmessagesimple)
+* [PostChatMessage](#capi-chat-postchatmessage)
+
+#### Updating chat messages
+
+* [UpdateChatMessage](#capi-chat-updatechatmessage)
+* [DeleteChatMessage](#capi-chat-deletechatmessage)
+
+#### System chat API (cloud-code only)
+
+These API calls bypass channel membership / message ownership checks - and allow you to post messages from the *system* (i.e. app) instead of from another end-user:
+
+* [SysCreateChannel](#capi-chat-syscreatechannel)
+* [SysDeleteChannel](#capi-chat-sysdeletechannel)
+* [SysDeleteChatMessage](#capi-chat-sysdeletechatmessage)
+* [SysGetChannelInfo](#capi-chat-sysgetchannelinfo)
+* [SysGetChatMessage](#capi-chat-sysgetchatmessage)
+* [SysGetRecentChatMessages](#capi-chat-sysgetrecentchatmessages)
+* [SysPostChatMessage](#capi-chat-syspostchatmessage)
+* [SysPostChatMessageSimple](#capi-chat-syspostchatmessagesimple)
+* [SysUpdateChatMessage](#capi-chat-sysupdatechatmessage)
+

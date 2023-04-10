@@ -1,0 +1,62 @@
+### SysDeleteEntity
+
+```cfscript
+var entityType = "athletes";
+var entityId = "aaaa-bbbb-cccc-dddd";
+var version = 1;
+var customEntityProxy = bridge.getCustomEntityServiceProxy();
+
+var postResult = customEntityProxy.sysDeleteEntity(entityType, entityId, version);
+if (postResult.status == 200) {
+    // Success!
+}
+```
+```cpp
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+```csharp
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+```java
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+```javascript
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+```objective_c
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+
+```r
+{
+	"service": "customEntity",
+	"operation": "SYS_DELETE_ENTITY",
+	"data": {
+		"entityType": "athletes",
+		"entityId": "aaaa-bbbb-cccc-dddd",
+    	"version": 1
+	}
+}
+```
+
+<%= partial "partials/jsonBtn" %>
+
+```json-doc
+{
+  "status": 200,
+  "data": null
+}
+```
+
+
+Advanced version of deleteEntity that bypasses the ACL check. Available from S2S sessions.
+
+<%= partial(:"partials/servop", :locals => { :service_name => "customEntity", :operation_name => "SYS_DELETE_ENTITY" }) %>
+
+#### Method Parameters
+Parameter | Description
+--------- | -----------
+entityType | The type of custom entity being deleted. 
+entityId | The id of custom entity being deleted. 
+version | Version of the custom entity being deleted.
+

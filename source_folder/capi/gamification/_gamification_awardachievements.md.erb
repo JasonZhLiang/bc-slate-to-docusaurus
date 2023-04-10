@@ -1,0 +1,102 @@
+### AwardAchievements
+
+```r
+{
+	"service": "gamification",
+	"operation": "AWARD_ACHIEVEMENTS",
+	"data": {
+		"achievements": [
+			"EGG_ACH09",
+			"EGG_ACH10"
+		]
+	}
+}
+```
+
+```objective_c
+NSArray *achievements = @[ @"EGG_ACH09", @"EGG_ACH10" ];
+BCCompletionBlock successBlock;      // define callback
+BCErrorCompletionBlock failureBlock; // define callback
+
+[[<%= data.branding.codePrefix %> gamificationService] awardAchievements:achievements
+            completionBlock:successBlock
+       errorCompletionBlock:failureBlock
+                   cbObject:nil];
+```
+
+```cpp
+std::vector<std::string> achievements;
+achievements.push_back("EGG_ACH09");
+achievements.push_back("EGG_ACH10");
+<%= data.branding.codePrefix %>->getGamificationService()->awardAchievements(achievements, this);
+```
+
+```csharp
+string[] achievements = { "EGG_ACH09", "EGG_ACH10" };
+SuccessCallback successCallback = (response, cbObject) =>
+{
+    Debug.Log(string.Format("Success | {0}", response));
+};
+FailureCallback failureCallback = (status, code, error, cbObject) =>
+{
+    Debug.Log(string.Format("Failed | {0}  {1}  {2}", status, code, error));
+};
+
+<%= data.branding.codePrefix %>.GamificationService.AwardAchievements(achievements, successCallback, failureCallback);
+```
+
+```java
+String[] achievements = { "EGG_ACH09", "EGG_ACH10" };
+this; // implements IServerCallback
+
+<%= data.branding.codePrefix %>.getGamificationService().awardAchievements(achievements, this);
+
+public void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData)
+{
+    System.out.print(String.format("Success | %s", jsonData.toString()));
+}
+public void serverError(ServiceName serviceName, ServiceOperation serviceOperation, int statusCode, int reasonCode, String jsonError)
+{
+    System.out.print(String.format("Failed | %d %d %s", statusCode,  reasonCode, jsonError.toString()));
+}
+```
+
+```javascript
+var achievements = [ "EGG_ACH09", "EGG_ACH10" ];
+
+<%= data.branding.codePrefix %>.gamification.awardAchievements(achievements, result =>
+{
+	var status = result.status;
+	console.log(status + " : " + JSON.stringify(result, null, 2));
+});
+```
+
+```cfscript
+var achievements = [ "EGG_ACH09", "EGG_ACH10" ];
+var gamificationProxy = bridge.getGamificationServiceProxy();
+
+//includeMetaData Whether to return meta data as well, Boolean
+var includeMetaData = false;
+var postResult = gamificationProxy.awardAchievements(achievements, includeMetaData);
+if (postResult.status == 200) {
+    // Success!
+}
+```
+
+<%= partial "partials/jsonBtn" %>
+
+```json-doc
+{
+    "status": 200,
+    "data": null
+}
+```
+
+Method will award the achievements specified. On success, this will call AwardThirdPartyAchievement to hook into the client-side Achievement service (ie GameCentre, Facebook etc).
+
+<%= partial(:"partials/servop", :locals => { :service_name => "gamification", :operation_name => "AWARD_ACHIEVEMENTS" }) %>
+#### Method Parameters
+Parameter | Description
+--------- | -----------
+achievementIds | A list of achievement ids to award
+

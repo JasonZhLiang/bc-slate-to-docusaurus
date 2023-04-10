@@ -1,0 +1,80 @@
+### MergeOculusIdentity
+
+```csharp
+string userId = "userId";
+string nonce = "nonce";
+
+<%= data.branding.codePrefix %>.IdentityService.MergeOculusIdentity(
+    userId,
+    nonce,
+    SuccessCallback, FailureCallback);
+```
+
+```cpp
+const char * userId = "userId";
+const char * nonce = "nonce";
+
+<%= data.branding.codePrefix %>->getIdentityService()->mergeOculusIdentity(
+    userId, nonce, this);
+```
+
+```objective_c
+// N/A
+```
+
+```java
+String userId = "userId";
+String nonce = "nonce";
+this; // implements IServerCallback
+
+<%= data.branding.codePrefix %>.getIdentityService().mergeOculusIdentity(userId, nonce, this);
+
+public void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData)
+{
+    System.out.print(String.format("Success | %s", jsonData.toString()));
+}
+public void serverError(ServiceName serviceName, ServiceOperation serviceOperation, int statusCode, int reasonCode, String jsonError)
+{
+    System.out.print(String.format("Failed | %d %d %s", statusCode,  reasonCode, jsonError.toString()));
+}
+```
+
+```javascript
+// N/A
+```
+
+```cfscript
+// N/A
+```
+
+<%= partial "partials/jsonBtn" %>
+
+```json-doc
+{  
+   "data":{  
+      "profileId":"f94f7e2d-3cdd-4fd6-9c28-392f7875e9df"
+   },
+   "status":200
+}
+```
+
+<%= partial(:"partials/versionTag", :locals => {
+  :version => "4.7.0",
+  :newText => "",
+  :comingText => ""
+}) %>
+
+Merge the user's Oculus credentials with the current profile.
+
+<%= partial(:"partials/servop", :locals => { :service_name => "identity", :operation_name => "MERGE" }) %>
+
+#### Method Parameters
+Parameter | Description
+--------- | -----------
+userId | The Oculus id of the user
+nonce | The returned nonce from the Oculus Platform SDK
+
+#### Status Codes
+Code | Name | Description
+---- | ---- | -----------
+40211 | DUPLICATE_IDENTITY_TYPE | Returned when trying to attach an identity type that already exists for that profile. For instance you can have only one Twitter identity for a profile.

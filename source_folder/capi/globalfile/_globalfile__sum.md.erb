@@ -1,0 +1,40 @@
+#### API Summary
+
+#### Client File Retrieval APIs
+
+* [GetGlobalFileList()](#capi-globalfile-getglobalfilelist) - list all global files at the specified `folderPath`
+* [GetFileInfo()](#capi-globalfile-getfileinfo) - returns information about the specified file, given a `fileId`.
+* [GetFileInfoSimple()](#capi-globalfile-getfileinfosimple) - returns information about the specified file, given a `folderPath` + `filename`.
+* [GetGlobalCDNUrl()](#capi-globalfile-getglobalcdnurl) - only required for clients that don't support redirection
+
+#### System File Retrieval APIs
+
+*Accessible via cloud-code and S2S.*
+
+* [SysGetGlobalFileList](#capi-globalfile-sysgetglobalfilelist) - list all global files at the specified `folderPath`
+* [SysGetFileInfo()](#capi-globalfile-sysgetfileinfo) - returns information about the specified file, given a `fileId`.
+* [SysGetFileInfoSimple()](#capi-globalfile-sysgetfileinfosimple) - returns information about the specified file, given a `folderPath` + `filename`.
+* [SysGetGlobalCDNUrl](#capi-globalfile-sysgetglobalcdnurl) - only required for clients that don't support redirection
+
+#### File Management
+
+* [SysMoveToGlobalFile()](#capi-globalfile-sysmovetoglobalfile) - migrate a file from User Files to the Global File system
+* [SysCopyGlobalFile()](#capi-globalfile-syscopyglobalfile) - copy a file
+* [SysMoveGlobalFile()](#capi-globalfile-sysmoveglobalfile) - move (or rename) a file 
+* [SysDeleteGlobalFile()](#capi-globalfile-sysdeleteglobalfile) - delete a file
+* [SysDeleteGlobalFiles()](#capi-globalfile-sysdeleteglobalfiles) - delete the contents of a directory
+
+#### Folder Management ####
+
+* [SysLookupFolder](#capi-globalfile-syslookupfolder) - lookup a folder given it's path
+* [SysCreateFolder](#capi-globalfile-syscreatefolder) - create a folder
+* [SysMoveFolder](#capi-globalfile-sysmovefolder) - move a folder
+* [SysRenameFolder](#capi-globalfile-sysrenamefolder) - rename a folder
+* [SysDeleteFolder](#capi-globalfile-sysdeletefolder) - delete a folder
+
+
+
+
+
+
+

@@ -1,0 +1,30 @@
+#### API Summary
+
+#### Basic Presence
+The user's online status is automatically registered when they connect to <%= data.branding.productName %> RTT. From there, the following API calls can be used to update the user's presence state and activity.
+
+* [UpdateActivity](#capi-presence-updateactivity) - update the user's rich activity data
+* [SetVisibility](#capi-presence-setvisibility) - hide the user's online state
+ 
+#### Getting Presence Status
+The following API calls are used to directly request the presence status of other users:
+
+* [GetPresenceOfFriends](#capi-presence-getpresenceoffriends) - get presence of friends
+* [GetPresenceOfGroup](#capi-presence-getpresenceofgroup) - get presence of specified group
+* [GetPresenceOfUsers](#capi-presence-getpresenceofusers) - get presence of specified set of users
+
+#### Real-time Presence
+Use these API calls to configure real-time presence updates:
+
+* [RegisterListenersForFriends](#capi-presence-registerlistenersforfriends) - register listeners with all friends
+* [RegisterListenersForGroup](#capi-presence-registerlistenersforgroup) - register listeners with the specified group
+* [RegisterListenersForProfiles](#capi-presence-registerlistenersforprofiles) - register listeners with the specified list of users (profiles)
+* [StopListening](#capi-presence-stoplistening) - deregisters are listeners
+* [ForcePush](#capi-presence-forcepush) - force an update to all listeners
+
+#### System calls
+The system API calls can be used to register presence for users who are not currently connected via RTT. Useful for Internet-of-Things use cases. Callable by cloud-code only.
+
+* [SysInitializePresence](#capi-presence-sysinitializepresence) - initialize presence for the specified user 
+* [SysExtendPxExpiry](#capi-presence-sysextendpxexpiry) - extend the presence state
+* [SysTerminatePresence](#capi-presence-systerminatepresence) - terminate presence for the specified user

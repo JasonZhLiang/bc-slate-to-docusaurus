@@ -1,0 +1,73 @@
+### ReadSystemEntity
+
+```r
+{
+	"service": "globalEntity",
+	"operation": "READ_SYSTEM_ENTITY",
+	"data": {
+		"entityId": "the-entity-id"
+	}
+}
+```
+
+```cpp
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+
+```csharp
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+
+```java
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+
+```objective_c
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+
+```javascript
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+
+```cfscript
+var entityId = "a-entity-id";
+var globalEntityProxy = bridge.getGlobalEntityServiceProxy();
+
+var postResult = globalEntityProxy.readSystemEntity(entityId);
+if (postResult.status == 200) {
+    // Success!
+}
+```
+
+<%= partial "partials/jsonBtn" %>
+
+```json-doc
+{
+   "data": {
+        "entityIndexedId": null,
+        "timeToLive": 0,
+        "createdAt": 1498850247510,
+        "entityType": "address",
+        "entityId": "4b2f1cba-cc52-4d3c-8663-ff540ee48a38",
+        "acl": {
+        "other": 2
+        },
+        "ownerId": null,
+        "version": 2,
+        "expiresAt": 9223372036854776000,
+        "updatedAt": 1498850536733,
+        "_serverTime": 1637946319239
+   },
+   "status": 200
+}
+```
+
+Method reads an existing system entity on the server. It cannot be an owned/global entity.
+
+<%= partial(:"partials/servop", :locals => { :service_name => "globalEntity", :operation_name => "READ_SYSTEM_ENTITY" }) %>
+#### Method Parameters
+Parameter | Description
+--------- | -----------
+entityId | The id of the entity to read
+

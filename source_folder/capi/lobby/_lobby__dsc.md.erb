@@ -1,0 +1,26 @@
+
+<%= partial(:"partials/versionTag", :locals => {
+  :version => "3.8.0",
+  :newText => "",
+  :comingText => ""
+}) %>
+
+
+The **Lobby Service** works together with custom **Room Servers** to provide multi-user experiences (i.e. online games, shared streaming, etc.) to groups of participants.
+
+It is available to apps that have **<%= data.branding.productNameRTT %>** enabled.
+
+<aside class="info">
+You configure <em>Lobby Types</em> in the portal under <strong>Design | Multiplayer | Lobbies</strong>.
+</aside>
+
+#### Key concepts
+
+![Online Multiplayer Process](<%= I18n.t(:root) %> <%= data.images.online_multiplayer_process %>)
+
+*Lobbies* are used to gather up users prior to launching shared experiences via *Room Servers*. Users can be added to teams, indicate their ready status, and adjust personal and room settings before the experience starts.
+
+The *Lobby Service* also offers highly configurable *Online Matchmaking* - to quickly and efficiently pair users up together.
+
+*For more information on Lobby Concepts, see the [Lobby Overview](https://getbraincloud.com/apidocs/api-modules/multiplayer/lobbies/) page.*
+

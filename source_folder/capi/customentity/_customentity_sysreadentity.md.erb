@@ -1,0 +1,78 @@
+### SysReadEntity
+
+```cfscript
+var entityType = "athletes";
+var entityId = "aaaa-bbbb-cccc-dddd";
+var customEntityProxy = bridge.getCustomEntityServiceProxy();
+
+var postResult = customEntityProxy.sysReadEntity(entityType, entityId);
+if (postResult.status == 200) {
+    // Success!
+}
+```
+```cpp
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+```csharp
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+```java
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+```javascript
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+```objective_c
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+
+```r
+{
+	"service": "customEntity",
+	"operation": "SYS_READ_ENTITY",
+	"data": {
+		"entityType": "athletes",
+		"entityId": "aaaa-bbbb-cccc-dddd"
+	}
+}
+```
+
+<%= partial "partials/jsonBtn" %>
+
+```json-doc
+{
+  "status": 200,
+  "data": {
+    "entityId": "f9d91cda-3ece-447c-xxxx-046fa026520c",
+    "version": 1,
+    "acl": {
+      "other": 1
+    },
+    "ownerId": null,
+    "expiresAt": null,
+    "timeToLive": null,
+    "createdAt": 1573537595505,
+    "updatedAt": 1573537595505,
+    "entityType": "athletes",
+    "data": {
+      "firstName": "Super",
+      "surName": "Star",
+      "position": "forward",
+      "goals": 2,
+      "assists": 4
+    },
+    "_serverTime": 1637946319239    
+  }
+}
+```
+
+Reads a custom entity. Ignores ownership/ACL checks.
+
+<%= partial(:"partials/servop", :locals => { :service_name => "customEntity", :operation_name => "SYS_READ_ENTITY" }) %>
+
+#### Method Parameters
+Parameter | Description
+--------- | -----------
+entityType | The type of custom entity being read. 
+entityId | The id of custom entity being read. 
+

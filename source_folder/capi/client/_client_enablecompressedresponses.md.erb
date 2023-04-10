@@ -1,0 +1,34 @@
+### EnableCompressedResponses
+
+```csharp
+<%= data.branding.codePrefix %>.EnableCompressedResponses(true);
+```
+
+```cpp
+<%= data.branding.codePrefix %>->enableCompressedResponses(true);
+```
+
+```objective_c
+[<%= data.branding.codePrefix %> enableCompressedResponses:true];
+```
+
+```java
+<%= data.branding.codePrefix %>.enableCompressedResponses(true);
+```
+
+```javascript
+<%= data.branding.codePrefix %>.enableCompressedResponses(true);
+```
+
+<%= partial(:"partials/versionTag", :locals => {
+  :version => "4.9.0",
+  :newText => "",
+  :comingText => ""
+}) %>
+
+Enables receiving compressed packets of responses.
+
+#### Method Parameters
+Parameter | Description
+--------- | -----------
+enabled | True if response packets should be compressed

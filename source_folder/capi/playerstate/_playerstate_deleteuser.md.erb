@@ -1,0 +1,80 @@
+### DeleteUser
+
+```r
+{
+	"service": "playerState",
+	"operation": "FULL_PLAYER_RESET"
+}
+```
+
+```objective_c
+BCCompletionBlock successBlock;      // define callback
+BCErrorCompletionBlock failureBlock; // define callback
+
+[[<%= data.branding.codePrefix %> playerStateService] deleteUser:successBlock
+       errorCompletionBlock:failureBlock
+                   cbObject:nil];
+```
+
+```cpp
+<%= data.branding.codePrefix %>->getPlayerStateService()->deleteUser(this);
+```
+
+```csharp
+SuccessCallback successCallback = (response, cbObject) =>
+{
+    Debug.Log(string.Format("Success | {0}", response));
+};
+FailureCallback failureCallback = (status, code, error, cbObject) =>
+{
+    Debug.Log(string.Format("Failed | {0}  {1}  {2}", status, code, error));
+};
+
+<%= data.branding.codePrefix %>.PlayerStateService.DeleteUser(successCallback, failureCallback);
+```
+
+```java
+this; // implements IServerCallback
+
+<%= data.branding.codePrefix %>.getPlayerStateService().deleteUser(this);
+
+public void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData)
+{
+    System.out.print(String.format("Success | %s", jsonData.toString()));
+}
+public void serverError(ServiceName serviceName, ServiceOperation serviceOperation, int statusCode, int reasonCode, String jsonError)
+{
+    System.out.print(String.format("Failed | %d %d %s", statusCode,  reasonCode, jsonError.toString()));
+}
+```
+
+```javascript
+
+<%= data.branding.codePrefix %>.playerState.deleteUser(result =>
+{
+	var status = result.status;
+	console.log(status + " : " + JSON.stringify(result, null, 2));
+});
+```
+
+```cfscript
+var playerStateProxy = bridge.getPlayerStateServiceProxy();
+
+var postResult = playerStateProxy.deleteUser();
+if (postResult.status == 200) {
+    // Success!
+}
+```
+
+<%= partial "partials/jsonBtn" %>
+
+```json-doc
+{
+    "status" : 200,
+    "data" : null
+}
+```
+
+Completely deletes the user record and all data fully owned by the user. After calling this method, the user will need to re-authenticate and create a new profile.
+
+<%= partial(:"partials/servop", :locals => { :service_name => "playerState", :operation_name => "FULL_PLAYER_RESET" }) %>

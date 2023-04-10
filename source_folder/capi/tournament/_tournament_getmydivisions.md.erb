@@ -1,0 +1,96 @@
+### GetMyDivisions
+```r
+{
+	"service": "tournament",
+	"operation": "GET_MY_DIVISIONS",
+	"data": {}
+}
+```
+
+<%= partial(:"partials/versionTag", :locals => {
+  :version => "3.9.0",
+  :newText => "",
+  :comingText => ""
+}) %>
+
+```csharp
+SuccessCallback successCallback = (response, cbObject) =>
+{
+    Debug.Log(string.Format("Success | {0}", response));
+};
+FailureCallback failureCallback = (status, code, error, cbObject) =>
+{
+    Debug.Log(string.Format("Failed | {0}  {1}  {2}", status, code, error));
+};
+
+<%= data.branding.codePrefix %>.TournamentService.GetMyDivisions(successCallback, failureCallback);
+```
+
+```cpp
+<%= data.branding.codePrefix %>->getTournamentService()->getMyDivisions(this);
+```
+
+```objective_c
+BCCompletionBlock successBlock;      // define callback
+BCErrorCompletionBlock failureBlock; // define callback
+
+[[<%= data.branding.codePrefix %> tournamentService] getMyDivisions:successBlock
+       errorCompletionBlock:failureBlock
+                   cbObject:nil];
+```
+
+```java
+this; // implements IServerCallback
+
+<%= data.branding.codePrefix %>.getTournamentService().getMyDivisions(this);
+
+public void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData)
+{
+    System.out.print(String.format("Success | %s", jsonData.toString()));
+}
+public void serverError(ServiceName serviceName, ServiceOperation serviceOperation, int statusCode, int reasonCode, String jsonError)
+{
+    System.out.print(String.format("Failed | %d %d %s", statusCode,  reasonCode, jsonError.toString()));
+}
+```
+
+```javascript
+
+<%= data.branding.codePrefix %>.tournament.getMyDivisions(result =>
+{
+	var status = result.status;
+	console.log(status + " : " + JSON.stringify(result, null, 2));
+});
+```
+
+```cfscript
+var tournamentProxy = bridge.getTournamentServiceProxy();
+
+var postResult = tournamentProxy.getMyDivisions();
+if (postResult.status == 200) {
+    // Success!
+}
+```
+
+<%= partial "partials/jsonBtn" %>
+
+```json-doc
+{
+ "data": {
+  "ACTIVE": {
+   "weekly": [
+    "^D^weekly^2"
+   ]
+  },
+  "PENDING": {},
+  "CLAIMABLE": {},
+  "COMPLETE": {}
+ },
+ "status": 200
+}
+```
+
+Returns a list of the player's recently active divisions, organized by simplified tournament state: ACTIVE, PENDING, CLAIMABLE, or COMPLETE.
+
+<%= partial(:"partials/servop", :locals => { :service_name => "tournament", :operation_name => "GET_MY_DIVISIONS" }) %>
+

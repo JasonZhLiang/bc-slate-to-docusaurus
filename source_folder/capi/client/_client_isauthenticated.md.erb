@@ -1,0 +1,25 @@
+### IsAuthenticated
+
+```cpp
+bool isAuthenticated = <%= data.branding.codePrefix %>->isAuthenticated();
+```
+
+```csharp
+bool isAuthenticated = <%= data.branding.codePrefix %>.Authenticated;
+```
+
+```java
+boolean isAuthenticated = <%= data.branding.codePrefix %>.isAuthenticated();
+```
+
+```objective_c
+bool isAuthenticated = [<%= data.branding.codePrefix %> isAuthenticated];
+```
+
+```javascript
+var isAuthenticated = <%= data.branding.codePrefix %>.isAuthenticated();
+```
+
+Returns true if the user is authenticated.
+
+If a session has timed out or if the server returns a session invalidation error, this flag will reset back to false.

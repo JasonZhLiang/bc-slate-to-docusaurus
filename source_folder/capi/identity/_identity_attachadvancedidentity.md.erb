@@ -1,0 +1,113 @@
+### AttachAdvancedIdentity
+
+```csharp
+AuthenticationType authenticationType = AuthenticationType.Universal;
+AuthenticationIds ids;
+ids.externalId = "authAdvancedUser";
+ids.authenticationToken = "authAdvancedPass";
+ids.authenticationSubType = "";
+string extraJson = "{\"key\":\"value\"}";
+
+<%= data.branding.codePrefix %>.IdentityService.AttachAdvancedIdentity(
+    authenticationType,
+    ids,
+    extraJson,
+    SuccessCallback, FailureCallback);
+```
+
+```cpp
+AuthenticationType authenticationType = AuthenticationType::Universal;
+AuthenticationIds ids = { "authAdvancedUser", "authAdvancedPass", "" };
+const char* extraJson = "{\"key\":\"value\"}";
+
+<%= data.branding.codePrefix %>->getIdentityService()->attachAdvancedIdentity(
+    authenticationType, ids, extraJson, this);
+```
+
+```objective_c
+AuthenticationType authenticationType = [AuthenticationTypeObjc Universal];
+AuthenticationIds *ids = [[AuthenticationIdsObjc alloc]init];
+ids.externalId = @"authAdvancedUser";
+ids.authenticationToken = @"authAdvancedPass";
+ids.authenticationSubType = @"";
+NSString * extraJson = "{\"key\":\"value\"}";
+BCCompletionBlock successBlock;      // define callback
+BCErrorCompletionBlock failureBlock; // define callback
+
+[[<%= data.branding.codePrefix %> identityService]
+       attachAdvancedIdentity:authenticationType
+                        ids:ids
+                  extraJson:extraJson
+            completionBlock:successBlock
+       errorCompletionBlock:failureBlock
+                   cbObject:nil];
+```
+
+```java
+AuthenticationType authenticationType = AuthenticationType.Universal;
+AuthenticationIds ids = new AuthenticationIds ("authAdvancedUser", "authAdvancedPass", "");
+string extraJson = "{\"key\":\"value\"}";
+this; // implements IServerCallback
+
+<%= data.branding.codePrefix %>.getIdentityService().attachAdvancedIdentity(authenticationType, ids, extraJson, this);
+
+public void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData)
+{
+    System.out.print(String.format("Success | %s", jsonData.toString()));
+}
+public void serverError(ServiceName serviceName, ServiceOperation serviceOperation, int statusCode, int reasonCode, String jsonError)
+{
+    System.out.print(String.format("Failed | %d %d %s", statusCode,  reasonCode, jsonError.toString()));
+}
+```
+
+```javascript
+var authenticationType = <%= data.branding.codePrefix %>.brainCloudClient.authentication.AUTHENTICATION_TYPE_UNIVERSAL;
+var ids = {externalId: "authAdvancedUser", authenticationToken: "authAdvancedPass", authenticationSubType: ""};
+var forceCreate = true;
+var extraJson = {"key":"value"};
+
+<%= data.branding.codePrefix %>.identity.attachAdvancedIdentity(authenticationType, ids, forceCreate, extraJson, result =>
+{
+	var status = result.status;
+	console.log(status + " : " + JSON.stringify(result, null, 2));
+});
+```
+
+```cfscript
+// N/A
+```
+
+<%= partial "partials/jsonBtn" %>
+
+```json-doc
+{
+    "status" : 200,
+    "data" : null
+}
+```
+
+<%= partial(:"partials/versionTag", :locals => {
+  :version => "4.10.0",
+  :newText => "",
+  :comingText => ""
+}) %>
+
+Attach the user's credentials to the current profile.
+
+<%= partial(:"partials/servop", :locals => { :service_name => "identity", :operation_name => "ATTACH" }) %>
+
+#### Method Parameters
+Parameter | Description
+--------- | -----------
+authenticationType | Universal, Universal, Facebook, etc
+ids | Auth IDs structure
+extraJson | Additional to piggyback along with the call, to be picked up by pre- or post- hooks. Leave empty string for no extraJson
+
+
+#### Status Codes
+Code | Name | Description
+---- | ---- | -----------
+40211 | DUPLICATE_IDENTITY_TYPE | Returned when trying to attach an identity type that already exists for that profile. For instance you can have only one Email identity for a profile.
+40212 | MERGE_PROFILES | Returned when trying to attach an identity type that would result in two profiles being merged into one (for instance an anonymous account and a Email account).
+550022 | INVALID_PASSWORD_CONTENT | The password doesn't meet the minimum password requirements.

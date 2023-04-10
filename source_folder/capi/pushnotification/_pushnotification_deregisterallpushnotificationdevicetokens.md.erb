@@ -1,0 +1,81 @@
+### DeregisterAllPushNotificationDeviceTokens
+```r
+{
+	"service": "pushNotification",
+	"operation": "DEREGISTER_ALL",
+	"data": {}
+}
+```
+
+```objective_c
+BCCompletionBlock successBlock;      // define callback
+BCErrorCompletionBlock failureBlock; // define callback
+
+[[<%= data.branding.codePrefix %> pushNotificationService] deregisterAllPushNotificationDeviceTokens:successBlock
+       errorCompletionBlock:failureBlock
+                   cbObject:nil];
+```
+
+```cpp
+<%= data.branding.codePrefix %>->getPushNotificationService()->deregisterAllPushNotificationDeviceTokens(this);
+```
+
+```csharp
+SuccessCallback successCallback = (response, cbObject) =>
+{
+    Debug.Log(string.Format("Success | {0}", response));
+};
+FailureCallback failureCallback = (status, code, error, cbObject) =>
+{
+    Debug.Log(string.Format("Failed | {0}  {1}  {2}", status, code, error));
+};
+
+<%= data.branding.codePrefix %>.PushNotificationService.DeregisterAllPushNotificationDeviceTokens(successCallback, failureCallback);
+```
+
+```java
+this; // implements IServerCallback
+
+<%= data.branding.codePrefix %>.getPushNotificationService().deregisterAllPushNotificationDeviceTokens(this);
+
+public void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData)
+{
+    System.out.print(String.format("Success | %s", jsonData.toString()));
+}
+public void serverError(ServiceName serviceName, ServiceOperation serviceOperation, int statusCode, int reasonCode, String jsonError)
+{
+    System.out.print(String.format("Failed | %d %d %s", statusCode,  reasonCode, jsonError.toString()));
+}
+```
+
+```javascript
+
+<%= data.branding.codePrefix %>.pushNotification.deregisterAllPushNotificationDeviceTokens(result =>
+{
+	var status = result.status;
+	console.log(status + " : " + JSON.stringify(result, null, 2));
+});
+```
+
+```cfscript
+var pushNotificationProxy = bridge.getPushNotificationServiceProxy();
+
+var postResult = pushNotificationProxy.deregisterAllPushNotificationDeviceTokens();
+if (postResult.status == 200) {
+    // Success!
+}
+```
+
+<%= partial "partials/jsonBtn" %>
+
+```json-doc
+{
+    "status": 200,
+    "data": null
+}
+```
+
+Clears the device tokens currently registered to the user.
+
+<%= partial(:"partials/servop", :locals => { :service_name => "pushNotification", :operation_name => "DEREGISTER_ALL" }) %>
+

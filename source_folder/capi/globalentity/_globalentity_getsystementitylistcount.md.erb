@@ -1,0 +1,77 @@
+### GetSystemEntityListCount
+
+```r
+{
+	"service": "globalEntity",
+	"operation": "GET_SYSTEM_ENTITY_LIST_COUNT",
+	"data": {
+		"where": {
+			"entityType": "address"
+		}
+	}
+}
+```
+
+```cpp
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+
+```csharp
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+
+```java
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+
+```objective_c
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+
+```javascript
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+
+```cfscript
+var where = {
+    "entityType": "address"
+};
+var globalEntityProxy = bridge.getGlobalEntityServiceProxy();
+
+var postResult = globalEntityProxy.getSystemEntityListCount(where);
+if (postResult.status == 200) {
+    // Success!
+}
+```
+
+<%= partial "partials/jsonBtn" %>
+
+```json-doc
+{
+    "status":200,
+    "data":
+    {
+        "entityListCount":5
+    }
+}
+```
+
+Method gets a count of system entities based on the where clause.
+
+Fields available for use in the 'where' clause are:
+
+ - entityType
+ - entityIndexedId
+ - createdAt
+ - updatedAt
+ - ownerId
+ - timeToLive
+
+ Along with all custom data (using `data.`).  For more information on the query syntax see <a href="#" onclick='window.navigateToTarget("#appendix-mongodbwherequeries");'>here</a>.
+
+<%= partial(:"partials/servop", :locals => { :service_name => "globalEntity", :operation_name => "GET_SYSTEM_ENTITY_LIST_COUNT" }) %>
+#### Method Parameters
+Parameter | Description
+--------- | -----------
+where | Mongo style query string
+

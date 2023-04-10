@@ -1,0 +1,68 @@
+### MergeSteamIdentity
+
+```csharp
+string steamId = "someId";
+string sessionTicket = "someToken";
+
+<%= data.branding.codePrefix %>.IdentityService.MergeSteamIdentity(
+    steamId,
+    sessionTicket,
+    SuccessCallback, FailureCallback);
+```
+
+```cpp
+const char * steamId = "someId";
+const char * sessionTicket = "someToken";
+
+<%= data.branding.codePrefix %>->getIdentityService()->mergeSteamIdentity(
+    steamId, sessionTicket, this);
+```
+
+```objective_c
+- (void)mergeSteamIdentity:(NSString *)steamId
+       authenticationToken:(NSString *)sessionTicket
+           completionBlock:(BCCompletionBlock)cb
+      errorCompletionBlock:(BCErrorCompletionBlock)ecb
+                  cbObject:(BCCallbackObject)cbObject;
+```
+
+```java
+public void mergeSteamIdentity(String steamId, String sessionTicket, IServerCallback callback)
+```
+
+```javascript
+<%= data.branding.codePrefix %>.identity.mergeSteamIdentity = function(steamId, sessionTicket, callback)
+```
+
+```cfscript
+// N/A
+```
+
+<%= partial "partials/jsonBtn" %>
+
+```json-doc
+{  
+   "data":{  
+      "profileId":"f94f7e2d-3cdd-4fd6-9c28-392f7875e9df"
+   },
+   "status":200
+}
+```
+
+Merge the profile associated with the provided steam ID with the current profile.
+
+NOTE: If using the <%= data.branding.codeWrapper %>, once the merge is complete you should call <a href="#" onclick='window.navigateToTarget("#wrapper-setstoredprofileid");'><code>SetStoredProfileId</code></a> in the <%= data.branding.codeWrapper %> with the profileId returned in the Merge call.
+
+<%= partial(:"partials/servop", :locals => { :service_name => "identity", :operation_name => "MERGE" }) %>
+
+#### Method Parameters
+Parameter | Description
+--------- | -----------
+steamId | String representation of 64 bit steam id
+sessionTicket | The player's session ticket (hex encoded)
+
+#### Status Codes
+Code | Name | Description
+---- | ---- | -----------
+40211 | DUPLICATE_IDENTITY_TYPE | Returned when trying to attach an identity type that already exists for that profile. For instance you can have only one Steam identity for a profile.
+

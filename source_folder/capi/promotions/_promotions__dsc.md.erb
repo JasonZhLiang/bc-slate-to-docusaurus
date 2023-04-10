@@ -1,0 +1,13 @@
+<%= partial(:"partials/versionTag", :locals => {
+  :version => "4.5.5",
+  :newText => "",
+  :comingText => ""
+}) %>
+
+**Promotions** is a new service that allows devs to create/edit/delete promotions programmatically via S2S and cloud-code.
+
+*Important notes (when creating or updating a promotion):*
+
+* Include only products that you want to CHANGE the price of in the "prices" section of the JSON
+* Products whose prices are to remain UNCHANGED should not be included in "prices"
+* Products to remove from availability should be encoded with a priceId of -2

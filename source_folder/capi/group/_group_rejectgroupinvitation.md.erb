@@ -1,0 +1,96 @@
+### RejectGroupInvitation [rejectgroupinvitation]
+
+```r
+{
+	"service": "group",
+	"operation": "REJECT_GROUP_INVITATION",
+	"data": {
+		"groupId": "a-group-id"
+	}
+}
+```
+
+```objective_c
+NSString *groupId = @"a-group-id";
+BCCompletionBlock successBlock;      // define callback
+BCErrorCompletionBlock failureBlock; // define callback
+
+[[<%= data.branding.codePrefix %> groupService] rejectGroupInvitation:groupId
+            completionBlock:successBlock
+       errorCompletionBlock:failureBlock
+                   cbObject:nil];
+```
+
+```cpp
+const char *groupId = "a-group-id";
+
+<%= data.branding.codePrefix %>->getGroup()->rejectGroupInvitation(groupId, this);
+```
+
+```csharp
+string groupId = "a-group-id";
+SuccessCallback successCallback = (response, cbObject) =>
+{
+    Debug.Log(string.Format("Success | {0}", response));
+};
+FailureCallback failureCallback = (status, code, error, cbObject) =>
+{
+    Debug.Log(string.Format("Failed | {0}  {1}  {2}", status, code, error));
+};
+
+<%= data.branding.codePrefix %>.Group.RejectGroupInvitation(groupId, successCallback, failureCallback);
+```
+
+```java
+String groupId = "a-group-id";
+this; // implements IServerCallback
+
+<%= data.branding.codePrefix %>.getGroup().rejectGroupInvitation(groupId, this);
+
+public void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData)
+{
+    System.out.print(String.format("Success | %s", jsonData.toString()));
+}
+public void serverError(ServiceName serviceName, ServiceOperation serviceOperation, int statusCode, int reasonCode, String jsonError)
+{
+    System.out.print(String.format("Failed | %d %d %s", statusCode,  reasonCode, jsonError.toString()));
+}
+```
+
+```javascript
+var groupId = "a-group-id";
+
+<%= data.branding.codePrefix %>.group.rejectGroupInvitation(groupId, result =>
+{
+	var status = result.status;
+	console.log(status + " : " + JSON.stringify(result, null, 2));
+});
+```
+
+```cfscript
+var groupId = "a-group-id";
+var groupProxy = bridge.getGroupServiceProxy();
+
+var postResult = groupProxy.rejectGroupInvitation(groupId);
+if (postResult.status == 200) {
+    // Success!
+}
+```
+
+<%= partial "partials/jsonBtn" %>
+
+```json-doc
+{
+    "status": 200,
+    "data": null
+}
+```
+
+
+Reject an invitation to become a member of the group.
+
+<%= partial(:"partials/servop", :locals => { :service_name => "group", :operation_name => "REJECT_GROUP_INVITATION" }) %>
+#### Method Parameters
+Parameter | Description
+--------- | -----------
+groupId | ID of the group

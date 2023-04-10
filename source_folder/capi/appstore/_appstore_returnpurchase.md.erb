@@ -1,0 +1,63 @@
+### ReturnPurchase
+
+```r
+{
+	"service": "appStore",
+	"operation": "RETURN_PURCHASE",
+	"data": {
+		"storeId": "mock",
+        "transactionId": "xxxxxx"
+	}
+}
+```
+
+```cfscript
+var storeId = "mock";
+var transactionId: "xxxxxx";
+var appStoreProxy = bridge.getAppStoreServiceProxy();
+
+var postResult = appStoreProxy.returnPurchase(storeId, transactionId);
+if (postResult.status == 200) {
+    // Success!
+}
+```
+```cpp
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+
+```csharp
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+
+```java
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+
+```javascript
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+
+```objective_c
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+
+
+
+<%= partial "partials/jsonBtn" %>
+
+```json-doc
+{
+    "status": 200,
+    "data": {}
+}
+```
+
+Mock version of return purchase, use for test purpose. 
+
+<%= partial(:"partials/servop", :locals => { :service_name => "appStore", :operation_name => "RETURN_PURCHASE" }) %>
+
+#### Method Parameters
+Parameter | Description
+--------- | -----------
+storeId | The store type.
+transactionId | Id of transaction to return

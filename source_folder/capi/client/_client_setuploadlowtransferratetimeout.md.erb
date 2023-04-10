@@ -1,0 +1,38 @@
+### SetUploadLowTransferRateTimeout
+
+```csharp
+int timeoutSecs = 60;
+<%= data.branding.codePrefix %>.SetUploadLowTransferRateTimeout(timeoutSecs);
+```
+
+```cpp
+int timeoutSecs = 60;
+<%= data.branding.codePrefix %>->setUploadLowTransferRateTimeout(timeoutSecs);
+```
+
+```objective_c
+int timeoutSecs = 60;
+[<%= data.branding.codePrefix %> setUploadLowTransferRateTimeout:timeoutSecs];
+```
+
+```java
+// N/A
+```
+
+```javascript
+// N/A
+```
+
+Sets the timeout in seconds of a low speed upload (ie transfer rate which is underneath the low transfer rate threshold).
+
+By default this is set to 120 seconds. Setting this value to 0 will turn off the timeout.
+
+#### Method Parameters
+Parameter | Description
+--------- | -----------
+timeoutSecs | The timeout in seconds
+
+<aside class="notice">
+This timeout method does not work on Unity mobile platforms.
+</aside>
+

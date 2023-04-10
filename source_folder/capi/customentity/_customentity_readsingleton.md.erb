@@ -1,0 +1,115 @@
+### ReadSingleton
+
+```cfscript
+var entityType = "athletes";
+var customEntityProxy = bridge.getCustomEntityServiceProxy();
+
+var postResult = customEntityProxy.readSingleton(entityType);
+if (postResult.status == 200) {
+    // Success!
+}
+```
+```cpp
+const char *entityType = "athletes";
+<%= data.branding.codePrefix %>->getCustomEntityService()->readSingleton(entityType, this);
+```
+```csharp
+string entityType = "athletes";
+SuccessCallback successCallback = (response, cbObject) =>
+{
+    Debug.Log(string.Format("Success | {0}", response));
+};
+FailureCallback failureCallback = (status, code, error, cbObject) =>
+{
+    Debug.Log(string.Format("Failed | {0}  {1}  {2}", status, code, error));
+};
+
+<%= data.branding.codePrefix %>.CustomEntityService.ReadSingleton(entityType, successCallback, failureCallback);
+```
+```java
+String entityType = "athletes";
+this; // implements IServerCallback
+
+<%= data.branding.codePrefix %>.getCustomEntityService().readSingleton(entityType, this);
+
+public void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData)
+{
+    System.out.print(String.format("Success | %s", jsonData.toString()));
+}
+public void serverError(ServiceName serviceName, ServiceOperation serviceOperation, int statusCode, int reasonCode, String jsonError)
+{
+    System.out.print(String.format("Failed | %d %d %s", statusCode,  reasonCode, jsonError.toString()));
+}
+```
+```javascript
+var entityType = "athletes";
+
+<%= data.branding.codePrefix %>.customEntity.readSingleton(entityType, result =>
+{
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
+});
+```
+```objective_c
+NSString *entityType = @"athletes";
+BCCompletionBlock successBlock;      // define callback
+BCErrorCompletionBlock failureBlock; // define callback
+
+[[<%= data.branding.codePrefix %> customEntityService] readSingleton:entityType
+            completionBlock:successBlock
+       errorCompletionBlock:failureBlock
+                   cbObject:nil];
+```
+```r
+{
+	"service": "customEntity",
+	"operation": "READ_SINGLETON",
+	"data": {
+		"entityType": "athletes",
+	}
+}
+```
+
+<%= partial "partials/jsonBtn" %>
+
+```json-doc
+{
+  "data": {
+    "entityId": "12a57791-2600-47dc-ad3c-96a54c461a58",
+    "version": 1,
+    "acl": {
+      "other": 0
+    },
+    "ownerId": "cde6c0b2-e9e4-40e4-8c8a-91ebba5a2291",
+    "expiresAt": null,
+    "timeToLive": null,
+    "createdAt": 1590264448888,
+    "updatedAt": 1591815136870,
+    "entityType": "athletes",
+    "data": {
+        "firstName": "Super", 
+        "surName": "Star", 
+        "position" : "forward", 
+        "goals": 2, 
+        "assists": 4 
+    },
+    "_serverTime": 1637946319239
+  },
+  "status": 200
+}
+```
+<%= partial(:"partials/versionTag", :locals => {
+  :version => "4.5.5",
+  :newText => "",
+  :comingText => ""
+}) %>
+
+Reads the custom entity singleton owned by the session's user.
+
+<%= partial(:"partials/servop", :locals => { :service_name => "customEntity", :operation_name => "READ_SINGLETON" }) %>
+
+#### Method Parameters
+Parameter | Description
+--------- | -----------
+entityType | The type of custom entity being read. Custom entity type must have option isOwned set to true.
+

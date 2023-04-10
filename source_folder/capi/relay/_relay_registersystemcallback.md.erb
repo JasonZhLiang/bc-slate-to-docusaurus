@@ -1,0 +1,26 @@
+### RegisterSystemCallback
+
+```csharp
+RSDataCallback rsDataCallback = (response) =>
+{
+    Debug.Log(string.Format("Success | {0}", response));  
+};
+
+<%= data.branding.codePrefix %>.RelayService.RegisterSystemCallback(rsDataCallback);
+```
+```cpp
+<%= data.branding.codePrefix %>->getRelayService()->registerSystemCallback(this);
+```
+
+```cfscript
+// N/A
+```
+
+<%= partial(:"partials/versionTag", :locals => {
+  :version => "4.5.6",
+  :newText => "",
+  :comingText => ""
+}) %>
+
+
+Register callback for RelayServer system messages.

@@ -1,0 +1,39 @@
+### Connect
+
+```csharp
+RelayConnectionType connectionType = RelayConnectionType.WEBSOCKET;
+Dictionary<string, object> options = null;
+
+SuccessCallback successCallback = (response, cbObject) =>
+{
+    Debug.Log(string.Format("Success | {0}", response));
+};
+FailureCallback failureCallback = (status, code, error, cbObject) =>
+{
+    Debug.Log(string.Format("Failed | {0}  {1}  {2}", status, code, error));
+};
+
+<%= data.branding.codePrefix %>.RelayService.Connect(connectionType, options, successCallback, failureCallback);
+```
+```cpp
+<%= data.branding.codePrefix %>->getRelayService()->getCount(eRelayConnectionType.WEBSOCKET, server.host, port, server.passcode, server.lobbyId, this);
+```
+
+```cfscript
+// N/A
+```
+
+<%= partial(:"partials/versionTag", :locals => {
+  :version => "4.0",
+  :newText => "",
+  :comingText => ""
+}) %>
+
+
+Start off a connection, based off connection type to <%= data.branding.productName %>'s Relay Servers.  Connect options come in from "ROOM_ASSIGNED" lobby callback
+
+#### Method Parameters
+Parameter | Description
+--------- | -----------
+connectionType | The connection type. INVALID, WEBSOCKET, TCP, UDP, MAX
+options | Options sent in the connection

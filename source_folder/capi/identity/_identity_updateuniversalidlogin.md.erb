@@ -1,0 +1,99 @@
+### UpdateUniversalIdLogin
+
+```r
+{
+	"service": "identity",
+	"operation": "UPDATE_UNIVERSAL_LOGIN",
+	"data": {
+		"externalId": "username"
+	}
+}
+```
+
+```csharp
+string externalId = "username";
+
+<%= data.branding.codePrefix %>.IdentityService.UpdateUniversalIdLogin(
+    externalId,
+    SuccessCallback, FailureCallback);
+```
+
+```cpp
+const char * externalId = "username";
+const char * token = "someToken";
+
+<%= data.branding.codePrefix %>->getIdentityService()->updateUniversalIdLogin(
+  externalId, this);
+```
+
+```objective_c
+NSString *externalId = @"username";
+BCCompletionBlock successBlock;      // define callback
+BCErrorCompletionBlock failureBlock; // define callback
+
+[[<%= data.branding.codePrefix %> identityService] updateUniversalIdLogin:externalId
+              completionBlock:successBlock
+        errorCompletionBlock:failureBlock
+                    cbObject:nil];
+```
+
+```java
+String externalId = "username";
+this; // implements IServerCallback
+
+<%= data.branding.codePrefix %>.identity.updateUniversalIdLogin(externalId, this);
+
+public void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData)
+{
+    System.out.print(String.format("Success | %s", jsonData.toString()));
+}
+public void serverError(ServiceName serviceName, ServiceOperation serviceOperation, int statusCode, int reasonCode, String jsonError)
+{
+    System.out.print(String.format("Failed | %d %d %s", statusCode,  reasonCode, jsonError.toString()));
+}
+```
+
+```javascript
+var externalId = "username";
+<%= data.branding.codePrefix %>.identity.updateUniversalIdLogin(externalId, result =>
+{
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
+});
+```
+
+```cfscript
+var externalId = "username";
+var identityProxy = bridge.getIdentityServiceProxy();
+
+var postResult = identityProxy.updateUniversalIdLogin(externalId);
+if (postResult.status == 200) {
+    // Success!
+}
+```
+
+<%= partial "partials/jsonBtn" %>
+
+```json-doc
+{
+    "status" : 200,
+    "data" : null
+}
+```
+
+<%= partial(:"partials/versionTag", :locals => {
+  :version => "3.10.0",
+  :newText => "",
+  :comingText => ""
+}) %>
+
+Updates the UniversalId of the current profile. *Note - works for non-login versions of UniversalId as well.*
+
+Call will fail if the new UniversalId is already in use, or if the profile does not have a UniversalId. 
+
+<%= partial(:"partials/servop", :locals => { :service_name => "identity", :operation_name => "UPDATE_UNIVERSAL_LOGIN" }) %>
+
+#### Method Parameters
+Parameter | Description
+--------- | -----------
+externalId | The new universal id to update to

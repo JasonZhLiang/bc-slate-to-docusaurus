@@ -1,0 +1,66 @@
+### ConsumePeerCurrency
+
+```cfscript
+var vcId = "tokens";
+var vcAmount = 1;
+var peerCode = "gameloot";
+var virtualCurrencyProxy = bridge.getVirtualCurrencyServiceProxy();
+
+var postResult = virtualCurrencyProxy.consumePeerCurrency(vcId, vcAmount, peerCode);
+if (postResult.status == 200) {
+    // Success!
+}
+```
+```cpp
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+```csharp
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+```java
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+```javascript
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+```objective_c
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+
+<%= partial "partials/jsonBtn" %>
+
+```json-doc
+{
+    "status" : 200,
+    "data" :
+    {
+        "currencyMap": {
+            "gems": {
+                "purchased": 0,
+                "balance": 0,
+                "consumed": 0,
+                "awarded": 0
+            },
+            "gold": {
+                "purchased": 0,
+                "balance": 90,
+                "consumed": 10,
+                "awarded": 100
+            }
+        }
+
+    }
+}
+```
+
+Consumes currency in a peer.
+
+
+<%= partial(:"partials/servop", :locals => { :service_name => "virtualCurrency", :operation_name => "CONSUME_PEER_VC" }) %>
+
+#### Method Parameters
+Parameter | Description
+--------- | -----------
+vcId | Type of currency (Ex. ticket, tokens)
+vcAmount | Currency amount to be consumed
+peer | Name of the peer

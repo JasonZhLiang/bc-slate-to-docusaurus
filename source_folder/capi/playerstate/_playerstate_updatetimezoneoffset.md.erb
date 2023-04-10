@@ -1,0 +1,103 @@
+### UpdateTimezoneOffset
+
+```r
+{
+	"service": "playerState",
+	"operation": "UPDATE_TIMEZONE_OFFSET",
+	"data": {
+		"timeZoneOffset": -2
+	}
+}
+```
+
+```objective_c
+int timeZoneOffset = -2;
+BCCompletionBlock successBlock;      // define callback
+BCErrorCompletionBlock failureBlock; // define callback
+
+[[<%= data.branding.codePrefix %> playerStateService] updateTimeZoneOffset:timeZoneOffset
+            completionBlock:successBlock
+       errorCompletionBlock:failureBlock
+                   cbObject:nil];
+```
+
+```cpp
+int timeZoneOffset = -2;
+<%= data.branding.codePrefix %>->getPlayerStateService()->updateTimeZoneOffset(timeZoneOffset, this);
+```
+
+```csharp
+int timeZoneOffset = -2;
+SuccessCallback successCallback = (response, cbObject) =>
+{
+    Debug.Log(string.Format("Success | {0}", response));
+};
+FailureCallback failureCallback = (status, code, error, cbObject) =>
+{
+    Debug.Log(string.Format("Failed | {0}  {1}  {2}", status, code, error));
+};
+
+<%= data.branding.codePrefix %>.PlayerStateService.UpdateTimeZoneOffset(timeZoneOffset, successCallback, failureCallback);
+```
+
+```java
+int timeZoneOffset = -2;
+this; // implements IServerCallback
+
+<%= data.branding.codePrefix %>.getPlayerStateService().updateTimeZoneOffset(timeZoneOffset, this);
+
+public void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData)
+{
+    System.out.print(String.format("Success | %s", jsonData.toString()));
+}
+public void serverError(ServiceName serviceName, ServiceOperation serviceOperation, int statusCode, int reasonCode, String jsonError)
+{
+    System.out.print(String.format("Failed | %d %d %s", statusCode,  reasonCode, jsonError.toString()));
+}
+```
+
+```javascript
+int timeZoneOffset = -2;
+
+<%= data.branding.codePrefix %>.playerState.updateTimeZoneOffset(timeZoneOffset, result =>
+{
+	var status = result.status;
+	console.log(status + " : " + JSON.stringify(result, null, 2));
+});
+```
+
+```cfscript
+int timeZoneOffset = -2;
+var playerStateProxy = bridge.getPlayerStateServiceProxy();
+
+var postResult = playerStateProxy.updateTimeZoneOffset(timeZoneOffset);
+if (postResult.status == 200) {
+    // Success!
+}
+```
+
+<%= partial "partials/jsonBtn" %>
+
+```json-doc
+{
+    "status":200,
+    "data":
+    {
+        "timeZoneOffset": -2
+    }
+}
+```
+<%= partial(:"partials/versionTag", :locals => {
+  :version => "4.4.0",
+  :newText => "",
+  :comingText => ""
+}) %>
+
+Sets the user's timezone offset.
+
+<%= partial(:"partials/servop", :locals => { :service_name => "playerState", :operation_name => "UPDATE_TIMEZONE_OFFSET" }) %>
+#### Method Parameters
+Parameter | Description
+--------- | -----------
+timeZoneOffset | The numeric timezone offset of the user
+

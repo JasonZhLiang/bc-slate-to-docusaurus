@@ -1,0 +1,77 @@
+### MergeTwitterIdentity
+
+```csharp
+string twitterId = "someId";
+string token = "someToken";
+string secret = "someSecret";
+
+<%= data.branding.codePrefix %>.IdentityService.MergeTwitterIdentity(
+    twitterId,
+    token,
+    secret,
+    SuccessCallback, FailureCallback);
+```
+
+```cpp
+const char * twitterId = "someId";
+const char * token = "someToken";
+const char * secret = "secret";
+
+<%= data.branding.codePrefix %>->getIdentityService()->mergeTwitterIdentity(
+    twitterId, token, secret, this);
+```
+
+```objective_c
+- (void)mergeTwitterIdentity:(NSString *)twitterId
+         authenticationToken:(NSString *)token
+                      secret:(NSString *)secret
+             completionBlock:(BCCompletionBlock)cb
+        errorCompletionBlock:(BCErrorCompletionBlock)ecb
+                    cbObject:(BCCallbackObject)cbObject;
+```
+
+```java
+public void mergeTwitterIdentity(
+        String twitterId,
+        String authenticationToken,
+        String secret,
+        IServerCallback callback)
+```
+
+```javascript
+<%= data.branding.codePrefix %>.identity.mergeTwitterIdentity = function(twitterId, authenticationToken, secret, callback)
+```
+
+```cfscript
+// N/A
+```
+
+<%= partial "partials/jsonBtn" %>
+
+```json-doc
+{  
+   "data":{  
+      "profileId":"f94f7e2d-3cdd-4fd6-9c28-392f7875e9df"
+   },
+   "status":200
+}
+```
+
+Merge the profile associated with the provided Twitter credentials with the current profile.
+
+NOTE: If using the <%= data.branding.codeWrapper %>, once the merge is complete you should call <a href="#" onclick='window.navigateToTarget("#wrapper-setstoredprofileid");'><code>SetStoredProfileId</code></a> in the <%= data.branding.codeWrapper %> with the profileId returned in the Merge call.
+
+<%= partial(:"partials/servop", :locals => { :service_name => "identity", :operation_name => "MERGE" }) %>
+
+#### Method Parameters
+Parameter | Description
+--------- | -----------
+twitterId | String representation of a Twitter user ID
+authenticationToken | The authentication token derived via the Twitter API
+secret | The secret given when attempting to link with Twitter
+
+#### Status Codes
+Code | Name | Description
+---- | ---- | -----------
+40211 | DUPLICATE_IDENTITY_TYPE | Returned when trying to attach an identity type that already exists for that profile. For instance you can have only one Twitter identity for a profile.
+

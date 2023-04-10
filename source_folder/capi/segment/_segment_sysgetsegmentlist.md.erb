@@ -1,0 +1,71 @@
+### SysGetSegmentList
+
+```cfscript
+var segmentProxy = bridge.getSegmentServiceProxy();
+
+var postResult = segmentProxy.sysGetSegmentList();
+if (postResult.status == 200) {
+    // Success!
+}
+```
+```cpp
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+```csharp
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+```java
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+```javascript
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+```objective_c
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+```r
+{
+	"service": "segment",
+	"operation": "SYS_GET_SEGMENT_LIST",
+	"data": {}
+}
+```
+
+<%= partial "partials/jsonBtn" %>
+
+```json-doc
+{
+	"data": {
+		"segments": [
+		  {
+			"segmentId": 1,
+			"name": "segmentname",
+			"description": "a/b test id less than 30",
+			"testersOnly": false,
+			"createdAt": 1591891097875,
+			"updatedAt": 1591891108642,
+			"version": 2
+		  },
+		  {
+			"segmentId": 2,
+			"name": "another segment",
+			"description": "xp level great than 2",
+			"testersOnly": false,
+			"createdAt": 1591891221983,
+			"updatedAt": 1591891227208,
+			"version": 2
+		  }
+		]
+	  },
+	  "status": 200
+}
+```
+<%= partial(:"partials/versionTag", :locals => {
+  :version => "4.5.5",
+  :newText => "",
+  :comingText => ""
+}) %>
+
+Returns a list of all segments with basic meta-data. i.e. does not include the criteria details.
+
+<%= partial(:"partials/servop", :locals => { :service_name => "segment", :operation_name => "SYS_GET_SEGMENT_LIST" }) %>

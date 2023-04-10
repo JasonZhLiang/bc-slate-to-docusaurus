@@ -1,0 +1,37 @@
+### InitializeIdentity
+
+```cpp
+<%= data.branding.codePrefix %>->initializeIdentity("myProfileId", "myAnonymousId");
+```
+
+```csharp
+<%= data.branding.codePrefix %>.InitializeIdentity("myProfileId", "myAnonymousId");
+```
+
+```java
+<%= data.branding.codePrefix %>.initializeIdentity("myProfileId", "myAnonymousId");
+```
+
+```objective_c
+[<%= data.branding.codePrefix %> initializeIdentity:@"myProfileId", anonymousId:@"myAnonymousId"];
+```
+
+```javascript
+<%= data.branding.codePrefix %>.initializeIdentity = function(profileId, anonymousId)
+```
+
+Initializes the authentication service with an anonymous installation ID and most recently used profile ID.
+You will need to call this method before authenticating anonymously.
+
+Note that calling this is the same as calling <a href="#" onclick='window.navigateToTarget("#capi-authentication-initialize");'><code>Initialize</code></a> in the BrainCloudAuthentication service.
+
+#### Method Parameters
+Parameter | Description
+--------- | -----------
+profileId | The profile id of the user
+anonymousId | The anonymous id of the user
+
+<aside class="warning">
+InitializeIdentity must be called before you can authenticate a user anonymously.
+</aside>
+

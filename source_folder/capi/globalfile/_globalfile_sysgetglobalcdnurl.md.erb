@@ -1,0 +1,64 @@
+### SysGetGlobalCDNUrl
+
+```r
+{
+	"service": "globalFileV3",
+	"operation": "SYS_GET_GLOBAL_CDN_URL",
+	"data": {
+		"fileId": "hjvfsghguhuhrtghgh"
+	}
+}
+```
+
+
+```objective_c
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+
+```cpp
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+
+```csharp
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+
+```java
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+
+```javascript
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+
+```cfscript
+var fileId = "hjvfsghguhuhrtghgh";
+var globalFileProxy = bridge.getGlobalFileV3ServiceProxy();
+
+var postResult = globalFileProxy.sysGetGlobalCDNUrl(fileId);
+if (postResult.status == 200) {
+    // Success!
+}
+```
+
+<%= partial "partials/jsonBtn" %>
+
+```json-doc
+{
+    "status": 200,
+    "data": {
+        "appServerUrl": "https://api.braincloudservers.com/...f434b1db538b/f/uploadsimplefile.txt",
+        "cdnUrl": "https://d2b6zwnvr1nyug.cloudfront.net/bc/g/20001/u/107b3aa9-0d9f-4e90-af..."
+    }
+}
+```
+
+Returns the CDN URL for the specified file.
+
+<%= partial(:"partials/servop", :locals => { :service_name => "globalFileV3", :operation_name => "SYS_GET_GLOBAL_CDN_URL" }) %>
+
+#### Method Parameters
+Parameter | Description
+--------- | -----------
+fileId | File ID
+

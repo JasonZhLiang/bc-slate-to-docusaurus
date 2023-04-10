@@ -1,0 +1,61 @@
+### Initialize
+
+> To initialize, use this code:
+
+```cpp
+const char* serverUrl = "https://api.braincloudservers.com/dispatcherv2";
+const char* secret = "1234-1234-1234-1234";
+const char* appId = "123456";
+
+<%= data.branding.codePrefix %>->initialize(serverUrl, secret, appId, "1.0.0");
+```
+
+```csharp
+// If you're using Unity, you can make use of the <%= data.branding.productName %>Settings toolbar
+string serverUrl = "https://api.braincloudservers.com/dispatcherv2";
+string secret = "1234-1234-1234-1234";
+string appId = "123456";
+
+<%= data.branding.codePrefix %>.Initialize(serverUrl, secret, appId, "1.0.0");
+```
+
+```java
+String serverUrl = "https://api.braincloudservers.com/dispatcherv2";
+String secret = "1234-1234-1234-1234";
+String appId = "123456";
+
+<%= data.branding.codePrefix %>.initialize(appId, secret, "1.0.0", serverUrl);
+```
+
+```objective_c
+NSString* serverUrl = @"https://api.braincloudservers.com/dispatcherv2";
+NSString* secret = @"1234-1234-1234-1234";
+NSString* appId = @"123456";
+
+[<%= data.branding.codePrefix %> initialize:serverUrl
+                                 secretKey:secret
+                                    appId:appId
+                                    appVersion:"1.0.0"];
+```
+
+```javascript
+var secret = "1234-1234-1234-1234";
+var appId = "123456";
+
+<%= data.branding.codePrefix %>.initialize(appId, secret, "1.0.0");
+```
+
+This method initializes the <%= data.branding.productName %> client SDK.  The information required to initialize can be found on the [Application IDs page](https://portal.braincloudservers.com/admin/dashboard#/development/core-settings-information) of the portal.
+
+#### Method Parameters
+Parameter | Description
+--------- | -----------
+serverUrl | The url of the <%= data.branding.productName %> server.
+secretKey | The secret key for your app found in the <%= data.branding.productName %> portal.
+appId | The id of your app found in the <%= data.branding.productName %> portal.
+appVersion | The version of your app. This can be used to prevent older versions of your app from logging into <%= data.branding.productName %>.
+
+<aside class="warning">
+Initialize must be called before you can call any <%= data.branding.productName %> APIs.
+</aside>
+

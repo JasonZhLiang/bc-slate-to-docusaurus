@@ -1,0 +1,45 @@
+<%= partial(:"partials/versionTag", :locals => {
+  :version => "4.2.0",
+  :newText => "",
+  :comingText => ""
+}) %>
+
+**Custom Entities** are very similar to **Global Entities**, but with several advanced features that make them more applicable for larger data sets.
+
+Like *Global Entities*, *Custom Entites* are:
+
+* available across all users of an app
+* access is controlled via ACL
+* have an `entityType` for organization
+* can have `owners` or be un-owned (as system objects)
+* can be automatically deleted via TTL (time-to-live)
+
+*Custom Entities* differ in these ways:
+
+* You must pre-declare your `entityTypes` ahead-of-time
+* You can create *custom indexes* for each `entityType` for fast lookups
+* You can have an unlimited # of custom entities
+* You can do partial updates of custom entities
+* Custom entities support auto-migration during deployment
+
+*Custom Entities* supports `text` index, `$text` operator can be use to query document fields once a `text` index is set up. Note that as the MongoDB restriction, one collection can have only one `text` index. 
+
+`{
+  "entityType": "questions",
+  "context": {
+    "pagination": {
+      "rowsPerPage": 50,
+      "pageNumber": 1
+    },
+    "searchCriteria": {
+        "$text":{"$search": "moon"}
+    },
+    "sortCriteria": {
+      "createdAt": 1
+    }
+  }
+}`
+  
+<aside class="notice">
+Custom Entities are a premium feature available to <em>Plus Plan</em> customers. Additional usage fees apply.
+</aside>

@@ -1,0 +1,70 @@
+#### API Summary
+
+#### Critical
+Functions that are necessary to use the brianCloud library.
+
+* [Initialize](#capi-client-initialize)
+* [InitializeIdentity](#capi-client-initializeidentity)
+* [GetInstance](#capi-client-getinstance)
+* [RunCallbacks](#capi-client-runcallbacks)
+* [Update](#capi-client-update)
+
+#### Callbacks
+Functions to register and deregister callbacks for specific events.
+
+* [RegisterEventCallback](#capi-client-registereventcallback)
+* [DeregisterEventCallback](#capi-client-deregistereventcallback)
+* [RegisterRewardCallback](#capi-client-registerrewardcallback)
+* [DeregisterRewardCallback](#capi-client-deregisterrewardcallback)
+
+#### Timeouts
+Functions to configure network timeouts.
+
+* [SetPacketTimeoutsToDefault](#capi-client-setpackettimeoutstodefault)
+* [GetPacketTimeouts](#capi-client-getpackettimeouts)
+* [SetPacketTimeouts](#capi-client-setpackettimeouts)
+* [GetAuthenticationPacketTimeout](#capi-client-getauthenticationpackettimeout)
+* [SetAuthenticationPacketTimeout](#capi-client-setauthenticationpackettimeout)
+
+#### Status
+Functions to query the client state or reset network communications.
+
+* [IsAuthenticated](#capi-client-isauthenticated)
+* [IsInitialized](#capi-client-isinitialized)
+* [GetSessionId](#capi-client-getsessionid)
+* [ResetCommunication](#capi-client-resetcommunication)
+* [InsertEndOfMessageBundleMarker](#capi-client-insertendofmessagebundlemarker)
+* [OverrideCountryCode](#capi-client-overridecountrycode)
+* [OverrideLanguageCode](#capi-client-overridelanguagecode)
+* [EnableLogging](#capi-client-enablelogging)
+
+#### File Upload
+Functions to register for file upload callbacks and configure upload specific timeouts.
+
+* [RegisterFileUploadCallback](#capi-client-registerfileuploadcallback)
+* [DeregisterFileUploadCallback](#capi-client-deregisterfileuploadcallback)
+* [GetUploadLowTransferRateThreshold](#capi-client-getuploadlowtransferratethreshold)
+* [SetUploadLowTransferRateThreshold](#capi-client-setuploadlowtransferratethreshold)
+* [GetUploadLowTransferRateTimeout](#capi-client-getuploadlowtransferratetimeout)
+* [SetUploadLowTransferRateTimeout](#capi-client-setuploadlowtransferratetimeout)
+
+#### Network Error Caching
+Functions to enable and manage network error message caching.
+
+* [EnableNetworkErrorMessageCaching](#capi-client-enablenetworkerrormessagecaching)
+* [RegisterNetworkErrorCallback](#capi-client-registernetworkerrorcallback)
+* [RetryCachedMessages](#capi-client-retrycachedmessages)
+* [FlushCachedMessages](#capi-client-flushcachedmessages)
+
+#### Global Error Logging
+Functions to register and deregister callbacks for all error events.
+
+* [RegisterGlobalErrorCallback](#capi-client-registerglobalerrorcallback)
+* [DeregisterGlobalErrorCallback](#capi-client-deregisterglobalerrorcallback)
+
+#### Compatibility
+Compatibility settings for older <%= data.branding.productName %> versions.
+
+* [SetErrorCallbackOn202Status](#capi-client-seterrorcallbackon202status)
+* [SetOldStyleStatusMessageErrorCallback](#capi-client-setoldstylestatusmessageerrorcallback)
+

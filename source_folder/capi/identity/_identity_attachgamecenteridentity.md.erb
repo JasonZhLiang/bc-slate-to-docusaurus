@@ -1,0 +1,60 @@
+### AttachGameCenterIdentity
+
+```csharp
+string gameCenterId = "someId";
+
+<%= data.branding.codePrefix %>.IdentityService.AttachGameCenterIdentity(
+    gameCenterId,
+    SuccessCallback, FailureCallback);
+```
+
+```cpp
+const char * gameCenterId = "someId";
+
+<%= data.branding.codePrefix %>->getIdentityService()->attachGameCenterIdentity(
+    gameCenterId, this);
+```
+
+```objective_c
+- (void)attachGameCenterIdentity:(NSString *)gameCenterId
+                 completionBlock:(BCCompletionBlock)cb
+            errorCompletionBlock:(BCErrorCompletionBlock)ecb
+                        cbObject:(BCCallbackObject)cbObject;
+```
+
+```java
+public void attachGameCenterIdentity(String gameCenterId, IServerCallback callback)
+```
+
+```javascript
+<%= data.branding.codePrefix %>.identity.attachGameCenterIdentity = function(gameCenterId, callback)
+```
+
+```cfscript
+// N/A
+```
+
+<%= partial "partials/jsonBtn" %>
+
+```json-doc
+{
+    "status" : 200,
+    "data" : null
+}
+```
+
+Attach a Game Center identity to the current profile.
+
+<%= partial(:"partials/servop", :locals => { :service_name => "identity", :operation_name => "ATTACH" }) %>
+
+#### Method Parameters
+Parameter | Description
+--------- | -----------
+gameCenterId | The player's game center id  (use the playerID property from the local GKPlayer object)
+
+#### Status Codes
+Code | Name | Description
+---- | ---- | -----------
+40211 | DUPLICATE_IDENTITY_TYPE | Returned when trying to attach an identity type that already exists for that profile. For instance you can have only one Game Center identity for a profile.
+40212 | MERGE_PROFILES | Returned when trying to attach an identity type that would result in two profiles being merged into one (for instance an anonymous account and a Game Center account).
+

@@ -1,0 +1,55 @@
+### RegisterEventCallback
+
+```csharp
+<%= data.branding.codePrefix %>.RegisterEventCallback(callbackFunction);
+```
+
+```cpp
+<%= data.branding.codePrefix %>->registerEventCallback(this);
+```
+
+```objective_c
+eventBlock = ^(NSString *eventsJson) {  };
+
+[<%= data.branding.codePrefix %> registerEventCallback:eventBlock];
+```
+
+```java
+<%= data.branding.codePrefix %>.registerEventCallback(callback);
+```
+
+```javascript
+<%= data.branding.codePrefix %>.registerEventCallback(eventCallback);
+```
+
+<%= partial "partials/jsonBtn" %>
+
+```json-doc
+{
+    "events": [
+        {
+            "fromPlayerId": "178ed06a-d575-4591-8970-e23a5d35f9df",
+            "eventId": 3967,
+            "createdAt": 1441742105908,
+            "gameId": "123",
+            "toPlayerId": "178ed06a-d575-4591-8970-e23a5d35f9df",
+            "eventType": "test",
+            "eventData": {
+                "testData": 117
+            }
+        }
+    ]
+}
+```
+
+<aside class="warning">
+This method is now deprecated. For real-time events, you should use the RTT API method,  <strong>RegisterRTTEventCallback()</strong>, instead.
+</aside>
+
+Sets a callback handler for any out of band event messages that come from <%= data.branding.productName %>.
+
+#### Method Parameters
+Parameter | Description
+--------- | -----------
+eventCallback | A function which takes a JSON string as it's only parameter.
+

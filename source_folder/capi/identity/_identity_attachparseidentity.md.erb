@@ -1,0 +1,65 @@
+### AttachParseIdentity
+
+```csharp
+string parseId = "someId";
+string token = "someToken";
+
+<%= data.branding.codePrefix %>.IdentityService.AttachParseIdentity(
+    parseId,
+    token,
+    SuccessCallback, FailureCallback);
+```
+
+```cpp
+const char * parseId = "someId";
+const char * token = "someToken";
+
+<%= data.branding.codePrefix %>->getIdentityService()->attachParseIdentity(
+    parseId, token, this);
+```
+
+```objective_c
+- (void)attachParseIdentity:(NSString *)parseId
+         authenticationToken:(NSString *)token
+             completionBlock:(BCCompletionBlock)cb
+        errorCompletionBlock:(BCErrorCompletionBlock)ecb
+                    cbObject:(BCCallbackObject)cbObject;
+```
+
+```java
+public void attachParseIdentity(String parseId, String authenticationToken, IServerCallback callback)
+```
+
+```javascript
+<%= data.branding.codePrefix %>.identity.attachParseIdentity = function(parseId, authenticationToken, callback)
+```
+
+```cfscript
+// N/A
+```
+
+<%= partial "partials/jsonBtn" %>
+
+```json-doc
+{
+    "status" : 200,
+    "data" : null
+}
+```
+
+Attach the user's Parse credentials to the current profile.
+
+<%= partial(:"partials/servop", :locals => { :service_name => "identity", :operation_name => "ATTACH" }) %>
+
+#### Method Parameters
+Parameter | Description
+--------- | -----------
+parseId | The parse ID of the user
+authenticationToken | The validated token from Parse (that will be further validated when sent to the <%= data.branding.productName %> service)
+
+#### Status Codes
+Code | Name | Description
+---- | ---- | -----------
+40211 | DUPLICATE_IDENTITY_TYPE | Returned when trying to attach an identity type that already exists for that profile. For instance you can have only one Parse identity for a profile.
+40212 | MERGE_PROFILES | Returned when trying to attach an identity type that would result in two profiles being merged into one (for instance an anonymous account and a Parse account).
+

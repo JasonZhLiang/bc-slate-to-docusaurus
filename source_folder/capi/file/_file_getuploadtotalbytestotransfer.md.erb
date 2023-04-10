@@ -1,0 +1,40 @@
+### GetUploadTotalBytesToTransfer
+
+```csharp
+string myUploadId = "1234-1234-1234-1234"; //From UploadFile return data
+
+int bytes = <%= data.branding.codePrefix %>.FileService.GetUploadTotalBytesToTransfer(myUploadId);
+```
+
+```cpp
+const char* myUploadId = "1234-1234-1234-1234"; //From UploadFile return data
+
+int64_t bytes = <%= data.branding.codePrefix %>->getFileService()->
+    getUploadTotalBytesToTransfer(myUploadId);
+```
+
+```objective_c
+NSString * myUploadId = @"1234-1234-1234-1234"; //From UploadFile return data
+
+[[<%= data.branding.codePrefix %> fileService] getUploadTotalBytesToTransfer:myUploadId];
+```
+
+```java
+public void cancelUpload(String uploadId)
+```
+
+```javascript
+// N/A
+```
+
+```cfscript
+// N/A
+```
+
+Returns the total number of bytes that will be uploaded or -1 if upload not found.
+
+#### Method Parameters
+Parameter | Description
+--------- | -----------
+uploadId | The id of the upload
+

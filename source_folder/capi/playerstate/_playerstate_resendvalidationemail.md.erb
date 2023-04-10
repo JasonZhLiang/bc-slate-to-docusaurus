@@ -1,0 +1,55 @@
+### ResendValidationEmail
+
+```r
+{
+	"service": "playerState",
+	"operation": "RESEND_VALIDATION_EMAIL"
+}
+```
+
+```cpp
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+
+```csharp
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+
+```java
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+
+```objective_c
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+
+```javascript
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+
+```cfscript
+var playerStateProxy = bridge.getPlayerStateServiceProxy();
+
+var postResult = playerStateProxy.resendValidationEmail();
+if (postResult.status == 200) {
+    // Success!
+}
+```
+
+<%= partial "partials/jsonBtn" %>
+```json-doc
+{
+ "data": null,
+ "status": 200
+}
+```
+
+<aside class="notice">
+This method is available in Cloud Code scripts only.
+</aside>
+
+
+Resend validation email.
+
+<%= partial(:"partials/servop", :locals => { :service_name => "playerState", :operation_name => "RESEND_VALIDATION_EMAIL" }) %>
+

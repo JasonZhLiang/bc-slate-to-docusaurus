@@ -1,0 +1,6 @@
+The **VirtualCurrency Service** manages virtual currency balances for app users. 
+
+*This service replaces the currency functions of the deprecated **Product Service**.* The currency APIs of the two services are largely the same, with the following two changes:
+
+* For security purposes, only the get methods are callable from the client -- use *Cloud Code* for the rest
+* We have cleaned up the responses a bit, removing unnecessary fields like `createdAt`, `updatedAt` and `profileId`

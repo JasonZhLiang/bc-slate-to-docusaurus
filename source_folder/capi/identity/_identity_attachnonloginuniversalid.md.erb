@@ -1,0 +1,101 @@
+### AttachNonLoginUniversalId
+
+```r
+{
+	"service": "identity",
+	"operation": "ATTACH_NONLOGIN_UNIVERSAL",
+	"data": {
+		"externalId": "username"
+	}
+}
+```
+
+```csharp
+string externalId = "username";
+
+<%= data.branding.codePrefix %>.IdentityService.AttachNonLoginUniversalId(
+    externalId,
+    SuccessCallback, FailureCallback);
+```
+
+```cpp
+const char * externalId = "username";
+const char * token = "someToken";
+
+<%= data.branding.codePrefix %>->getIdentityService()->attachNonLoginUniversalId(
+  externalId, this);
+```
+
+```objective_c
+NSString *externalId = @"username";
+BCCompletionBlock successBlock;      // define callback
+BCErrorCompletionBlock failureBlock; // define callback
+
+[[<%= data.branding.codePrefix %> identityService] attachNonLoginUniversalId:externalId
+              completionBlock:successBlock
+        errorCompletionBlock:failureBlock
+                    cbObject:nil];
+```
+
+```java
+String externalId = "username";
+this; // implements IServerCallback
+
+<%= data.branding.codePrefix %>.identity.attachNonLoginUniversalId(externalId, this);
+
+public void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData)
+{
+    System.out.print(String.format("Success | %s", jsonData.toString()));
+}
+public void serverError(ServiceName serviceName, ServiceOperation serviceOperation, int statusCode, int reasonCode, String jsonError)
+{
+    System.out.print(String.format("Failed | %d %d %s", statusCode,  reasonCode, jsonError.toString()));
+}
+```
+
+```javascript
+var externalId = "username";
+<%= data.branding.codePrefix %>.identity.attachNonLoginUniversalId(externalId, result =>
+{
+    var status = result.status;
+    console.log(status + " : " + JSON.stringify(result, null, 2));
+});
+```
+
+```cfscript
+var externalId = "username";
+var identityProxy = bridge.getIdentityServiceProxy();
+
+var postResult = identityProxy.attachNonLoginUniversalId(externalId);
+if (postResult.status == 200) {
+    // Success!
+}
+```
+
+
+```json-doc
+{
+    "status" : 200,
+    "data" : null
+}
+```
+
+
+<%= partial(:"partials/versionTag", :locals => {
+  :version => "3.10.0",
+  :newText => "",
+  :comingText => ""
+}) %>
+
+Attaches a UniversalId to the current profile with no login capability.
+
+Useful if the app is not using UniversalId for authentication, and you still want to attach a UniversalId to create an app-unique display name for the user.
+
+The call will fail if the UniversalId is already in use, or if the profile already contains a UniversalId.
+
+
+<%= partial(:"partials/servop", :locals => { :service_name => "identity", :operation_name => "ATTACH_NONLOGIN_UNIVERSAL" }) %>
+#### Method Parameters
+Parameter | Description
+--------- | -----------
+externalId | The user's user ID

@@ -1,0 +1,59 @@
+### SysSendMessageSimple
+
+```cfscript
+var toProfileIds = [ "profileId1", "profileId2" ];
+var text = "Chat and messaging features are here!";
+var fromJson = {
+    "id": null,
+    "name": "App Administrator"
+};
+var messagingProxy = bridge.getMessagingServiceProxy();
+
+var postResult = messagingProxy.sysSendMessageSimple(toProfileIds, text, fromJson);
+if (postResult.status == 200) {
+    // Success!
+}
+```
+```cpp
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+```csharp
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+```java
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+```javascript
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+```objective_c
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+
+```r
+{
+	"service": "messaging",
+	"operation": "SYS_SEND_MESSAGE_SIMPLE",
+	"data": {
+		"toProfileIds": [
+			"profileId1",
+			"profileId2"
+		],
+		"text": "Chat and messaging features are here!",
+		"fromJson": {
+			"id": null,
+			"name": "App Administrator"
+		}
+	}
+}
+```
+Sends a simple string-based message on behalf of the system (i.e. app) to the specified users.
+
+<%= partial(:"partials/servop", :locals => { :service_name => "messaging", :operation_name => "SYS_SEND_MESSAGE_SIMPLE" }) %>
+
+#### Method Parameters
+Parameter | Description
+--------- | -----------
+toProfileIds | The array of recipients  
+test | Simple text message.
+fromJson | Who the message is from. Should contain at least "name" field, and potential "pic" field as well.  

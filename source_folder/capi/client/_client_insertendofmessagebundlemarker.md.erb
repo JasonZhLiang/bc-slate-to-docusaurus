@@ -1,0 +1,30 @@
+### InsertEndOfMessageBundleMarker
+
+<%= partial(:"partials/versionTag", :locals => {
+  :version => "2.25.0",
+  :newText => "",
+  :comingText => ""
+}) %>
+
+```cpp
+<%= data.branding.codePrefix %>->insertEndOfMessageBundleMarker();
+```
+
+```csharp
+<%= data.branding.codePrefix %>.InsertEndOfMessageBundleMarker();
+```
+
+```java
+<%= data.branding.codePrefix %>.insertEndOfMessageBundleMarker();
+```
+
+```objective_c
+[<%= data.branding.codePrefix %> insertEndOfMessageBundleMarker];
+```
+
+```javascript
+<%= data.branding.codePrefix %>.insertEndOfMessageBundleMarker();
+```
+
+Inserts a marker which will tell the <%= data.branding.productName %> comms layer to close the message bundle off at this point. Any messages queued before this method was called will likely be bundled together in the next send to the server.
+

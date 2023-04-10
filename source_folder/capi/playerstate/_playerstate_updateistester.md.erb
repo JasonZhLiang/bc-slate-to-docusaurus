@@ -1,0 +1,62 @@
+### UpdateIsTester
+
+```r
+{
+	"service": "playerState",
+	"operation": "UPDATE_IS_TESTER",
+	"data": {
+		"isTester": true
+	}
+}
+```
+
+```csharp
+// Cloud Code Only
+```
+
+```cpp
+// Cloud Code Only
+```
+
+```objective_c
+// Cloud Code Only
+```
+
+```java
+// Cloud Code Only
+```
+
+```javascript
+// Cloud Code Only
+```
+
+```cfscript
+var isTester = true;
+var playerStateProxy = bridge.getPlayerStateServiceProxy();
+
+var postResult = playerStateProxy.updateIsTester(isTester);
+if (postResult.status == 200) {
+    // Success!
+}
+```
+
+<%= partial "partials/jsonBtn" %>
+
+```json-doc
+{
+    "status": 200,
+    "data": {
+      "isTester": false
+     }
+}
+```
+
+Set a user's IsTester flag.
+
+<%= partial(:"partials/servop", :locals => { :service_name => "playerState", :operation_name => "UPDATE_IS_TESTER" }) %>
+
+#### Method Parameters
+Parameter | Description
+--------- | -----------
+isTester | Boolean flag to indicate if the profile belongs to a test account.
+

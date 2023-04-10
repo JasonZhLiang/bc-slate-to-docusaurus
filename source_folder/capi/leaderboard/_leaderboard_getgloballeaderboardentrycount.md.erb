@@ -1,0 +1,94 @@
+### GetGlobalLeaderboardEntryCount
+
+```r
+{
+	"service": "leaderboard",
+	"operation": "GET_GLOBAL_LEADERBOARD_ENTRY_COUNT",
+	"data": {
+		"leaderboardId": "default",
+	}
+}
+```
+
+```cfscript
+var leaderboardId = "default";
+// note that for cloud code script using getLeaderboardServiceProxy, version id of the leaderboard is required
+var versionId = 1;
+var leaderboardProxy = bridge.getLeaderboardServiceProxy();
+
+var postResult = leaderboardProxy.getGlobalLeaderboardEntryCount(leaderboardId, versionId);
+if (postResult.status == 200) {
+    // Success!
+}
+```
+```cpp
+const char *leaderboardId = "default";
+<%= data.branding.codePrefix %>->getLeaderboardService()->getGlobalLeaderboardEntryCount(leaderboardId, this);
+```
+```csharp
+string leaderboardId = "default";
+SuccessCallback successCallback = (response, cbObject) =>
+{
+    Debug.Log(string.Format("Success | {0}", response));
+};
+FailureCallback failureCallback = (status, code, error, cbObject) =>
+{
+    Debug.Log(string.Format("Failed | {0}  {1}  {2}", status, code, error));
+};
+
+<%= data.branding.codePrefix %>.LeaderboardService.GetGlobalLeaderboardEntryCount(leaderboardId, successCallback, failureCallback);
+```
+```java
+String leaderboardId = "default";
+this; // implements IServerCallback
+
+<%= data.branding.codePrefix %>.getLeaderboardService().getGlobalLeaderboardEntryCount(leaderboardId, this);
+
+public void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData)
+{
+    System.out.print(String.format("Success | %s", jsonData.toString()));
+}
+public void serverError(ServiceName serviceName, ServiceOperation serviceOperation, int statusCode, int reasonCode, String jsonError)
+{
+    System.out.print(String.format("Failed | %d %d %s", statusCode,  reasonCode, jsonError.toString()));
+}
+```
+```javascript
+var leaderboardId = "default";
+
+<%= data.branding.codePrefix %>.leaderboard.getGlobalLeaderboardEntryCount(leaderboardId, result =>
+{
+	var status = result.status;
+	console.log(status + " : " + JSON.stringify(result, null, 2));
+});
+```
+```objective_c
+NSString *leaderboardId = @"default";
+BCCompletionBlock successBlock;      // define callback
+BCErrorCompletionBlock failureBlock; // define callback
+
+[[<%= data.branding.codePrefix %> leaderboardService] getGlobalLeaderboardEntryCount:leaderboardId
+            completionBlock:successBlock
+       errorCompletionBlock:failureBlock
+                   cbObject:nil];
+```
+
+<%= partial "partials/jsonBtn" %>
+
+```json-doc
+{
+    "status": 200,
+    "data": {
+        "entryCount": 1
+    }
+}
+```
+
+Method returns the number of entries in a global leaderboard.
+
+<%= partial(:"partials/servop", :locals => { :service_name => "leaderboard", :operation_name => "GET_GLOBAL_LEADERBOARD_ENTRY_COUNT" }) %>
+#### Method Parameters
+Parameter | Description
+--------- | -----------
+leaderboardId | The id of the leaderboard
+

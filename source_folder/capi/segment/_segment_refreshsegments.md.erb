@@ -1,0 +1,52 @@
+### RefreshMySegments
+
+```cfscript
+var segmentProxy = bridge.getSegmentServiceProxy();
+
+var postResult = segmentProxy.refreshMySegments();
+if (postResult.status == 200) {
+    // Success!
+}
+```
+```cpp
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+```csharp
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+```java
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+```javascript
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+```objective_c
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+```r
+{
+	"service": "segment",
+	"operation": "REFRESH_MY_SEGMENTS",
+	"data": {}
+}
+```
+
+<%= partial "partials/jsonBtn" %>
+
+```json-doc
+{
+	"data": {},
+	"status": 200
+}
+```
+<%= partial(:"partials/versionTag", :locals => {
+  :version => "4.5.5",
+  :newText => "",
+  :comingText => ""
+}) %>
+
+Refreshes the segments for the current user. Available via cloud-code only.
+
+*Note that segments are already automatically refreshed upon authentication – this method can be used to cause segments to refresh mid-session - for example, after completing a level.* 
+
+<%= partial(:"partials/servop", :locals => { :service_name => "segment", :operation_name => "REFRESH_MY_SEGMENTS" }) %>

@@ -1,0 +1,61 @@
+### SysDeleteProduct
+
+```cfscript
+var itemId = "barBundle1Imp";
+var version = 1;
+var productManagementProxy = bridge.getProductManagementServiceProxy();
+
+var postResult = productManagementProxy.sysDeleteProduct(itemId, version);
+if (postResult.status == 200) {
+    // Success!
+}
+```
+```cpp
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+```csharp
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+```java
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+```javascript
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+```objective_c
+// Cloud Code only. To view example, switch to the Cloud Code tab
+```
+```r
+{
+	"service": "productManagement",
+	"operation": "SYS_DELETE_PRODUCT",
+	"data": {
+    "itemId": "barBundle1Imp",
+    "version": 1
+  }
+}
+```
+
+<%= partial "partials/jsonBtn" %>
+
+```json-doc
+{
+  "data": null,
+  "status": 200
+}
+```
+<%= partial(:"partials/versionTag", :locals => {
+  :version => "4.5.5",
+  :newText => "",
+  :comingText => ""
+}) %>
+
+Delete the product item.
+
+<%= partial(:"partials/servop", :locals => { :service_name => "productManagement", :operation_name => "SYS_DELETE_PRODUCT" }) %>
+
+#### Method Parameters
+Parameter | Description
+--------- | -----------
+itemId | The item id being deleted.
+version | The version being validated. Pass -1 to bypass version checking.

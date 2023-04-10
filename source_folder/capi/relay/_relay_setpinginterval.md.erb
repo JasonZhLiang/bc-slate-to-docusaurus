@@ -1,0 +1,26 @@
+### SetPingInterval
+
+```csharp
+float interval = 10;
+<%= data.branding.codePrefix %>.RelayService.SetPingInterval(interval);
+```
+```cpp
+<%= data.branding.codePrefix %>->getRelayService()->SetPingInterval(10);
+```
+```cfscript
+// N/A
+```
+
+<%= partial(:"partials/versionTag", :locals => {
+  :version => "4.0",
+  :newText => "",
+  :comingText => ""
+}) %>
+
+
+Set the ping interval.
+
+#### Method Parameters
+Parameter | Description
+--------- | -----------
+interval | Seconds inbetween pings.

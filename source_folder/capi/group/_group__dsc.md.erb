@@ -1,0 +1,35 @@
+Groups are used to represent and manage a collection of <%= data.branding.productName %> users. They are most commonly used to represent Teams in apps, and Clans in games.
+
+Groups are designed as follows:
+
+* Groups consist of a collection of members (users)
+* Groups have a name, a type, an id, and custom data
+* Members are each assigned a role-based permission level: `"OWNER"`, `"ADMIN"`, or `"MEMBER"`
+    * Groups have one (and only one) `"OWNER"`. The OWNER of a group can add/remove members, and delete the group
+    * Groups can have multiple `"ADMIN"`s. ADMINs are like OWNERs, except that they cannot delete the group.
+    * Any `"MEMBER"` can edit group data
+* MEMBERs of a group can have custom `attributes` associated with them (can be used for custom application roles, etc.)
+* Users can be members of more than one group
+* Users can be the owner of more than one group
+* Groups can also have associated Entities (i.e. `GroupEntity`)
+
+Groups are made up of the following attributes:
+
+Attribute | Description
+--------- | -----------
+groupId | ID of the group
+ownerId | ProfileId of the end-user who owns the group
+name | Name of the group
+type | Type of group. This is a developer-defined type, that establishes some rules for the group.
+members | the members of the group
+pendingMembers | members who have been invited to the group, but have not yet accepted
+data | json-data associated with the group
+acl | controls visibility of data and members list for non-members
+
+To create a group you must first configure a Group Type on the [Group Types page](https://portal.braincloudservers.com/admin/dashboard#/development/group-types) of the <%= data.branding.productName %> portal.
+
+<%= partial(:"partials/versionTag", :locals => {
+  :version => "4.13.0",
+  :newText => "",
+  :comingText => "Groups can now take advantage of a new `indexedId` field in the custom data portion of the group. This field is indexed, and is especially useful for looking up groups via an external reference id."
+}) %>
