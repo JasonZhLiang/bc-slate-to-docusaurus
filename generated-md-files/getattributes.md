@@ -1,7 +1,7 @@
-# ReadAllUserStats
-Read all available user statistics.
+# GetAttributes
+Get player attributes.
 
-<PartialServop service_name="playerStatistics" operation_name="READ" />
+<PartialServop service_name="playerState" operation_name="GET_ATTRIBUTES" />
 
 ## Usage
 
@@ -22,7 +22,7 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
     Debug.Log(string.Format("Failed | {0}  {1}  {2}", status, code, error));
 };
 
-<%= data.branding.codePrefix %>.PlayerstatisticsService.ReadAllUserStats(successCallback, failureCallback);
+<%= data.branding.codePrefix %>.PlayerstateService.GetAttributes(successCallback, failureCallback);
 ```
 
 ```mdx-code-block
@@ -31,7 +31,7 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
 ```
 
 ```cpp
-<%= data.branding.codePrefix %>.getPlayerstatisticsService().readAllUserStats(this);
+<%= data.branding.codePrefix %>.getPlayerstateService().getAttributes(this);
 ```
 
 ```mdx-code-block
@@ -42,7 +42,7 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
 ```objectivec
 BCCompletionBlock successBlock; // define callback
 BCErrorCompletionBlock failureBlock; // define callback
-[[<%= data.branding.codePrefix %> playerStatisticsService] readAllUserStats:
+[[<%= data.branding.codePrefix %> playerStateService] getAttributes:
               completionBlock:successBlock
          errorCompletionBlock:failureBlock
                      cbObject:nil]
@@ -55,7 +55,7 @@ BCErrorCompletionBlock failureBlock; // define callback
 
 ```java
 this; // implements IServerCallback
-<%= data.branding.codePrefix %>.getPlayerstatisticsService.readAllUserStats(this);
+<%= data.branding.codePrefix %>.getPlayerstateService.getAttributes(this);
 
 public void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData)
 {
@@ -73,7 +73,7 @@ public void serverError(ServiceName serviceName, ServiceOperation serviceOperati
 ```
 
 ```javascript
-<%= data.branding.codePrefix %>.playerStatistics.readAllUserStats(result =>
+<%= data.branding.codePrefix %>.playerState.getAttributes(result =>
 {
   var status = result.status;
   console.log(status + " : " + JSON.stringify(result, null, 2));
@@ -86,13 +86,28 @@ public void serverError(ServiceName serviceName, ServiceOperation serviceOperati
 ```
 
 ```dart
-ServerResponse result = await <%= data.branding.codePrefix %>.playerStatisticsService.readAllUserStats();
+ServerResponse result = await <%= data.branding.codePrefix %>.playerStateService.getAttributes();
 
 if (result.statusCode == 200) {
-    print("Success");    
+    print("Success");
 } else {
     print("Failed ${result.error['status_message'] ?? result.error}");
 }
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Roblox">
+```
+
+```lua
+<%= data.branding.codePrefix %>.playerStateService:getAttributes()
+
+if result.status == 200 then
+    print("Success")
+else
+    print("Failed " .. tostring(result.error.status_message or result.error))
+end
 ```
 
 ```mdx-code-block
@@ -101,9 +116,9 @@ if (result.statusCode == 200) {
 ```
 
 ```cfscript
-var playerStatisticsProxy = bridge.getPlayerstatisticsServiceProxy();
+var playerStateProxy = bridge.getPlayerstateServiceProxy();
 
-var postResult = playerStatisticsProxy.readAllUserStats();
+var postResult = playerStateProxy.getAttributes();
 ```
 
 ```mdx-code-block
@@ -113,8 +128,8 @@ var postResult = playerStatisticsProxy.readAllUserStats();
 
 ```r
 {
-    "service":"playerStatistics",
-    "operation":"READ"
+    "service":"playerState",
+    "operation":"GET_ATTRIBUTES"
 }
 ```
 

@@ -1,12 +1,12 @@
-# IncrementUserStats
-Atomically increment user statistics.
+# UpdateLanguageCode
+Update user's language code preference on their profile.
 
-<PartialServop service_name="playerStatistics" operation_name="UPDATE" />
+<PartialServop service_name="playerState" operation_name="UPDATE_LANGUAGE_CODE" />
 
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-statistics | The data to be passed to method.
+languageCode | New language code
 
 ## Usage
 
@@ -17,7 +17,7 @@ statistics | The data to be passed to method.
 ```
 
 ```csharp
-string statistics = "{\"LIVES\": 1}";
+string languageCode = "fr";
 
 SuccessCallback successCallback = (response, cbObject) =>
 {
@@ -28,7 +28,7 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
     Debug.Log(string.Format("Failed | {0}  {1}  {2}", status, code, error));
 };
 
-<%= data.branding.codePrefix %>.PlayerstatisticsService.IncrementUserStats(statistics, successCallback, failureCallback);
+<%= data.branding.codePrefix %>.PlayerstateService.UpdateLanguageCode(languageCode, successCallback, failureCallback);
 ```
 
 ```mdx-code-block
@@ -37,8 +37,8 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
 ```
 
 ```cpp
-const char *statistics = "{\"LIVES\": 1}";
-<%= data.branding.codePrefix %>.getPlayerstatisticsService().incrementUserStats(statistics, this);
+const char *languageCode = "fr";
+<%= data.branding.codePrefix %>.getPlayerstateService().updateLanguageCode(languageCode, this);
 ```
 
 ```mdx-code-block
@@ -47,11 +47,11 @@ const char *statistics = "{\"LIVES\": 1}";
 ```
 
 ```objectivec
-NSString *statistics = @"{\"LIVES\": 1}";
+NSString *languageCode = @"fr";
 BCCompletionBlock successBlock; // define callback
 BCErrorCompletionBlock failureBlock; // define callback
-[[<%= data.branding.codePrefix %> playerStatisticsService] incrementUserStats:
-                   statistics:statistics
+[[<%= data.branding.codePrefix %> playerStateService] updateLanguageCode:
+                 languageCode:languageCode
               completionBlock:successBlock
          errorCompletionBlock:failureBlock
                      cbObject:nil]
@@ -63,9 +63,9 @@ BCErrorCompletionBlock failureBlock; // define callback
 ```
 
 ```java
-String statistics = "{\"LIVES\": 1}";
+String languageCode = "fr";
 this; // implements IServerCallback
-<%= data.branding.codePrefix %>.getPlayerstatisticsService.incrementUserStats(statistics, this);
+<%= data.branding.codePrefix %>.getPlayerstateService.updateLanguageCode(languageCode, this);
 
 public void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData)
 {
@@ -83,10 +83,8 @@ public void serverError(ServiceName serviceName, ServiceOperation serviceOperati
 ```
 
 ```javascript
-var statistics = {
-    "LIVES": 1
-};
-<%= data.branding.codePrefix %>.playerStatistics.incrementUserStats(statistics, result =>
+var languageCode = "fr";
+<%= data.branding.codePrefix %>.playerState.updateLanguageCode(languageCode, result =>
 {
   var status = result.status;
   console.log(status + " : " + JSON.stringify(result, null, 2));
@@ -99,16 +97,30 @@ var statistics = {
 ```
 
 ```dart
-var statistics = {
-    "LIVES": 1
-};
-ServerResponse result = await <%= data.branding.codePrefix %>.playerStatisticsService.incrementUserStats(statistics:statistics);
+var languageCode = "fr";
+ServerResponse result = await <%= data.branding.codePrefix %>.playerStateService.updateLanguageCode(languageCode:languageCode);
 
 if (result.statusCode == 200) {
-    print("Success");    
+    print("Success");
 } else {
     print("Failed ${result.error['status_message'] ?? result.error}");
 }
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Roblox">
+```
+
+```lua
+local languageCode = "fr"
+<%= data.branding.codePrefix %>.playerStateService:updateLanguageCode(languageCode)
+
+if result.status == 200 then
+    print("Success")
+else
+    print("Failed " .. tostring(result.error.status_message or result.error))
+end
 ```
 
 ```mdx-code-block
@@ -117,12 +129,10 @@ if (result.statusCode == 200) {
 ```
 
 ```cfscript
-var statistics = {
-    "LIVES": 1
-};
-var playerStatisticsProxy = bridge.getPlayerstatisticsServiceProxy();
+var languageCode = "fr";
+var playerStateProxy = bridge.getPlayerstateServiceProxy();
 
-var postResult = playerStatisticsProxy.incrementUserStats(statistics);
+var postResult = playerStateProxy.updateLanguageCode(languageCode);
 ```
 
 ```mdx-code-block
@@ -132,12 +142,10 @@ var postResult = playerStatisticsProxy.incrementUserStats(statistics);
 
 ```r
 {
-    "service":"playerStatistics",
-    "operation":"UPDATE",
+    "service":"playerState",
+    "operation":"UPDATE_LANGUAGE_CODE",
     "data":{
-        "statistics":{
-            "LIVES":1
-        }
+        "languageCode":"fr"
     }
 }
 ```

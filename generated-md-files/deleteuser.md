@@ -1,12 +1,7 @@
-# ReadUserStatsSubset
-Reads a subset of user statistics as defined by the input JSON.
+# DeleteUser
+Deletes the user and data owned by the user.
 
-<PartialServop service_name="playerStatistics" operation_name="READ_SUBSET" />
-
-## Method Parameters
-Parameter | Description
---------- | -----------
-statistics | A collection containing the statistics to read.
+<PartialServop service_name="playerState" operation_name="FULL_PLAYER_RESET" />
 
 ## Usage
 
@@ -17,7 +12,6 @@ statistics | A collection containing the statistics to read.
 ```
 
 ```csharp
-string statistics = "[\"LIVES\"]";
 
 SuccessCallback successCallback = (response, cbObject) =>
 {
@@ -28,7 +22,7 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
     Debug.Log(string.Format("Failed | {0}  {1}  {2}", status, code, error));
 };
 
-<%= data.branding.codePrefix %>.PlayerstatisticsService.ReadUserStatsSubset(statistics, successCallback, failureCallback);
+<%= data.branding.codePrefix %>.PlayerstateService.DeleteUser(successCallback, failureCallback);
 ```
 
 ```mdx-code-block
@@ -37,8 +31,7 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
 ```
 
 ```cpp
-const char *statistics = "[\"LIVES\"]";
-<%= data.branding.codePrefix %>.getPlayerstatisticsService().readUserStatsSubset(statistics, this);
+<%= data.branding.codePrefix %>.getPlayerstateService().deleteUser(this);
 ```
 
 ```mdx-code-block
@@ -47,11 +40,9 @@ const char *statistics = "[\"LIVES\"]";
 ```
 
 ```objectivec
-NSString *statistics = @"[\"LIVES\"]";
 BCCompletionBlock successBlock; // define callback
 BCErrorCompletionBlock failureBlock; // define callback
-[[<%= data.branding.codePrefix %> playerStatisticsService] readUserStatsSubset:
-                   statistics:statistics
+[[<%= data.branding.codePrefix %> playerStateService] deleteUser:
               completionBlock:successBlock
          errorCompletionBlock:failureBlock
                      cbObject:nil]
@@ -63,9 +54,8 @@ BCErrorCompletionBlock failureBlock; // define callback
 ```
 
 ```java
-String statistics = "[\"LIVES\"]";
 this; // implements IServerCallback
-<%= data.branding.codePrefix %>.getPlayerstatisticsService.readUserStatsSubset(statistics, this);
+<%= data.branding.codePrefix %>.getPlayerstateService.deleteUser(this);
 
 public void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData)
 {
@@ -83,10 +73,7 @@ public void serverError(ServiceName serviceName, ServiceOperation serviceOperati
 ```
 
 ```javascript
-var statistics = [
-    "LIVES"
-];
-<%= data.branding.codePrefix %>.playerStatistics.readUserStatsSubset(statistics, result =>
+<%= data.branding.codePrefix %>.playerState.deleteUser(result =>
 {
   var status = result.status;
   console.log(status + " : " + JSON.stringify(result, null, 2));
@@ -99,16 +86,28 @@ var statistics = [
 ```
 
 ```dart
-var statistics = [
-    "LIVES"
-];
-ServerResponse result = await <%= data.branding.codePrefix %>.playerStatisticsService.readUserStatsSubset(statistics:statistics);
+ServerResponse result = await <%= data.branding.codePrefix %>.playerStateService.deleteUser();
 
 if (result.statusCode == 200) {
-    print("Success");    
+    print("Success");
 } else {
     print("Failed ${result.error['status_message'] ?? result.error}");
 }
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Roblox">
+```
+
+```lua
+<%= data.branding.codePrefix %>.playerStateService:deleteUser()
+
+if result.status == 200 then
+    print("Success")
+else
+    print("Failed " .. tostring(result.error.status_message or result.error))
+end
 ```
 
 ```mdx-code-block
@@ -117,12 +116,9 @@ if (result.statusCode == 200) {
 ```
 
 ```cfscript
-var statistics = [
-    "LIVES"
-];
-var playerStatisticsProxy = bridge.getPlayerstatisticsServiceProxy();
+var playerStateProxy = bridge.getPlayerstateServiceProxy();
 
-var postResult = playerStatisticsProxy.readUserStatsSubset(statistics);
+var postResult = playerStateProxy.deleteUser();
 ```
 
 ```mdx-code-block
@@ -132,13 +128,8 @@ var postResult = playerStatisticsProxy.readUserStatsSubset(statistics);
 
 ```r
 {
-    "service":"playerStatistics",
-    "operation":"READ_SUBSET",
-    "data":{
-        "statistics":[
-            "LIVES"
-        ]
-    }
+    "service":"playerState",
+    "operation":"FULL_PLAYER_RESET"
 }
 ```
 

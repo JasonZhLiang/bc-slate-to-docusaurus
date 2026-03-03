@@ -40,6 +40,12 @@ dart_head = """
 <TabItem value="dart" label="Dart">
 ```
 """
+lua_head = """
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Roblox">
+```
+"""
 cfs_head = """
 ```mdx-code-block
 </TabItem>
@@ -83,10 +89,17 @@ public void serverError(ServiceName serviceName, ServiceOperation serviceOperati
 """
 dart_callback = """
 if (result.statusCode == 200) {
-    print("Success");    
+    print("Success");
 } else {
     print("Failed ${result.error['status_message'] ?? result.error}");
 }
+"""
+lua_callback = """
+if result.status == 200 then
+    print("Success")
+else
+    print("Failed " .. tostring(result.error.status_message or result.error))
+end
 """
 # json or s2sJson
 section = "json"
@@ -153,6 +166,10 @@ while proxy != "exit":
                         api_method.write(f'```\n')
                         api_method.write(f'{dart_head}\n')
                         api_method.write(f'```dart\n')
+                        api_method.write(f'{cloud_code_comment}\n')
+                        api_method.write(f'```\n')
+                        api_method.write(f'{lua_head}\n')
+                        api_method.write(f'```lua\n')
                         api_method.write(f'{cloud_code_comment}\n')
                         api_method.write(f'```\n')
                     else:
@@ -322,6 +339,37 @@ while proxy != "exit":
                         else:
                             api_method.write(f'ServerResponse result = await <%= data.branding.codePrefix %>.{operation["service"]}Service.{operation["apiMethod"][0].lower() + operation["apiMethod"][1:]}();\n')
                         api_method.write(f'{dart_callback}')
+                        api_method.write(f'```\n')
+                        # lua block
+                        api_method.write(f'{lua_head}\n')
+                        api_method.write(f'```lua\n')
+                        if "paramInfo" in operation:
+                            param_list = []
+                            for param in operation["paramInfo"]:
+                                if param['type'] == 'String':
+                                    api_method.write(
+                                        f'local {param["name"]} = "{operation["parameters"][param["name"]]}"\n')
+                                elif param['type'] == 'NativeObject' or param['type'] == 'NativeArray':
+                                    lua_table = json.dumps(operation["parameters"][param["name"]], indent=4)
+                                    lua_table = re.sub(r'"(\w+)"(\s*):', r'\1\2=', lua_table)
+                                    lua_table = re.sub(r'\bnull\b', 'nil', lua_table)
+                                    api_method.write(
+                                        f'local {param["name"]} = {lua_table}\n')
+                                elif param['type'] == 'Boolean':
+                                    api_method.write(
+                                        f'local {param["name"]} = {str(operation["parameters"][param["name"]]).lower()}\n')
+                                elif param['type'] == 'Long' or param['type'] == 'Integer':
+                                    api_method.write(
+                                        f'local {param["name"]} = {operation["parameters"][param["name"]]}\n')
+                                else:
+                                    api_method.write(
+                                        f'local {param["name"]} = {operation["parameters"][param["name"]]}\n')
+                                param_list.append(param["name"])
+                            param_list_string = ', '.join(param_list)
+                            api_method.write(f'<%= data.branding.codePrefix %>.{operation["service"]}Service:{operation["apiMethod"][0].lower() + operation["apiMethod"][1:]}({param_list_string})\n')
+                        else:
+                            api_method.write(f'<%= data.branding.codePrefix %>.{operation["service"]}Service:{operation["apiMethod"][0].lower() + operation["apiMethod"][1:]}()\n')
+                        api_method.write(f'{lua_callback}')
                         api_method.write(f'```\n')
                     # left indent one level higher than code blocks above, no matter sys or non-sys calls
                     # cfs block

@@ -1,7 +1,12 @@
-# ResetAllUserStats
-Reset all of the statistics for this user back to their initial value.
+# GetUserStatus
+Get user status.
 
-<PartialServop service_name="playerStatistics" operation_name="RESET" />
+<PartialServop service_name="playerState" operation_name="GET_USER_STATUS" />
+
+## Method Parameters
+Parameter | Description
+--------- | -----------
+statusName | Name of the status.
 
 ## Usage
 
@@ -12,6 +17,7 @@ Reset all of the statistics for this user back to their initial value.
 ```
 
 ```csharp
+string statusName = "a-status-name";
 
 SuccessCallback successCallback = (response, cbObject) =>
 {
@@ -22,7 +28,7 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
     Debug.Log(string.Format("Failed | {0}  {1}  {2}", status, code, error));
 };
 
-<%= data.branding.codePrefix %>.PlayerstatisticsService.ResetAllUserStats(successCallback, failureCallback);
+<%= data.branding.codePrefix %>.PlayerstateService.GetUserStatus(statusName, successCallback, failureCallback);
 ```
 
 ```mdx-code-block
@@ -31,7 +37,8 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
 ```
 
 ```cpp
-<%= data.branding.codePrefix %>.getPlayerstatisticsService().resetAllUserStats(this);
+const char *statusName = "a-status-name";
+<%= data.branding.codePrefix %>.getPlayerstateService().getUserStatus(statusName, this);
 ```
 
 ```mdx-code-block
@@ -40,9 +47,11 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
 ```
 
 ```objectivec
+NSString *statusName = @"a-status-name";
 BCCompletionBlock successBlock; // define callback
 BCErrorCompletionBlock failureBlock; // define callback
-[[<%= data.branding.codePrefix %> playerStatisticsService] resetAllUserStats:
+[[<%= data.branding.codePrefix %> playerStateService] getUserStatus:
+                   statusName:statusName
               completionBlock:successBlock
          errorCompletionBlock:failureBlock
                      cbObject:nil]
@@ -54,8 +63,9 @@ BCErrorCompletionBlock failureBlock; // define callback
 ```
 
 ```java
+String statusName = "a-status-name";
 this; // implements IServerCallback
-<%= data.branding.codePrefix %>.getPlayerstatisticsService.resetAllUserStats(this);
+<%= data.branding.codePrefix %>.getPlayerstateService.getUserStatus(statusName, this);
 
 public void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData)
 {
@@ -73,7 +83,8 @@ public void serverError(ServiceName serviceName, ServiceOperation serviceOperati
 ```
 
 ```javascript
-<%= data.branding.codePrefix %>.playerStatistics.resetAllUserStats(result =>
+var statusName = "a-status-name";
+<%= data.branding.codePrefix %>.playerState.getUserStatus(statusName, result =>
 {
   var status = result.status;
   console.log(status + " : " + JSON.stringify(result, null, 2));
@@ -86,13 +97,30 @@ public void serverError(ServiceName serviceName, ServiceOperation serviceOperati
 ```
 
 ```dart
-ServerResponse result = await <%= data.branding.codePrefix %>.playerStatisticsService.resetAllUserStats();
+var statusName = "a-status-name";
+ServerResponse result = await <%= data.branding.codePrefix %>.playerStateService.getUserStatus(statusName:statusName);
 
 if (result.statusCode == 200) {
-    print("Success");    
+    print("Success");
 } else {
     print("Failed ${result.error['status_message'] ?? result.error}");
 }
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Roblox">
+```
+
+```lua
+local statusName = "a-status-name"
+<%= data.branding.codePrefix %>.playerStateService:getUserStatus(statusName)
+
+if result.status == 200 then
+    print("Success")
+else
+    print("Failed " .. tostring(result.error.status_message or result.error))
+end
 ```
 
 ```mdx-code-block
@@ -101,9 +129,10 @@ if (result.statusCode == 200) {
 ```
 
 ```cfscript
-var playerStatisticsProxy = bridge.getPlayerstatisticsServiceProxy();
+var statusName = "a-status-name";
+var playerStateProxy = bridge.getPlayerstateServiceProxy();
 
-var postResult = playerStatisticsProxy.resetAllUserStats();
+var postResult = playerStateProxy.getUserStatus(statusName);
 ```
 
 ```mdx-code-block
@@ -113,8 +142,11 @@ var postResult = playerStatisticsProxy.resetAllUserStats();
 
 ```r
 {
-    "service":"playerStatistics",
-    "operation":"RESET"
+    "service":"playerState",
+    "operation":"GET_USER_STATUS",
+    "data":{
+        "statusName":"a-status-name"
+    }
 }
 ```
 

@@ -1,7 +1,7 @@
-# GetNextExperienceLevel
-Returns JSON representing the next experience level for the user.
+# ResendValidationEmail
+Resend validation email.
 
-<PartialServop service_name="playerStatistics" operation_name="READ_NEXT_XPLEVEL" />
+<PartialServop service_name="playerState" operation_name="RESEND_VALIDATION_EMAIL" />
 
 ## Usage
 
@@ -22,7 +22,7 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
     Debug.Log(string.Format("Failed | {0}  {1}  {2}", status, code, error));
 };
 
-<%= data.branding.codePrefix %>.PlayerstatisticsService.GetNextExperienceLevel(successCallback, failureCallback);
+<%= data.branding.codePrefix %>.PlayerstateService.ResendValidationEmail(successCallback, failureCallback);
 ```
 
 ```mdx-code-block
@@ -31,7 +31,7 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
 ```
 
 ```cpp
-<%= data.branding.codePrefix %>.getPlayerstatisticsService().getNextExperienceLevel(this);
+<%= data.branding.codePrefix %>.getPlayerstateService().resendValidationEmail(this);
 ```
 
 ```mdx-code-block
@@ -42,7 +42,7 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
 ```objectivec
 BCCompletionBlock successBlock; // define callback
 BCErrorCompletionBlock failureBlock; // define callback
-[[<%= data.branding.codePrefix %> playerStatisticsService] getNextExperienceLevel:
+[[<%= data.branding.codePrefix %> playerStateService] resendValidationEmail:
               completionBlock:successBlock
          errorCompletionBlock:failureBlock
                      cbObject:nil]
@@ -55,7 +55,7 @@ BCErrorCompletionBlock failureBlock; // define callback
 
 ```java
 this; // implements IServerCallback
-<%= data.branding.codePrefix %>.getPlayerstatisticsService.getNextExperienceLevel(this);
+<%= data.branding.codePrefix %>.getPlayerstateService.resendValidationEmail(this);
 
 public void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData)
 {
@@ -73,7 +73,7 @@ public void serverError(ServiceName serviceName, ServiceOperation serviceOperati
 ```
 
 ```javascript
-<%= data.branding.codePrefix %>.playerStatistics.getNextExperienceLevel(result =>
+<%= data.branding.codePrefix %>.playerState.resendValidationEmail(result =>
 {
   var status = result.status;
   console.log(status + " : " + JSON.stringify(result, null, 2));
@@ -86,13 +86,28 @@ public void serverError(ServiceName serviceName, ServiceOperation serviceOperati
 ```
 
 ```dart
-ServerResponse result = await <%= data.branding.codePrefix %>.playerStatisticsService.getNextExperienceLevel();
+ServerResponse result = await <%= data.branding.codePrefix %>.playerStateService.resendValidationEmail();
 
 if (result.statusCode == 200) {
-    print("Success");    
+    print("Success");
 } else {
     print("Failed ${result.error['status_message'] ?? result.error}");
 }
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Roblox">
+```
+
+```lua
+<%= data.branding.codePrefix %>.playerStateService:resendValidationEmail()
+
+if result.status == 200 then
+    print("Success")
+else
+    print("Failed " .. tostring(result.error.status_message or result.error))
+end
 ```
 
 ```mdx-code-block
@@ -101,9 +116,9 @@ if (result.statusCode == 200) {
 ```
 
 ```cfscript
-var playerStatisticsProxy = bridge.getPlayerstatisticsServiceProxy();
+var playerStateProxy = bridge.getPlayerstateServiceProxy();
 
-var postResult = playerStatisticsProxy.getNextExperienceLevel();
+var postResult = playerStateProxy.resendValidationEmail();
 ```
 
 ```mdx-code-block
@@ -113,8 +128,8 @@ var postResult = playerStatisticsProxy.getNextExperienceLevel();
 
 ```r
 {
-    "service":"playerStatistics",
-    "operation":"READ_NEXT_XPLEVEL"
+    "service":"playerState",
+    "operation":"RESEND_VALIDATION_EMAIL"
 }
 ```
 

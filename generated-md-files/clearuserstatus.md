@@ -1,12 +1,12 @@
-# SetExperiencePoints
-Sets the user's experience to an absolute value. Note that this is simply a set and will not reward the user if their level changes as a result.
+# ClearUserStatus
+Deletes the specified status.
 
-<PartialServop service_name="playerStatistics" operation_name="SET_XPPOINTS" />
+<PartialServop service_name="playerState" operation_name="CLEAR_USER_STATUS" />
 
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-xp_points | The amount to set the user's experience to.
+statusName | Name of the status.
 
 ## Usage
 
@@ -17,7 +17,7 @@ xp_points | The amount to set the user's experience to.
 ```
 
 ```csharp
-int xp_points = 1;
+string statusName = "a-status-name";
 
 SuccessCallback successCallback = (response, cbObject) =>
 {
@@ -28,7 +28,7 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
     Debug.Log(string.Format("Failed | {0}  {1}  {2}", status, code, error));
 };
 
-<%= data.branding.codePrefix %>.PlayerstatisticsService.SetExperiencePoints(xp_points, successCallback, failureCallback);
+<%= data.branding.codePrefix %>.PlayerstateService.ClearUserStatus(statusName, successCallback, failureCallback);
 ```
 
 ```mdx-code-block
@@ -37,8 +37,8 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
 ```
 
 ```cpp
-int xp_points = 1;
-<%= data.branding.codePrefix %>.getPlayerstatisticsService().setExperiencePoints(xp_points, this);
+const char *statusName = "a-status-name";
+<%= data.branding.codePrefix %>.getPlayerstateService().clearUserStatus(statusName, this);
 ```
 
 ```mdx-code-block
@@ -47,11 +47,11 @@ int xp_points = 1;
 ```
 
 ```objectivec
-int xp_points = 1;
+NSString *statusName = @"a-status-name";
 BCCompletionBlock successBlock; // define callback
 BCErrorCompletionBlock failureBlock; // define callback
-[[<%= data.branding.codePrefix %> playerStatisticsService] setExperiencePoints:
-                    xp_points:xp_points
+[[<%= data.branding.codePrefix %> playerStateService] clearUserStatus:
+                   statusName:statusName
               completionBlock:successBlock
          errorCompletionBlock:failureBlock
                      cbObject:nil]
@@ -63,9 +63,9 @@ BCErrorCompletionBlock failureBlock; // define callback
 ```
 
 ```java
-int xp_points = 1;
+String statusName = "a-status-name";
 this; // implements IServerCallback
-<%= data.branding.codePrefix %>.getPlayerstatisticsService.setExperiencePoints(xp_points, this);
+<%= data.branding.codePrefix %>.getPlayerstateService.clearUserStatus(statusName, this);
 
 public void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData)
 {
@@ -83,8 +83,8 @@ public void serverError(ServiceName serviceName, ServiceOperation serviceOperati
 ```
 
 ```javascript
-var xp_points = 1;
-<%= data.branding.codePrefix %>.playerStatistics.setExperiencePoints(xp_points, result =>
+var statusName = "a-status-name";
+<%= data.branding.codePrefix %>.playerState.clearUserStatus(statusName, result =>
 {
   var status = result.status;
   console.log(status + " : " + JSON.stringify(result, null, 2));
@@ -97,14 +97,30 @@ var xp_points = 1;
 ```
 
 ```dart
-var xp_points = 1;
-ServerResponse result = await <%= data.branding.codePrefix %>.playerStatisticsService.setExperiencePoints(xp_points:xp_points);
+var statusName = "a-status-name";
+ServerResponse result = await <%= data.branding.codePrefix %>.playerStateService.clearUserStatus(statusName:statusName);
 
 if (result.statusCode == 200) {
-    print("Success");    
+    print("Success");
 } else {
     print("Failed ${result.error['status_message'] ?? result.error}");
 }
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Roblox">
+```
+
+```lua
+local statusName = "a-status-name"
+<%= data.branding.codePrefix %>.playerStateService:clearUserStatus(statusName)
+
+if result.status == 200 then
+    print("Success")
+else
+    print("Failed " .. tostring(result.error.status_message or result.error))
+end
 ```
 
 ```mdx-code-block
@@ -113,10 +129,10 @@ if (result.statusCode == 200) {
 ```
 
 ```cfscript
-var xp_points = 1;
-var playerStatisticsProxy = bridge.getPlayerstatisticsServiceProxy();
+var statusName = "a-status-name";
+var playerStateProxy = bridge.getPlayerstateServiceProxy();
 
-var postResult = playerStatisticsProxy.setExperiencePoints(xp_points);
+var postResult = playerStateProxy.clearUserStatus(statusName);
 ```
 
 ```mdx-code-block
@@ -126,10 +142,10 @@ var postResult = playerStatisticsProxy.setExperiencePoints(xp_points);
 
 ```r
 {
-    "service":"playerStatistics",
-    "operation":"SET_XPPOINTS",
+    "service":"playerState",
+    "operation":"CLEAR_USER_STATUS",
     "data":{
-        "xp_points":1
+        "statusName":"a-status-name"
     }
 }
 ```

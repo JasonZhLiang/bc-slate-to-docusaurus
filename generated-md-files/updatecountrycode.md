@@ -1,12 +1,12 @@
-# IncrementExperiencePoints
-Atomically increment user experience points.
+# UpdateCountryCode
+Update user's country code preference on their profile.
 
-<PartialServop service_name="playerStatistics" operation_name="UPDATE" />
+<PartialServop service_name="playerState" operation_name="UPDATE_COUNTRY_CODE" />
 
 ## Method Parameters
 Parameter | Description
 --------- | -----------
-xp_points | The amount to increase the user's experience by.
+countryCode | New country code
 
 ## Usage
 
@@ -17,7 +17,7 @@ xp_points | The amount to increase the user's experience by.
 ```
 
 ```csharp
-int xp_points = 1;
+string countryCode = "CA";
 
 SuccessCallback successCallback = (response, cbObject) =>
 {
@@ -28,7 +28,7 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
     Debug.Log(string.Format("Failed | {0}  {1}  {2}", status, code, error));
 };
 
-<%= data.branding.codePrefix %>.PlayerstatisticsService.IncrementExperiencePoints(xp_points, successCallback, failureCallback);
+<%= data.branding.codePrefix %>.PlayerstateService.UpdateCountryCode(countryCode, successCallback, failureCallback);
 ```
 
 ```mdx-code-block
@@ -37,8 +37,8 @@ FailureCallback failureCallback = (status, code, error, cbObject) =>
 ```
 
 ```cpp
-int xp_points = 1;
-<%= data.branding.codePrefix %>.getPlayerstatisticsService().incrementExperiencePoints(xp_points, this);
+const char *countryCode = "CA";
+<%= data.branding.codePrefix %>.getPlayerstateService().updateCountryCode(countryCode, this);
 ```
 
 ```mdx-code-block
@@ -47,11 +47,11 @@ int xp_points = 1;
 ```
 
 ```objectivec
-int xp_points = 1;
+NSString *countryCode = @"CA";
 BCCompletionBlock successBlock; // define callback
 BCErrorCompletionBlock failureBlock; // define callback
-[[<%= data.branding.codePrefix %> playerStatisticsService] incrementExperiencePoints:
-                    xp_points:xp_points
+[[<%= data.branding.codePrefix %> playerStateService] updateCountryCode:
+                  countryCode:countryCode
               completionBlock:successBlock
          errorCompletionBlock:failureBlock
                      cbObject:nil]
@@ -63,9 +63,9 @@ BCErrorCompletionBlock failureBlock; // define callback
 ```
 
 ```java
-int xp_points = 1;
+String countryCode = "CA";
 this; // implements IServerCallback
-<%= data.branding.codePrefix %>.getPlayerstatisticsService.incrementExperiencePoints(xp_points, this);
+<%= data.branding.codePrefix %>.getPlayerstateService.updateCountryCode(countryCode, this);
 
 public void serverCallback(ServiceName serviceName, ServiceOperation serviceOperation, JSONObject jsonData)
 {
@@ -83,8 +83,8 @@ public void serverError(ServiceName serviceName, ServiceOperation serviceOperati
 ```
 
 ```javascript
-var xp_points = 1;
-<%= data.branding.codePrefix %>.playerStatistics.incrementExperiencePoints(xp_points, result =>
+var countryCode = "CA";
+<%= data.branding.codePrefix %>.playerState.updateCountryCode(countryCode, result =>
 {
   var status = result.status;
   console.log(status + " : " + JSON.stringify(result, null, 2));
@@ -97,14 +97,30 @@ var xp_points = 1;
 ```
 
 ```dart
-var xp_points = 1;
-ServerResponse result = await <%= data.branding.codePrefix %>.playerStatisticsService.incrementExperiencePoints(xp_points:xp_points);
+var countryCode = "CA";
+ServerResponse result = await <%= data.branding.codePrefix %>.playerStateService.updateCountryCode(countryCode:countryCode);
 
 if (result.statusCode == 200) {
-    print("Success");    
+    print("Success");
 } else {
     print("Failed ${result.error['status_message'] ?? result.error}");
 }
+```
+
+```mdx-code-block
+</TabItem>
+<TabItem value="lua" label="Roblox">
+```
+
+```lua
+local countryCode = "CA"
+<%= data.branding.codePrefix %>.playerStateService:updateCountryCode(countryCode)
+
+if result.status == 200 then
+    print("Success")
+else
+    print("Failed " .. tostring(result.error.status_message or result.error))
+end
 ```
 
 ```mdx-code-block
@@ -113,10 +129,10 @@ if (result.statusCode == 200) {
 ```
 
 ```cfscript
-var xp_points = 1;
-var playerStatisticsProxy = bridge.getPlayerstatisticsServiceProxy();
+var countryCode = "CA";
+var playerStateProxy = bridge.getPlayerstateServiceProxy();
 
-var postResult = playerStatisticsProxy.incrementExperiencePoints(xp_points);
+var postResult = playerStateProxy.updateCountryCode(countryCode);
 ```
 
 ```mdx-code-block
@@ -126,10 +142,10 @@ var postResult = playerStatisticsProxy.incrementExperiencePoints(xp_points);
 
 ```r
 {
-    "service":"playerStatistics",
-    "operation":"UPDATE",
+    "service":"playerState",
+    "operation":"UPDATE_COUNTRY_CODE",
     "data":{
-        "xp_points":1
+        "countryCode":"CA"
     }
 }
 ```
