@@ -70,7 +70,7 @@ def other_apidocs_link_process(content):
 def move_status_code_to_json_response(content):
     status_code = re.search(r'(?s)### Status Codes(.+?)\n\n', content)
     if status_code:
-        # content = re.sub(f'{status_code.group(0)}', f'', content, 1)
+        # content = re.sub(f'{status_code.relay(0)}', f'', content, 1)
         content = re.sub(r'(?s)### Status Codes(.+?)\n\n', f'', content, 1)
         content = re.sub(f'</details>', f'</details>\n\n<details>\n<summary>Common Error Code</summary>\n\n{status_code.group(0)}</details>\n', content, 1)
     return content

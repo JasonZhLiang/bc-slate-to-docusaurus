@@ -1,0 +1,2480 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="property">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="AF">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="AX">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="AL">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="DZ">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="AS">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="AD">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="AO">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="AI">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="AQ">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="AG">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="AR">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="AM">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="AW">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="AU">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="AT">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="AZ">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="BS">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="BH">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="BD">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="BB">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="BY">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="BE">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="BZ">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="BJ">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="BM">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="BT">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="BO">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="BQ">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="BA">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="BW">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="BV">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="BR">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="IO">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="BN">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="BG">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="BF">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="BI">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="CV">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="KH">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="CM">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="CA">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="KY">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="CF">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="TD">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="CL">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="CN">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="CX">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="CC">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="CO">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="KM">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="CG">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="CD">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="CK">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="CR">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="CI">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="HR">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="CU">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="CW">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="CY">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="CZ">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="DK">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="DJ">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="DM">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="DO">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="EC">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="EG">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="SV">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="GQ">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="ER">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="EE">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="SZ">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="ET">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="FK">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="FO">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="FJ">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="FI">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="FR">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="GF">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="PF">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="TF">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="GA">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="GM">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="GE">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="DE">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="GH">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="GI">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="GR">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="GL">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="GD">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="GP">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="GU">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="GT">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="GG">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="GN">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="GW">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="GY">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="HT">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="HM">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="VA">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="HN">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="HK">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="HU">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="IS">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="IN">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="ID">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="IR">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="IQ">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="IE">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="IM">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="IL">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="IT">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="JM">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="JP">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="JE">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="JO">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="KZ">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="KE">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="KI">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="KP">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="KR">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="KW">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="KG">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="LA">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="LV">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="LB">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="LS">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="LR">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="LY">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="LI">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="LT">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="LU">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="MO">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="MG">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="MW">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="MY">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="MV">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="ML">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="MT">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="MH">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="MQ">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="MR">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="MU">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="YT">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="MX">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="FM">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="MD">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="MC">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="MN">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="ME">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="MS">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="MA">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="MZ">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="MM">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="NA">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="NR">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="NP">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="NL">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="NC">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="NZ">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="NI">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="NE">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="NG">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="NU">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="NF">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="MK">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="MP">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="NO">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="OM">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="PK">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="PW">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="PS">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="PA">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="PG">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="PY">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="PE">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="PH">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="PN">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="PL">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="PT">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="PR">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="QA">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="RE">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="RO">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="RU">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="RW">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="BL">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="SH">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="KN">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="LC">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="MF">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="PM">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="VC">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="WS">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="SM">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="ST">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="SA">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="SN">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="RS">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="SC">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="SL">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="SG">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="SX">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="SK">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="SI">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="SB">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="SO">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="ZA">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="GS">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="SS">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="ES">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="LK">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="SD">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="SR">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="SJ">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="SE">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="CH">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="SY">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="TW">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="TJ">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="TZ">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="TH">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="TL">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="TG">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="TK">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="TO">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="TT">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="TN">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="TR">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="TM">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="TC">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="TV">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="UG">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="UA">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="AE">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="GB">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="UM">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="US">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="UY">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="UZ">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="VU">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="VE">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="VN">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="WF">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="EH">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="YE">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="ZM">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="ZW">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ISO2" type="xs:string" />
+                            <xs:element name="ISO3" type="xs:string" />
+                            <xs:element name="englishShortName" type="xs:string" />
+                            <xs:element name="frenchShortName" type="xs:string" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute name="name" use="required" />
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

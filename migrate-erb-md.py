@@ -2,7 +2,7 @@ import re
 import os
 
 # change the section name here (capi, s2s, cc, appendix, wrapper)
-section = 'capi'
+section = 's2s'
 
 csharp_head = """
 ```mdx-code-block
@@ -187,12 +187,12 @@ def appendix_title_process(content):
 
 # select method parameters block
 # in case some files don't have a blank line at the end of method parameters block, add one here
-param_block_value = ''
+sanitize_folder = ''
 
 
 def param_block_process(content):
     content = content + "\n\n"
-    global param_block_value
+    global sanitize_folder
     param_block = re.search(r'(?s)## Method Parameters(.+?)\n\n', content)
     if param_block:
         param_block_value = param_block.group(0)
@@ -243,7 +243,7 @@ def internal_file_link_process(content):
 
 # reset global values
 def reset_global_values():
-    global param_block_value, service_name_value, operation_name_value, code_block_value
+    global sanitize_folder, service_name_value, operation_name_value, code_block_value
     param_block_value = ''
     service_name_value = ''
     operation_name_value = ''
@@ -261,11 +261,13 @@ source_path = f"/Users/jasonl/bitbucket/braincloud-apiref/source/localizable/en/
 if section == "wrapper":
     target_path = f"/Users/jasonl/GCP/Udemy/Web/bcdocs/docs/api/1_{section}"
 if section == "capi":
-    target_path = f"/Users/jasonl/GCP/Udemy/Web/bcdocs/docs/api/2_{section}"
+    # target_path = f"/Users/jasonl/GCP/Udemy/Web/bcdocs/docs/api/2_{section}"
+    target_path = f"2_{section}"
 if section == "cc":
     target_path = f"/Users/jasonl/GCP/Udemy/Web/bcdocs/docs/api/3_{section}"
 if section == "s2s":
-    target_path = f"/Users/jasonl/GCP/Udemy/Web/bcdocs/docs/api/4_{section}"
+    # target_path = f"/Users/jasonl/GCP/Udemy/Web/bcdocs/docs/api/4_{section}"
+    target_path = f"2_{section}"
 if section == "appendix":
     target_path = f"/Users/jasonl/GCP/Udemy/Web/bcdocs/docs/api/5_{section}"
 

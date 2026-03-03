@@ -1,0 +1,1485 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<property xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="countrycodewithnames.xsd" name="validCountryCodesAndNames">
+	<AF>
+		<ISO2>AF</ISO2>
+		<ISO3>AFG</ISO3>
+		<englishShortName>Afghanistan</englishShortName>
+		<frenchShortName>Afghanistan (l')</frenchShortName>
+	</AF>
+	<AX>
+		<ISO2>AX</ISO2>
+		<ISO3>ALA</ISO3>
+		<englishShortName>Åland Islands</englishShortName>
+		<frenchShortName>Åland (les Îles)</frenchShortName>
+	</AX>
+	<AL>
+		<ISO2>AL</ISO2>
+		<ISO3>ALB</ISO3>
+		<englishShortName>Albania</englishShortName>
+		<frenchShortName>Albanie (l')</frenchShortName>
+	</AL>
+	<DZ>
+		<ISO2>DZ</ISO2>
+		<ISO3>DZA</ISO3>
+		<englishShortName>Algeria</englishShortName>
+		<frenchShortName>Algérie (l')</frenchShortName>
+	</DZ>
+	<AS>
+		<ISO2>AS</ISO2>
+		<ISO3>ASM</ISO3>
+		<englishShortName>American Samoa</englishShortName>
+		<frenchShortName>Samoa américaines (les)</frenchShortName>
+	</AS>
+	<AD>
+		<ISO2>AD</ISO2>
+		<ISO3>AND</ISO3>
+		<englishShortName>Andorra</englishShortName>
+		<frenchShortName>Andorre</frenchShortName>
+	</AD>
+	<AO>
+		<ISO2>AO</ISO2>
+		<ISO3>AGO</ISO3>
+		<englishShortName>Angola</englishShortName>
+		<frenchShortName>Angola (l')</frenchShortName>
+	</AO>
+	<AI>
+		<ISO2>AI</ISO2>
+		<ISO3>AIA</ISO3>
+		<englishShortName>Anguilla</englishShortName>
+		<frenchShortName>Anguilla</frenchShortName>
+	</AI>
+	<AQ>
+		<ISO2>AQ</ISO2>
+		<ISO3>ATA</ISO3>
+		<englishShortName>Antarctica</englishShortName>
+		<frenchShortName>Antarctique (l')</frenchShortName>
+	</AQ>
+	<AG>
+		<ISO2>AG</ISO2>
+		<ISO3>ATG</ISO3>
+		<englishShortName>Antigua and Barbuda</englishShortName>
+		<frenchShortName>Antigua-et-Barbuda</frenchShortName>
+	</AG>
+	<AR>
+		<ISO2>AR</ISO2>
+		<ISO3>ARG</ISO3>
+		<englishShortName>Argentina</englishShortName>
+		<frenchShortName>Argentine (l')</frenchShortName>
+	</AR>
+	<AM>
+		<ISO2>AM</ISO2>
+		<ISO3>ARM</ISO3>
+		<englishShortName>Armenia</englishShortName>
+		<frenchShortName>Arménie (l')</frenchShortName>
+	</AM>
+	<AW>
+		<ISO2>AW</ISO2>
+		<ISO3>ABW</ISO3>
+		<englishShortName>Aruba</englishShortName>
+		<frenchShortName>Aruba</frenchShortName>
+	</AW>
+	<AU>
+		<ISO2>AU</ISO2>
+		<ISO3>AUS</ISO3>
+		<englishShortName>Australia</englishShortName>
+		<frenchShortName>Australie (l')</frenchShortName>
+	</AU>
+	<AT>
+		<ISO2>AT</ISO2>
+		<ISO3>AUT</ISO3>
+		<englishShortName>Austria</englishShortName>
+		<frenchShortName>Autriche (l')</frenchShortName>
+	</AT>
+	<AZ>
+		<ISO2>AZ</ISO2>
+		<ISO3>AZE</ISO3>
+		<englishShortName>Azerbaijan</englishShortName>
+		<frenchShortName>Azerbaïdjan (l')</frenchShortName>
+	</AZ>
+	<BS>
+		<ISO2>BS</ISO2>
+		<ISO3>BHS</ISO3>
+		<englishShortName>Bahamas (the)</englishShortName>
+		<frenchShortName>Bahamas (les)</frenchShortName>
+	</BS>
+	<BH>
+		<ISO2>BH</ISO2>
+		<ISO3>BHR</ISO3>
+		<englishShortName>Bahrain</englishShortName>
+		<frenchShortName>Bahreïn</frenchShortName>
+	</BH>
+	<BD>
+		<ISO2>BD</ISO2>
+		<ISO3>BGD</ISO3>
+		<englishShortName>Bangladesh</englishShortName>
+		<frenchShortName>Bangladesh (le)</frenchShortName>
+	</BD>
+	<BB>
+		<ISO2>BB</ISO2>
+		<ISO3>BRB</ISO3>
+		<englishShortName>Barbados</englishShortName>
+		<frenchShortName>Barbade (la)</frenchShortName>
+	</BB>
+	<BY>
+		<ISO2>BY</ISO2>
+		<ISO3>BLR</ISO3>
+		<englishShortName>Belarus</englishShortName>
+		<frenchShortName>Bélarus (le)</frenchShortName>
+	</BY>
+	<BE>
+		<ISO2>BE</ISO2>
+		<ISO3>BEL</ISO3>
+		<englishShortName>Belgium</englishShortName>
+		<frenchShortName>Belgique (la)</frenchShortName>
+	</BE>
+	<BZ>
+		<ISO2>BZ</ISO2>
+		<ISO3>BLZ</ISO3>
+		<englishShortName>Belize</englishShortName>
+		<frenchShortName>Belize</frenchShortName>
+	</BZ>
+	<BJ>
+		<ISO2>BJ</ISO2>
+		<ISO3>BJI</ISO3>
+		<englishShortName>Benin</englishShortName>
+		<frenchShortName>Bénin (le)</frenchShortName>
+	</BJ>
+	<BM>
+		<ISO2>BM</ISO2>
+		<ISO3>BMU</ISO3>
+		<englishShortName>Bermuda</englishShortName>
+		<frenchShortName>Bermudes (les)</frenchShortName>
+	</BM>
+	<BT>
+		<ISO2>BT</ISO2>
+		<ISO3>BTN</ISO3>
+		<englishShortName>Bhutan</englishShortName>
+		<frenchShortName>Bhoutan (le)</frenchShortName>
+	</BT>
+	<BO>
+		<ISO2>BO</ISO2>
+		<ISO3>BOL</ISO3>
+		<englishShortName>Bolivia (Plurinational State of)</englishShortName>
+		<frenchShortName>Bolivie (État plurinational de)</frenchShortName>
+	</BO>
+	<BQ>
+		<ISO2>BQ</ISO2>
+		<ISO3>BES</ISO3>
+		<englishShortName>Bonaire, Sint Eustatius and Saba</englishShortName>
+		<frenchShortName>Bonaire, Saint-Eustache et Saba</frenchShortName>
+	</BQ>
+	<BA>
+		<ISO2>BA</ISO2>
+		<ISO3>BIH</ISO3>
+		<englishShortName>Bosnia and Herzegovina</englishShortName>
+		<frenchShortName>Bosnie-Herzégovine (la)</frenchShortName>
+	</BA>
+	<BW>
+		<ISO2>BW</ISO2>
+		<ISO3>BWA</ISO3>
+		<englishShortName>Botswana</englishShortName>
+		<frenchShortName>Botswana (le)</frenchShortName>
+	</BW>
+	<BV>
+		<ISO2>BV</ISO2>
+		<ISO3>BVT</ISO3>
+		<englishShortName>Bouvet Island</englishShortName>
+		<frenchShortName>Bouvet (l'Île)</frenchShortName>
+	</BV>
+	<BR>
+		<ISO2>BR</ISO2>
+		<ISO3>BRA</ISO3>
+		<englishShortName>Brazil</englishShortName>
+		<frenchShortName>Brésil (le)</frenchShortName>
+	</BR>
+	<IO>
+		<ISO2>IO</ISO2>
+		<ISO3>IOT</ISO3>
+		<englishShortName>British Indian Ocean Territory (the)</englishShortName>
+		<frenchShortName>Indien (le Territoire britannique de l'océan)</frenchShortName>
+	</IO>
+	<BN>
+		<ISO2>BN</ISO2>
+		<ISO3>BRN</ISO3>
+		<englishShortName>Brunei Darussalam</englishShortName>
+		<frenchShortName>Brunei Darussalam</frenchShortName>
+	</BN>
+	<BG>
+		<ISO2>BG</ISO2>
+		<ISO3>BGR</ISO3>
+		<englishShortName>Bulgaria</englishShortName>
+		<frenchShortName>Bulgarie (la)</frenchShortName>
+	</BG>
+	<BF>
+		<ISO2>BF</ISO2>
+		<ISO3>BFA</ISO3>
+		<englishShortName>Burkina Faso</englishShortName>
+		<frenchShortName>Burkina Faso (le)</frenchShortName>
+	</BF>
+	<BI>
+		<ISO2>BI</ISO2>
+		<ISO3>BDI</ISO3>
+		<englishShortName>Burundi</englishShortName>
+		<frenchShortName>Burundi (le)</frenchShortName>
+	</BI>
+	<CV>
+		<ISO2>CV</ISO2>
+		<ISO3>CPV</ISO3>
+		<englishShortName>Cabo Verde</englishShortName>
+		<frenchShortName>Cabo Verde</frenchShortName>
+	</CV>
+	<KH>
+		<ISO2>KH</ISO2>
+		<ISO3>KHM</ISO3>
+		<englishShortName>Cambodia</englishShortName>
+		<frenchShortName>Cambodge (le)</frenchShortName>
+	</KH>
+	<CM>
+		<ISO2>CM</ISO2>
+		<ISO3>CMR</ISO3>
+		<englishShortName>Cameroon</englishShortName>
+		<frenchShortName>Cameroun (le)</frenchShortName>
+	</CM>
+	<CA>
+		<ISO2>CA</ISO2>
+		<ISO3>CAN</ISO3>
+		<englishShortName>Canada</englishShortName>
+		<frenchShortName>Canada (le)</frenchShortName>
+	</CA>
+	<KY>
+		<ISO2>KY</ISO2>
+		<ISO3>CYM</ISO3>
+		<englishShortName>Cayman Islands (the)</englishShortName>
+		<frenchShortName>Caïmans (les Îles)</frenchShortName>
+	</KY>
+	<CF>
+		<ISO2>CF</ISO2>
+		<ISO3>CAF</ISO3>
+		<englishShortName>Central African Republic (the)</englishShortName>
+		<frenchShortName>Centrafricaine (la République)</frenchShortName>
+	</CF>
+	<TD>
+		<ISO2>TD</ISO2>
+		<ISO3>TCD</ISO3>
+		<englishShortName>Chad</englishShortName>
+		<frenchShortName>Tchad (le)</frenchShortName>
+	</TD>
+	<CL>
+		<ISO2>CL</ISO2>
+		<ISO3>CHL</ISO3>
+		<englishShortName>Chile</englishShortName>
+		<frenchShortName>Chili (le)</frenchShortName>
+	</CL>
+	<CN>
+		<ISO2>CN</ISO2>
+		<ISO3>CHN</ISO3>
+		<englishShortName>China</englishShortName>
+		<frenchShortName>Chine (la)</frenchShortName>
+	</CN>
+	<CX>
+		<ISO2>CX</ISO2>
+		<ISO3>CXR</ISO3>
+		<englishShortName>Christmas Island</englishShortName>
+		<frenchShortName>Christmas (l'Île)</frenchShortName>
+	</CX>
+	<CC>
+		<ISO2>CC</ISO2>
+		<ISO3>CCK</ISO3>
+		<englishShortName>Cocos (Keeling) Islands (the)</englishShortName>
+		<frenchShortName>Cocos (les Îles)/ Keeling (les Îles)</frenchShortName>
+	</CC>
+	<CO>
+		<ISO2>CO</ISO2>
+		<ISO3>COL</ISO3>
+		<englishShortName>Colombia</englishShortName>
+		<frenchShortName>Colombie (la)</frenchShortName>
+	</CO>
+	<KM>
+		<ISO2>KM</ISO2>
+		<ISO3>COM</ISO3>
+		<englishShortName>Comoros (the)</englishShortName>
+		<frenchShortName>Comores (les)</frenchShortName>
+	</KM>
+	<CG>
+		<ISO2>CG</ISO2>
+		<ISO3>COG</ISO3>
+		<englishShortName>Congo (the)</englishShortName>
+		<frenchShortName>Congo (le)</frenchShortName>
+	</CG>
+	<CD>
+		<ISO2>CD</ISO2>
+		<ISO3>COD</ISO3>
+		<englishShortName>Congo (the Democratic Republic of the)</englishShortName>
+		<frenchShortName>Congo (la République démocratique du)</frenchShortName>
+	</CD>
+	<CK>
+		<ISO2>CK</ISO2>
+		<ISO3>COK</ISO3>
+		<englishShortName>Cook Islands (the)</englishShortName>
+		<frenchShortName>Cook (les Îles)</frenchShortName>
+	</CK>
+	<CR>
+		<ISO2>CR</ISO2>
+		<ISO3>CR</ISO3>
+		<englishShortName>Costa Rica</englishShortName>
+		<frenchShortName>Costa Rica (le)</frenchShortName>
+	</CR>
+	<CI>
+		<ISO2>CI</ISO2>
+		<ISO3>CIV</ISO3>
+		<englishShortName>Côte d'Ivoire</englishShortName>
+		<frenchShortName>Côte d'Ivoire (la)</frenchShortName>
+	</CI>
+	<HR>
+		<ISO2>HR</ISO2>
+		<ISO3>HRV</ISO3>
+		<englishShortName>Croatia</englishShortName>
+		<frenchShortName>Croatie (la)</frenchShortName>
+	</HR>
+	<CU>
+		<ISO2>CU</ISO2>
+		<ISO3>CUB</ISO3>
+		<englishShortName>Cuba</englishShortName>
+		<frenchShortName>Cuba</frenchShortName>
+	</CU>
+	<CW>
+		<ISO2>CW</ISO2>
+		<ISO3>CUW</ISO3>
+		<englishShortName>Curaçao</englishShortName>
+		<frenchShortName>Curaçao</frenchShortName>
+	</CW>
+	<CY>
+		<ISO2>CY</ISO2>
+		<ISO3>CYP</ISO3>
+		<englishShortName>Cyprus</englishShortName>
+		<frenchShortName>Chypre</frenchShortName>
+	</CY>
+	<CZ>
+		<ISO2>CZ</ISO2>
+		<ISO3>CZE</ISO3>
+		<englishShortName>Czechia</englishShortName>
+		<frenchShortName>Tchéquie (la)</frenchShortName>
+	</CZ>
+	<DK>
+		<ISO2>DK</ISO2>
+		<ISO3>DNK</ISO3>
+		<englishShortName>Denmark</englishShortName>
+		<frenchShortName>Danemark (le)</frenchShortName>
+	</DK>
+	<DJ>
+		<ISO2>DJ</ISO2>
+		<ISO3>DJI</ISO3>
+		<englishShortName>Djibouti</englishShortName>
+		<frenchShortName>Djibouti</frenchShortName>
+	</DJ>
+	<DM>
+		<ISO2>DM</ISO2>
+		<ISO3>DMA</ISO3>
+		<englishShortName>Dominica</englishShortName>
+		<frenchShortName>Dominique (la)</frenchShortName>
+	</DM>
+	<DO>
+		<ISO2>DO</ISO2>
+		<ISO3>DOM</ISO3>
+		<englishShortName>Dominican Republic (the)</englishShortName>
+		<frenchShortName>Dominicaine (la République)</frenchShortName>
+	</DO>
+	<EC>
+		<ISO2>EC</ISO2>
+		<ISO3>ECU</ISO3>
+		<englishShortName>Ecuador</englishShortName>
+		<frenchShortName>Équateur (l')</frenchShortName>
+	</EC>
+	<EG>
+		<ISO2>EG</ISO2>
+		<ISO3>EGY</ISO3>
+		<englishShortName>Egypt</englishShortName>
+		<frenchShortName>Égypte (l')</frenchShortName>
+	</EG>
+	<SV>
+		<ISO2>SV</ISO2>
+		<ISO3>SLV</ISO3>
+		<englishShortName>El Salvador</englishShortName>
+		<frenchShortName>El Salvador</frenchShortName>
+	</SV>
+	<GQ>
+		<ISO2>GQ</ISO2>
+		<ISO3>GNQ</ISO3>
+		<englishShortName>Equatorial Guinea</englishShortName>
+		<frenchShortName>Guinée équatoriale (la)</frenchShortName>
+	</GQ>
+	<ER>
+		<ISO2>ER</ISO2>
+		<ISO3>ERI</ISO3>
+		<englishShortName>Eritrea</englishShortName>
+		<frenchShortName>Érythrée (l')</frenchShortName>
+	</ER>
+	<EE>
+		<ISO2>EE</ISO2>
+		<ISO3>EST</ISO3>
+		<englishShortName>Estonia</englishShortName>
+		<frenchShortName>Estonie (l')</frenchShortName>
+	</EE>
+	<SZ>
+		<ISO2>SZ</ISO2>
+		<ISO3>SWZ</ISO3>
+		<englishShortName>Eswatini</englishShortName>
+		<frenchShortName>Eswatini (l')</frenchShortName>
+	</SZ>
+	<ET>
+		<ISO2>ET</ISO2>
+		<ISO3>ETH</ISO3>
+		<englishShortName>Ethiopia</englishShortName>
+		<frenchShortName>Éthiopie (l')</frenchShortName>
+	</ET>
+	<FK>
+		<ISO2>FK</ISO2>
+		<ISO3>FLK</ISO3>
+		<englishShortName>Falkland Islands (the) [Malvinas]</englishShortName>
+		<frenchShortName>Falkland (les Îles)/ Malouines (les Îles)</frenchShortName>
+	</FK>
+	<FO>
+		<ISO2>FO</ISO2>
+		<ISO3>FRO</ISO3>
+		<englishShortName>Faroe Islands (the)</englishShortName>
+		<frenchShortName>Féroé (les Îles)</frenchShortName>
+	</FO>
+	<FJ>
+		<ISO2>FJ</ISO2>
+		<ISO3>FJI</ISO3>
+		<englishShortName>Fiji</englishShortName>
+		<frenchShortName>Fidji</frenchShortName>
+	</FJ>
+	<FI>
+		<ISO2>FI</ISO2>
+		<ISO3>FIN</ISO3>
+		<englishShortName>Finland</englishShortName>
+		<frenchShortName>Finlande (la)</frenchShortName>
+	</FI>
+	<FR>
+		<ISO2>FR</ISO2>
+		<ISO3>FRA</ISO3>
+		<englishShortName>France</englishShortName>
+		<frenchShortName>France (la)</frenchShortName>
+	</FR>
+	<GF>
+		<ISO2>GF</ISO2>
+		<ISO3>GUF</ISO3>
+		<englishShortName>French Guiana</englishShortName>
+		<frenchShortName>Guyane française (la)</frenchShortName>
+	</GF>
+	<PF>
+		<ISO2>PF</ISO2>
+		<ISO3>PYF</ISO3>
+		<englishShortName>French Polynesia</englishShortName>
+		<frenchShortName>Polynésie française (la)</frenchShortName>
+	</PF>
+	<TF>
+		<ISO2>TF</ISO2>
+		<ISO3>ATF</ISO3>
+		<englishShortName>French Southern Territories (the)</englishShortName>
+		<frenchShortName>Terres australes françaises (les)</frenchShortName>
+	</TF>
+	<GA>
+		<ISO2>GA</ISO2>
+		<ISO3>GAB</ISO3>
+		<englishShortName>Gabon</englishShortName>
+		<frenchShortName>Gabon (le)</frenchShortName>
+	</GA>
+	<GM>
+		<ISO2>GM</ISO2>
+		<ISO3>GMB</ISO3>
+		<englishShortName>Gambia (the)</englishShortName>
+		<frenchShortName>Gambie (la)</frenchShortName>
+	</GM>
+	<GE>
+		<ISO2>GE</ISO2>
+		<ISO3>GEO</ISO3>
+		<englishShortName>Georgia</englishShortName>
+		<frenchShortName>Géorgie (la)</frenchShortName>
+	</GE>
+	<DE>
+		<ISO2>DE</ISO2>
+		<ISO3>DEU</ISO3>
+		<englishShortName>Germany</englishShortName>
+		<frenchShortName>Allemagne (l')</frenchShortName>
+	</DE>
+	<GH>
+		<ISO2>GH</ISO2>
+		<ISO3>GHA</ISO3>
+		<englishShortName>Ghana</englishShortName>
+		<frenchShortName>Ghana (le)</frenchShortName>
+	</GH>
+	<GI>
+		<ISO2>GI</ISO2>
+		<ISO3>GIB</ISO3>
+		<englishShortName>Gibraltar</englishShortName>
+		<frenchShortName>Gibraltar</frenchShortName>
+	</GI>
+	<GR>
+		<ISO2>GR</ISO2>
+		<ISO3>GRC</ISO3>
+		<englishShortName>Greece</englishShortName>
+		<frenchShortName>Grèce (la)</frenchShortName>
+	</GR>
+	<GL>
+		<ISO2>GL</ISO2>
+		<ISO3>GRL</ISO3>
+		<englishShortName>Greenland</englishShortName>
+		<frenchShortName>Groenland (le)</frenchShortName>
+	</GL>
+	<GD>
+		<ISO2>GD</ISO2>
+		<ISO3>GRD</ISO3>
+		<englishShortName>Grenada</englishShortName>
+		<frenchShortName>Grenade (la)</frenchShortName>
+	</GD>
+	<GP>
+		<ISO2>GP</ISO2>
+		<ISO3>GLP</ISO3>
+		<englishShortName>Guadeloupe</englishShortName>
+		<frenchShortName>Guadeloupe (la)</frenchShortName>
+	</GP>
+	<GU>
+		<ISO2>GU</ISO2>
+		<ISO3>GUM</ISO3>
+		<englishShortName>Guam</englishShortName>
+		<frenchShortName>Guam</frenchShortName>
+	</GU>
+	<GT>
+		<ISO2>GT</ISO2>
+		<ISO3>GTM</ISO3>
+		<englishShortName>Guatemala</englishShortName>
+		<frenchShortName>Guatemala</frenchShortName>
+	</GT>
+	<GG>
+		<ISO2>GG</ISO2>
+		<ISO3>GGY</ISO3>
+		<englishShortName>Guernsey</englishShortName>
+		<frenchShortName>Guernesey</frenchShortName>
+	</GG>
+	<GN>
+		<ISO2>GN</ISO2>
+		<ISO3>GIN</ISO3>
+		<englishShortName>Guinea</englishShortName>
+		<frenchShortName>Guinée (la)</frenchShortName>
+	</GN>
+	<GW>
+		<ISO2>GW</ISO2>
+		<ISO3>GNB</ISO3>
+		<englishShortName>Guinea-Bissau</englishShortName>
+		<frenchShortName>Guinée-Bissau (la)</frenchShortName>
+	</GW>
+	<GY>
+		<ISO2>GY</ISO2>
+		<ISO3>GUY</ISO3>
+		<englishShortName>Guyana</englishShortName>
+		<frenchShortName>Guyana (le)</frenchShortName>
+	</GY>
+	<HT>
+		<ISO2>HT</ISO2>
+		<ISO3>HTI</ISO3>
+		<englishShortName>Haiti</englishShortName>
+		<frenchShortName>Haïti</frenchShortName>
+	</HT>
+	<HM>
+		<ISO2>HM</ISO2>
+		<ISO3>HMD</ISO3>
+		<englishShortName>Heard Island and McDonald Islands</englishShortName>
+		<frenchShortName>Heard-et-Îles MacDonald (l'Île)</frenchShortName>
+	</HM>
+	<VA>
+		<ISO2>VA</ISO2>
+		<ISO3>VAT</ISO3>
+		<englishShortName>Holy See (the)</englishShortName>
+		<frenchShortName>Saint-Siège (le)</frenchShortName>
+	</VA>
+	<HN>
+		<ISO2>HN</ISO2>
+		<ISO3>HND</ISO3>
+		<englishShortName>Honduras</englishShortName>
+		<frenchShortName>Honduras (le)</frenchShortName>
+	</HN>
+	<HK>
+		<ISO2>HK</ISO2>
+		<ISO3>HKG</ISO3>
+		<englishShortName>Hong Kong</englishShortName>
+		<frenchShortName>Hong Kong</frenchShortName>
+	</HK>
+	<HU>
+		<ISO2>HU</ISO2>
+		<ISO3>HUN</ISO3>
+		<englishShortName>Hungary</englishShortName>
+		<frenchShortName>Hongrie (la)</frenchShortName>
+	</HU>
+	<IS>
+		<ISO2>IS</ISO2>
+		<ISO3>ISL</ISO3>
+		<englishShortName>Iceland</englishShortName>
+		<frenchShortName>Islande (l')</frenchShortName>
+	</IS>
+	<IN>
+		<ISO2>IN</ISO2>
+		<ISO3>IND</ISO3>
+		<englishShortName>India</englishShortName>
+		<frenchShortName>Inde (l')</frenchShortName>
+	</IN>
+	<ID>
+		<ISO2>ID</ISO2>
+		<ISO3>IDN</ISO3>
+		<englishShortName>Indonesia</englishShortName>
+		<frenchShortName>Indonésie (l')</frenchShortName>
+	</ID>
+	<IR>
+		<ISO2>IR</ISO2>
+		<ISO3>IRN</ISO3>
+		<englishShortName>Iran (Islamic Republic of)</englishShortName>
+		<frenchShortName>Iran (République islamique d')</frenchShortName>
+	</IR>
+	<IQ>
+		<ISO2>IQ</ISO2>
+		<ISO3>IRQ</ISO3>
+		<englishShortName>Iraq</englishShortName>
+		<frenchShortName>Iraq (l')</frenchShortName>
+	</IQ>
+	<IE>
+		<ISO2>IE</ISO2>
+		<ISO3>IRL</ISO3>
+		<englishShortName>Ireland</englishShortName>
+		<frenchShortName>Irlande (l')</frenchShortName>
+	</IE>
+	<IM>
+		<ISO2>IM</ISO2>
+		<ISO3>IMN</ISO3>
+		<englishShortName>Isle of Man</englishShortName>
+		<frenchShortName>Île de Man</frenchShortName>
+	</IM>
+	<IL>
+		<ISO2>IL</ISO2>
+		<ISO3>ISR</ISO3>
+		<englishShortName>Israel</englishShortName>
+		<frenchShortName>Israël</frenchShortName>
+	</IL>
+	<IT>
+		<ISO2>IT</ISO2>
+		<ISO3>ITA</ISO3>
+		<englishShortName>Italy</englishShortName>
+		<frenchShortName>Italie (l')</frenchShortName>
+	</IT>
+	<JM>
+		<ISO2>JM</ISO2>
+		<ISO3>JAM</ISO3>
+		<englishShortName>Jamaica</englishShortName>
+		<frenchShortName>Jamaïque (la)</frenchShortName>
+	</JM>
+	<JP>
+		<ISO2>JP</ISO2>
+		<ISO3>JPN</ISO3>
+		<englishShortName>Japan</englishShortName>
+		<frenchShortName>Japon (le)</frenchShortName>
+	</JP>
+	<JE>
+		<ISO2>JE</ISO2>
+		<ISO3>JEY</ISO3>
+		<englishShortName>Jersey</englishShortName>
+		<frenchShortName>Jersey</frenchShortName>
+	</JE>
+	<JO>
+		<ISO2>JO</ISO2>
+		<ISO3>JOR</ISO3>
+		<englishShortName>Jordan</englishShortName>
+		<frenchShortName>Jordanie (la)</frenchShortName>
+	</JO>
+	<KZ>
+		<ISO2>KZ</ISO2>
+		<ISO3>KAZ</ISO3>
+		<englishShortName>Kazakhstan</englishShortName>
+		<frenchShortName>Kazakhstan (le)</frenchShortName>
+	</KZ>
+	<KE>
+		<ISO2>KE</ISO2>
+		<ISO3>KEN</ISO3>
+		<englishShortName>Kenya</englishShortName>
+		<frenchShortName>Kénya (le)</frenchShortName>
+	</KE>
+	<KI>
+		<ISO2>KI</ISO2>
+		<ISO3>KIR</ISO3>
+		<englishShortName>Kiribati</englishShortName>
+		<frenchShortName>Kiribati</frenchShortName>
+	</KI>
+	<KP>
+		<ISO2>KP</ISO2>
+		<ISO3>PRK</ISO3>
+		<englishShortName>Korea (the Democratic People's Republic of)</englishShortName>
+		<frenchShortName>Corée (la République populaire démocratique de)</frenchShortName>
+	</KP>
+	<KR>
+		<ISO2>KR</ISO2>
+		<ISO3>KOR</ISO3>
+		<englishShortName>Korea (the Republic of)</englishShortName>
+		<frenchShortName>Corée (la République de)</frenchShortName>
+	</KR>
+	<KW>
+		<ISO2>KW</ISO2>
+		<ISO3>KWT</ISO3>
+		<englishShortName>Kuwait</englishShortName>
+		<frenchShortName>Koweït (le)</frenchShortName>
+	</KW>
+	<KG>
+		<ISO2>KG</ISO2>
+		<ISO3>KGZ</ISO3>
+		<englishShortName>Kyrgyzstan</englishShortName>
+		<frenchShortName>Kirghizistan (le)</frenchShortName>
+	</KG>
+	<LA>
+		<ISO2>LA</ISO2>
+		<ISO3>LAO</ISO3>
+		<englishShortName>Lao People's Democratic Republic (the)</englishShortName>
+		<frenchShortName>Lao (la République démocratique populaire)</frenchShortName>
+	</LA>
+	<LV>
+		<ISO2>LV</ISO2>
+		<ISO3>LVA</ISO3>
+		<englishShortName>Latvia</englishShortName>
+		<frenchShortName>Lettonie (la)</frenchShortName>
+	</LV>
+	<LB>
+		<ISO2>LB</ISO2>
+		<ISO3>LBN</ISO3>
+		<englishShortName>Lebanon</englishShortName>
+		<frenchShortName>Liban (le)</frenchShortName>
+	</LB>
+	<LS>
+		<ISO2>LS</ISO2>
+		<ISO3>LSO</ISO3>
+		<englishShortName>Lesotho</englishShortName>
+		<frenchShortName>Lesotho (le)</frenchShortName>
+	</LS>
+	<LR>
+		<ISO2>LR</ISO2>
+		<ISO3>LBR</ISO3>
+		<englishShortName>Liberia</englishShortName>
+		<frenchShortName>Liberia (le)</frenchShortName>
+	</LR>
+	<LY>
+		<ISO2>LY</ISO2>
+		<ISO3>LBY</ISO3>
+		<englishShortName>Libya</englishShortName>
+		<frenchShortName>Libye (la)</frenchShortName>
+	</LY>
+	<LI>
+		<ISO2>LI</ISO2>
+		<ISO3>LIE</ISO3>
+		<englishShortName>Liechtenstein</englishShortName>
+		<frenchShortName>Liechtenstein (le)</frenchShortName>
+	</LI>
+	<LT>
+		<ISO2>LT</ISO2>
+		<ISO3>LTU</ISO3>
+		<englishShortName>Lithuania</englishShortName>
+		<frenchShortName>Lituanie (la)</frenchShortName>
+	</LT>
+	<LU>
+		<ISO2>LU</ISO2>
+		<ISO3>LUX</ISO3>
+		<englishShortName>Luxembourg</englishShortName>
+		<frenchShortName>Luxembourg (le)</frenchShortName>
+	</LU>
+	<MO>
+		<ISO2>MO</ISO2>
+		<ISO3>MAC</ISO3>
+		<englishShortName>Macao</englishShortName>
+		<frenchShortName>Macao</frenchShortName>
+	</MO>
+	<MG>
+		<ISO2>MG</ISO2>
+		<ISO3>MDG</ISO3>
+		<englishShortName>Madagascar</englishShortName>
+		<frenchShortName>Madagascar</frenchShortName>
+	</MG>
+	<MW>
+		<ISO2>MW</ISO2>
+		<ISO3>MWI</ISO3>
+		<englishShortName>Malawi</englishShortName>
+		<frenchShortName>Malawi (le)</frenchShortName>
+	</MW>
+	<MY>
+		<ISO2>MY</ISO2>
+		<ISO3>MYS</ISO3>
+		<englishShortName>Malaysia</englishShortName>
+		<frenchShortName>Malaisie (la)</frenchShortName>
+	</MY>
+	<MV>
+		<ISO2>MV</ISO2>
+		<ISO3>MDV</ISO3>
+		<englishShortName>Maldives</englishShortName>
+		<frenchShortName>Maldive (les)</frenchShortName>
+	</MV>
+	<ML>
+		<ISO2>ML</ISO2>
+		<ISO3>MLI</ISO3>
+		<englishShortName>Mali</englishShortName>
+		<frenchShortName>Mali (le)</frenchShortName>
+	</ML>
+	<MT>
+		<ISO2>MT</ISO2>
+		<ISO3>MLT</ISO3>
+		<englishShortName>Malta</englishShortName>
+		<frenchShortName>Malte</frenchShortName>
+	</MT>
+	<MH>
+		<ISO2>MH</ISO2>
+		<ISO3>MHL</ISO3>
+		<englishShortName>Marshall Islands (the)</englishShortName>
+		<frenchShortName>Marshall (les Îles)</frenchShortName>
+	</MH>
+	<MQ>
+		<ISO2>MQ</ISO2>
+		<ISO3>MTQ</ISO3>
+		<englishShortName>Martinique</englishShortName>
+		<frenchShortName>Martinique (la)</frenchShortName>
+	</MQ>
+	<MR>
+		<ISO2>MR</ISO2>
+		<ISO3>MRT</ISO3>
+		<englishShortName>Mauritania</englishShortName>
+		<frenchShortName>Mauritanie (la)</frenchShortName>
+	</MR>
+	<MU>
+		<ISO2>MU</ISO2>
+		<ISO3>MUS</ISO3>
+		<englishShortName>Mauritius</englishShortName>
+		<frenchShortName>Maurice</frenchShortName>
+	</MU>
+	<YT>
+		<ISO2>YT</ISO2>
+		<ISO3>MYT</ISO3>
+		<englishShortName>Mayotte</englishShortName>
+		<frenchShortName>Mayotte</frenchShortName>
+	</YT>
+	<MX>
+		<ISO2>MX</ISO2>
+		<ISO3>MEX</ISO3>
+		<englishShortName>Mexico</englishShortName>
+		<frenchShortName>Mexique (le)</frenchShortName>
+	</MX>
+	<FM>
+		<ISO2>FM</ISO2>
+		<ISO3>FSM</ISO3>
+		<englishShortName>Micronesia (Federated States of)</englishShortName>
+		<frenchShortName>Micronésie (États fédérés de)</frenchShortName>
+	</FM>
+	<MD>
+		<ISO2>MD</ISO2>
+		<ISO3>MDA</ISO3>
+		<englishShortName>Moldova (the Republic of)</englishShortName>
+		<frenchShortName>Moldova (la République de)</frenchShortName>
+	</MD>
+	<MC>
+		<ISO2>MC</ISO2>
+		<ISO3>MCO</ISO3>
+		<englishShortName>Monaco</englishShortName>
+		<frenchShortName>Monaco</frenchShortName>
+	</MC>
+	<MN>
+		<ISO2>MN</ISO2>
+		<ISO3>MNG</ISO3>
+		<englishShortName>Mongolia</englishShortName>
+		<frenchShortName>Mongolie (la)</frenchShortName>
+	</MN>
+	<ME>
+		<ISO2>ME</ISO2>
+		<ISO3>MNE</ISO3>
+		<englishShortName>Montenegro</englishShortName>
+		<frenchShortName>Monténégro (le)</frenchShortName>
+	</ME>
+	<MS>
+		<ISO2>MS</ISO2>
+		<ISO3>MSR</ISO3>
+		<englishShortName>Montserrat</englishShortName>
+		<frenchShortName>Montserrat</frenchShortName>
+	</MS>
+	<MA>
+		<ISO2>MA</ISO2>
+		<ISO3>MAR</ISO3>
+		<englishShortName>Morocco</englishShortName>
+		<frenchShortName>Maroc (le)</frenchShortName>
+	</MA>
+	<MZ>
+		<ISO2>MZ</ISO2>
+		<ISO3>MOZ</ISO3>
+		<englishShortName>Mozambique</englishShortName>
+		<frenchShortName>Mozambique (le)</frenchShortName>
+	</MZ>
+	<MM>
+		<ISO2>MM</ISO2>
+		<ISO3>MMR</ISO3>
+		<englishShortName>Myanmar</englishShortName>
+		<frenchShortName>Myanmar (le)</frenchShortName>
+	</MM>
+	<NA>
+		<ISO2>NA</ISO2>
+		<ISO3>NAM</ISO3>
+		<englishShortName>Namibia</englishShortName>
+		<frenchShortName>Namibie (la)</frenchShortName>
+	</NA>
+	<NR>
+		<ISO2>NR</ISO2>
+		<ISO3>NRU</ISO3>
+		<englishShortName>Nauru</englishShortName>
+		<frenchShortName>Nauru</frenchShortName>
+	</NR>
+	<NP>
+		<ISO2>NP</ISO2>
+		<ISO3>NPL</ISO3>
+		<englishShortName>Nepal</englishShortName>
+		<frenchShortName>Népal (le)</frenchShortName>
+	</NP>
+	<NL>
+		<ISO2>NL</ISO2>
+		<ISO3>NLD</ISO3>
+		<englishShortName>Netherlands (the)</englishShortName>
+		<frenchShortName>Pays-Bas (les)</frenchShortName>
+	</NL>
+	<NC>
+		<ISO2>NC</ISO2>
+		<ISO3>NCL</ISO3>
+		<englishShortName>New Caledonia</englishShortName>
+		<frenchShortName>Nouvelle-Calédonie (la)</frenchShortName>
+	</NC>
+	<NZ>
+		<ISO2>NZ</ISO2>
+		<ISO3>NZL</ISO3>
+		<englishShortName>New Zealand</englishShortName>
+		<frenchShortName>Nouvelle-Zélande (la)</frenchShortName>
+	</NZ>
+	<NI>
+		<ISO2>NI</ISO2>
+		<ISO3>NIC</ISO3>
+		<englishShortName>Nicaragua</englishShortName>
+		<frenchShortName>Nicaragua (le)</frenchShortName>
+	</NI>
+	<NE>
+		<ISO2>NE</ISO2>
+		<ISO3>NER</ISO3>
+		<englishShortName>Niger (the)</englishShortName>
+		<frenchShortName>Niger (le)</frenchShortName>
+	</NE>
+	<NG>
+		<ISO2>NG</ISO2>
+		<ISO3>NGA</ISO3>
+		<englishShortName>Nigeria</englishShortName>
+		<frenchShortName>Nigéria (le)</frenchShortName>
+	</NG>
+	<NU>
+		<ISO2>NU</ISO2>
+		<ISO3>NIU</ISO3>
+		<englishShortName>Niue</englishShortName>
+		<frenchShortName>Niue</frenchShortName>
+	</NU>
+	<NF>
+		<ISO2>NF</ISO2>
+		<ISO3>NFK</ISO3>
+		<englishShortName>Norfolk Island</englishShortName>
+		<frenchShortName>Norfolk (l'Île)</frenchShortName>
+	</NF>
+	<MK>
+		<ISO2>MK</ISO2>
+		<ISO3>MKD</ISO3>
+		<englishShortName>North Macedonia</englishShortName>
+		<frenchShortName>Macédoine du Nord (la)</frenchShortName>
+	</MK>
+	<MP>
+		<ISO2>MP</ISO2>
+		<ISO3>MNP</ISO3>
+		<englishShortName>Northern Mariana Islands (the)</englishShortName>
+		<frenchShortName>Mariannes du Nord (les Îles)</frenchShortName>
+	</MP>
+	<NO>
+		<ISO2>NO</ISO2>
+		<ISO3>NOR</ISO3>
+		<englishShortName>Norway</englishShortName>
+		<frenchShortName>Norvège (la)</frenchShortName>
+	</NO>
+	<OM>
+		<ISO2>OM</ISO2>
+		<ISO3>OMN</ISO3>
+		<englishShortName>Oman</englishShortName>
+		<frenchShortName>Oman</frenchShortName>
+	</OM>
+	<PK>
+		<ISO2>PK</ISO2>
+		<ISO3>PAK</ISO3>
+		<englishShortName>Pakistan (the)</englishShortName>
+		<frenchShortName>Pakistan (le)</frenchShortName>
+	</PK>
+	<PW>
+		<ISO2>PW</ISO2>
+		<ISO3>PLW</ISO3>
+		<englishShortName>Palau</englishShortName>
+		<frenchShortName>Palaos (les)</frenchShortName>
+	</PW>
+	<PS>
+		<ISO2>PS</ISO2>
+		<ISO3>PSE</ISO3>
+		<englishShortName>Palestine, State of</englishShortName>
+		<frenchShortName>Palestine, État de</frenchShortName>
+	</PS>
+	<PA>
+		<ISO2>PA</ISO2>
+		<ISO3>PAN</ISO3>
+		<englishShortName>Panama</englishShortName>
+		<frenchShortName>Panama (le)</frenchShortName>
+	</PA>
+	<PG>
+		<ISO2>PG</ISO2>
+		<ISO3>PNG</ISO3>
+		<englishShortName>Papua New Guinea</englishShortName>
+		<frenchShortName>Papouasie-Nouvelle-Guinée (la)</frenchShortName>
+	</PG>
+	<PY>
+		<ISO2>PY</ISO2>
+		<ISO3>PRY</ISO3>
+		<englishShortName>Paraguay</englishShortName>
+		<frenchShortName>Paraguay (le)</frenchShortName>
+	</PY>
+	<PE>
+		<ISO2>PE</ISO2>
+		<ISO3>PER</ISO3>
+		<englishShortName>Peru</englishShortName>
+		<frenchShortName>Pérou (le)</frenchShortName>
+	</PE>
+	<PH>
+		<ISO2>PH</ISO2>
+		<ISO3>PHL</ISO3>
+		<englishShortName>Philippines (the)</englishShortName>
+		<frenchShortName>Philippines (les)</frenchShortName>
+	</PH>
+	<PN>
+		<ISO2>PN</ISO2>
+		<ISO3>PCN</ISO3>
+		<englishShortName>Pitcairn</englishShortName>
+		<frenchShortName>Pitcairn</frenchShortName>
+	</PN>
+	<PL>
+		<ISO2>PL</ISO2>
+		<ISO3>POL</ISO3>
+		<englishShortName>Poland</englishShortName>
+		<frenchShortName>Pologne (la)</frenchShortName>
+	</PL>
+	<PT>
+		<ISO2>PT</ISO2>
+		<ISO3>PRT</ISO3>
+		<englishShortName>Portugal</englishShortName>
+		<frenchShortName>Portugal</frenchShortName>
+	</PT>
+	<PR>
+		<ISO2>PR</ISO2>
+		<ISO3>PRI</ISO3>
+		<englishShortName>Puerto Rico</englishShortName>
+		<frenchShortName>Puerto Rico</frenchShortName>
+	</PR>
+	<QA>
+		<ISO2>QA</ISO2>
+		<ISO3>QAT</ISO3>
+		<englishShortName>Qatar</englishShortName>
+		<frenchShortName>Qatar (le)</frenchShortName>
+	</QA>
+	<RE>
+		<ISO2>RE</ISO2>
+		<ISO3>REU</ISO3>
+		<englishShortName>Réunion (la)</englishShortName>
+		<frenchShortName>Réunion (la)</frenchShortName>
+	</RE>
+	<RO>
+		<ISO2>RO</ISO2>
+		<ISO3>ROU</ISO3>
+		<englishShortName>Romania</englishShortName>
+		<frenchShortName>Roumanie (la)</frenchShortName>
+	</RO>
+	<RU>
+		<ISO2>RU</ISO2>
+		<ISO3>RUS</ISO3>
+		<englishShortName>Russian Federation (the)</englishShortName>
+		<frenchShortName>Russie (la Fédération de)</frenchShortName>
+	</RU>
+	<RW>
+		<ISO2>RW</ISO2>
+		<ISO3>RWA</ISO3>
+		<englishShortName>Rwanda</englishShortName>
+		<frenchShortName>Rwanda (le)</frenchShortName>
+	</RW>
+	<BL>
+		<ISO2>BL</ISO2>
+		<ISO3>BLM</ISO3>
+		<englishShortName>Saint Barthélemy</englishShortName>
+		<frenchShortName>Saint-Barthélemy</frenchShortName>
+	</BL>
+	<SH>
+		<ISO2>SH</ISO2>
+		<ISO3>SHN</ISO3>
+		<englishShortName>Saint Helena, Ascension and Tristan da Cunha</englishShortName>
+		<frenchShortName>Sainte-Hélène, Ascension et Tristan da Cunha</frenchShortName>
+	</SH>
+	<KN>
+		<ISO2>KN</ISO2>
+		<ISO3>KNA</ISO3>
+		<englishShortName>Saint Kitts and Nevis</englishShortName>
+		<frenchShortName>Saint-Kitts-et-Nevis</frenchShortName>
+	</KN>
+	<LC>
+		<ISO2>LC</ISO2>
+		<ISO3>LCA</ISO3>
+		<englishShortName>Saint Lucia</englishShortName>
+		<frenchShortName>Sainte-Lucie</frenchShortName>
+	</LC>
+	<MF>
+		<ISO2>MF</ISO2>
+		<ISO3>MAF</ISO3>
+		<englishShortName>Saint Martin (French part)</englishShortName>
+		<frenchShortName>Saint-Martin (partie française)</frenchShortName>
+	</MF>
+	<PM>
+		<ISO2>PM</ISO2>
+		<ISO3>SPM</ISO3>
+		<englishShortName>Saint Pierre and Miquelon</englishShortName>
+		<frenchShortName>Saint-Pierre-et-Miquelon</frenchShortName>
+	</PM>
+	<VC>
+		<ISO2>VC</ISO2>
+		<ISO3>VCT</ISO3>
+		<englishShortName>Saint Vincent and the Grenadines</englishShortName>
+		<frenchShortName>Saint-Vincent-et-les Grenadines</frenchShortName>
+	</VC>
+	<WS>
+		<ISO2>WS</ISO2>
+		<ISO3>WSM</ISO3>
+		<englishShortName>Samoa</englishShortName>
+		<frenchShortName>Samoa (le)</frenchShortName>
+	</WS>
+	<SM>
+		<ISO2>SM</ISO2>
+		<ISO3>SMR</ISO3>
+		<englishShortName>San Marino</englishShortName>
+		<frenchShortName>Saint-Marin</frenchShortName>
+	</SM>
+	<ST>
+		<ISO2>ST</ISO2>
+		<ISO3>STP</ISO3>
+		<englishShortName>Sao Tome and Principe</englishShortName>
+		<frenchShortName>Sao Tomé-et-Principe</frenchShortName>
+	</ST>
+	<SA>
+		<ISO2>SA</ISO2>
+		<ISO3>SAU</ISO3>
+		<englishShortName>Saudi Arabia</englishShortName>
+		<frenchShortName>Arabie saoudite (l')</frenchShortName>
+	</SA>
+	<SN>
+		<ISO2>SN</ISO2>
+		<ISO3>SEN</ISO3>
+		<englishShortName>Senegal</englishShortName>
+		<frenchShortName>Sénégal (le)</frenchShortName>
+	</SN>
+	<RS>
+		<ISO2>RS</ISO2>
+		<ISO3>SRB</ISO3>
+		<englishShortName>Serbia</englishShortName>
+		<frenchShortName>Serbie (la)</frenchShortName>
+	</RS>
+	<SC>
+		<ISO2>SC</ISO2>
+		<ISO3>SYC</ISO3>
+		<englishShortName>Seychelles</englishShortName>
+		<frenchShortName>Seychelles (les)</frenchShortName>
+	</SC>
+	<SL>
+		<ISO2>SL</ISO2>
+		<ISO3>SLE</ISO3>
+		<englishShortName>Sierra Leone</englishShortName>
+		<frenchShortName>Sierra Leone (la)</frenchShortName>
+	</SL>
+	<SG>
+		<ISO2>SG</ISO2>
+		<ISO3>SGP</ISO3>
+		<englishShortName>Singapore</englishShortName>
+		<frenchShortName>Singapour</frenchShortName>
+	</SG>
+	<SX>
+		<ISO2>SX</ISO2>
+		<ISO3>SXM</ISO3>
+		<englishShortName>Sint Maarten (Dutch part)</englishShortName>
+		<frenchShortName>Saint-Martin (partie néerlandaise)</frenchShortName>
+	</SX>
+	<SK>
+		<ISO2>SK</ISO2>
+		<ISO3>SVK</ISO3>
+		<englishShortName>Slovakia</englishShortName>
+		<frenchShortName>Slovaquie (la)</frenchShortName>
+	</SK>
+	<SI>
+		<ISO2>SI</ISO2>
+		<ISO3>SVN</ISO3>
+		<englishShortName>Slovenia</englishShortName>
+		<frenchShortName>Slovénie (la)</frenchShortName>
+	</SI>
+	<SB>
+		<ISO2>SB</ISO2>
+		<ISO3>SLB</ISO3>
+		<englishShortName>Solomon Islands (the)</englishShortName>
+		<frenchShortName>Solomon (les Îles)</frenchShortName>
+	</SB>
+	<SO>
+		<ISO2>SO</ISO2>
+		<ISO3>SOM</ISO3>
+		<englishShortName>Somalia</englishShortName>
+		<frenchShortName>Somalie (la)</frenchShortName>
+	</SO>
+	<ZA>
+		<ISO2>ZA</ISO2>
+		<ISO3>ZAF</ISO3>
+		<englishShortName>South Africa</englishShortName>
+		<frenchShortName>Afrique du Sud (l')</frenchShortName>
+	</ZA>
+	<GS>
+		<ISO2>GS</ISO2>
+		<ISO3>SGS</ISO3>
+		<englishShortName>South Georgia and the South Sandwich Islands</englishShortName>
+		<frenchShortName>Géorgie du Sud-et-les Îles Sandwich du Sud (la)</frenchShortName>
+	</GS>
+	<SS>
+		<ISO2>SS</ISO2>
+		<ISO3>SSD</ISO3>
+		<englishShortName>South Sudan</englishShortName>
+		<frenchShortName>Soudan du Sud (le)</frenchShortName>
+	</SS>
+	<ES>
+		<ISO2>ES</ISO2>
+		<ISO3>ESP</ISO3>
+		<englishShortName>Spain</englishShortName>
+		<frenchShortName>Espagne (l')</frenchShortName>
+	</ES>
+	<LK>
+		<ISO2>LK</ISO2>
+		<ISO3>LKA</ISO3>
+		<englishShortName>Sri Lanka</englishShortName>
+		<frenchShortName>Sri Lanka</frenchShortName>
+	</LK>
+	<SD>
+		<ISO2>SD</ISO2>
+		<ISO3>SDN</ISO3>
+		<englishShortName>Sudan (the)</englishShortName>
+		<frenchShortName>Soudan (le)</frenchShortName>
+	</SD>
+	<SR>
+		<ISO2>SR</ISO2>
+		<ISO3>SUR</ISO3>
+		<englishShortName>Suriname</englishShortName>
+		<frenchShortName>Suriname (le)</frenchShortName>
+	</SR>
+	<SJ>
+		<ISO2>SJ</ISO2>
+		<ISO3>SJM</ISO3>
+		<englishShortName>Svalbard and Jan Mayen</englishShortName>
+		<frenchShortName>Svalbard et Jan Mayen (le)</frenchShortName>
+	</SJ>
+	<SE>
+		<ISO2>SE</ISO2>
+		<ISO3>SWE</ISO3>
+		<englishShortName>Sweden</englishShortName>
+		<frenchShortName>Suède (la)</frenchShortName>
+	</SE>
+	<CH>
+		<ISO2>CH</ISO2>
+		<ISO3>CHE</ISO3>
+		<englishShortName>Switzerland</englishShortName>
+		<frenchShortName>Suisse (la)</frenchShortName>
+	</CH>
+	<SY>
+		<ISO2>SY</ISO2>
+		<ISO3>SYR</ISO3>
+		<englishShortName>Syrian Arab Republic</englishShortName>
+		<frenchShortName>Syrian Arab Republic (the)</frenchShortName>
+	</SY>
+	<TW>
+		<ISO2>TW</ISO2>
+		<ISO3>TWN</ISO3>
+		<englishShortName>Taiwan (Province of China)</englishShortName>
+		<frenchShortName>Taiwan (Province of China)</frenchShortName>
+	</TW>
+	<TJ>
+		<ISO2>TJ</ISO2>
+		<ISO3>TJK</ISO3>
+		<englishShortName>Tajikistan</englishShortName>
+		<frenchShortName>Tadjikistan (le)</frenchShortName>
+	</TJ>
+	<TZ>
+		<ISO2>TZ</ISO2>
+		<ISO3>TZA</ISO3>
+		<englishShortName>Tanzania, United Republic of</englishShortName>
+		<frenchShortName>Tanzanie (la République-Unie de)</frenchShortName>
+	</TZ>
+	<TH>
+		<ISO2>TH</ISO2>
+		<ISO3>THA</ISO3>
+		<englishShortName>Thailand</englishShortName>
+		<frenchShortName>Thaïlande (la)</frenchShortName>
+	</TH>
+	<TL>
+		<ISO2>TL</ISO2>
+		<ISO3>TLS</ISO3>
+		<englishShortName>Timor-Leste</englishShortName>
+		<frenchShortName>Timor-Leste</frenchShortName>
+	</TL>
+	<TG>
+		<ISO2>TG</ISO2>
+		<ISO3>TGO</ISO3>
+		<englishShortName>Togo</englishShortName>
+		<frenchShortName>Togo (le)</frenchShortName>
+	</TG>
+	<TK>
+		<ISO2>TK</ISO2>
+		<ISO3>TKL</ISO3>
+		<englishShortName>Tokelau</englishShortName>
+		<frenchShortName>Tokélaou (les)</frenchShortName>
+	</TK>
+	<TO>
+		<ISO2>TO</ISO2>
+		<ISO3>TON</ISO3>
+		<englishShortName>Tonga</englishShortName>
+		<frenchShortName>Tonga (les)</frenchShortName>
+	</TO>
+	<TT>
+		<ISO2>TT</ISO2>
+		<ISO3>TTO</ISO3>
+		<englishShortName>Trinidad and Tobago</englishShortName>
+		<frenchShortName>Trinité-et-Tobago (la)</frenchShortName>
+	</TT>
+	<TN>
+		<ISO2>TN</ISO2>
+		<ISO3>TUN</ISO3>
+		<englishShortName>Tunisia</englishShortName>
+		<frenchShortName>Tunisie (la)</frenchShortName>
+	</TN>
+	<TR>
+		<ISO2>TR</ISO2>
+		<ISO3>TUR</ISO3>
+		<englishShortName>Turkey</englishShortName>
+		<frenchShortName>Turquie (la)</frenchShortName>
+	</TR>
+	<TM>
+		<ISO2>TM</ISO2>
+		<ISO3>TKM</ISO3>
+		<englishShortName>Turkmenistan</englishShortName>
+		<frenchShortName>Turkménistan (le)</frenchShortName>
+	</TM>
+	<TC>
+		<ISO2>TC</ISO2>
+		<ISO3>TCA</ISO3>
+		<englishShortName>Turks and Caicos Islands (the)</englishShortName>
+		<frenchShortName>Turks et Caïcos (les Îles)</frenchShortName>
+	</TC>
+	<TV>
+		<ISO2>TV</ISO2>
+		<ISO3>TUV</ISO3>
+		<englishShortName>Tuvalu</englishShortName>
+		<frenchShortName>Tuvalu (les)</frenchShortName>
+	</TV>
+	<UG>
+		<ISO2>UG</ISO2>
+		<ISO3>UGA</ISO3>
+		<englishShortName>Uganda</englishShortName>
+		<frenchShortName>Ouganda (l')</frenchShortName>
+	</UG>
+	<UA>
+		<ISO2>UA</ISO2>
+		<ISO3>UKR</ISO3>
+		<englishShortName>Ukraine</englishShortName>
+		<frenchShortName>Ukraine (l')</frenchShortName>
+	</UA>
+	<AE>
+		<ISO2>AE</ISO2>
+		<ISO3>ARE</ISO3>
+		<englishShortName>United Arab Emirates (the)</englishShortName>
+		<frenchShortName>Émirats arabes unis (les)</frenchShortName>
+	</AE>
+	<GB>
+		<ISO2>GB</ISO2>
+		<ISO3>GBR</ISO3>
+		<englishShortName>United Kingdom of Great Britain and Northern Ireland (the)</englishShortName>
+		<frenchShortName>Royaume-Uni de Grande-Bretagne et d'Irlande du Nord (le)</frenchShortName>
+	</GB>
+	<UM>
+		<ISO2>UM</ISO2>
+		<ISO3>UMI</ISO3>
+		<englishShortName>United States Minor Outlying Islands (the)</englishShortName>
+		<frenchShortName>Îles mineures éloignées des États-Unis (les)</frenchShortName>
+	</UM>
+	<US>
+		<ISO2>US</ISO2>
+		<ISO3>USA</ISO3>
+		<englishShortName>United States of America (the)</englishShortName>
+		<frenchShortName>États-Unis d'Amérique (les)</frenchShortName>
+	</US>
+	<UY>
+		<ISO2>UY</ISO2>
+		<ISO3>URY</ISO3>
+		<englishShortName>Uruguay</englishShortName>
+		<frenchShortName>Uruguay (l')</frenchShortName>
+	</UY>
+	<UZ>
+		<ISO2>UZ</ISO2>
+		<ISO3>UZB</ISO3>
+		<englishShortName>Uzbekistan</englishShortName>
+		<frenchShortName>Ouzbékistan (l')</frenchShortName>
+	</UZ>
+	<VU>
+		<ISO2>VU</ISO2>
+		<ISO3>VUT</ISO3>
+		<englishShortName>Vanuatu</englishShortName>
+		<frenchShortName>Vanuatu (le)</frenchShortName>
+	</VU>
+	<VE>
+		<ISO2>VE</ISO2>
+		<ISO3>VEN</ISO3>
+		<englishShortName>Venezuela (Bolivarian Republic of)</englishShortName>
+		<frenchShortName>Venezuela (République bolivarienne du)</frenchShortName>
+	</VE>
+	<VN>
+		<ISO2>VN</ISO2>
+		<ISO3>VNM</ISO3>
+		<englishShortName>Viet Nam</englishShortName>
+		<frenchShortName>Viet Nam (le)</frenchShortName>
+	</VN>
+	<WF>
+		<ISO2>WF</ISO2>
+		<ISO3>WLF</ISO3>
+		<englishShortName>Wallis and Futuna</englishShortName>
+		<frenchShortName>Wallis-et-Futuna</frenchShortName>
+	</WF>
+	<EH>
+		<ISO2>EH</ISO2>
+		<ISO3>ESH</ISO3>
+		<englishShortName>Western Sahara</englishShortName>
+		<frenchShortName>Sahara occidental (le)</frenchShortName>
+	</EH>
+	<YE>
+		<ISO2>YE</ISO2>
+		<ISO3>YEM</ISO3>
+		<englishShortName>Yemen</englishShortName>
+		<frenchShortName>Yémen (le)</frenchShortName>
+	</YE>
+	<ZM>
+		<ISO2>ZM</ISO2>
+		<ISO3>ZMB</ISO3>
+		<englishShortName>Zambia</englishShortName>
+		<frenchShortName>Zambie (la)</frenchShortName>
+	</ZM>
+	<ZW>
+		<ISO2>ZW</ISO2>
+		<ISO3>ZWE</ISO3>
+		<englishShortName>Zimbabwe</englishShortName>
+		<frenchShortName>Zimbabwe (le)</frenchShortName>
+	</ZW>
+</property>
