@@ -94,11 +94,12 @@ if (result.statusCode == 200) {
     print("Failed ${result.error['status_message'] ?? result.error}");
 }
 """
-lua_callback = """
-if result.status == 200 then
-    print("Success")
-else
-    print("Failed " .. tostring(result.error.status_message or result.error))
+lua_callback = """local callback = function(result)
+    if result.statusCode == 200 then
+        print("Success")
+    else
+        print("Failed | " .. tostring(result.status))
+    end
 end
 """
 # json or s2sJson
@@ -366,10 +367,11 @@ while proxy != "exit":
                                         f'local {param["name"]} = {operation["parameters"][param["name"]]}\n')
                                 param_list.append(param["name"])
                             param_list_string = ', '.join(param_list)
-                            api_method.write(f'<%= data.branding.codePrefix %>.{operation["service"]}Service:{operation["apiMethod"][0].lower() + operation["apiMethod"][1:]}({param_list_string})\n')
+                            api_method.write(f'{lua_callback}')
+                            api_method.write(f'<%= data.branding.codePrefix %>:get{operation["service"][0].upper() + operation["service"][1:]}Service():{operation["apiMethod"][0].lower() + operation["apiMethod"][1:]}({param_list_string}, callback)\n')
                         else:
-                            api_method.write(f'<%= data.branding.codePrefix %>.{operation["service"]}Service:{operation["apiMethod"][0].lower() + operation["apiMethod"][1:]}()\n')
-                        api_method.write(f'{lua_callback}')
+                            api_method.write(f'{lua_callback}')
+                            api_method.write(f'<%= data.branding.codePrefix %>:get{operation["service"][0].upper() + operation["service"][1:]}Service():{operation["apiMethod"][0].lower() + operation["apiMethod"][1:]}(callback)\n')
                         api_method.write(f'```\n')
                     # left indent one level higher than code blocks above, no matter sys or non-sys calls
                     # cfs block
